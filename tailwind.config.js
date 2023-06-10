@@ -14,7 +14,10 @@ module.exports = {
       },
       backgroundColor: {
         'bg-dark': '#0b0b0b'
-      }
+      },
+      spacing: {
+        boxPosition: 'max(20px, 2.5vmin)'
+      },
     },
   },
   plugins: [],
