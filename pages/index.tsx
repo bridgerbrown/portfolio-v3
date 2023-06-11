@@ -1,13 +1,15 @@
 import React, { useState, useRef } from "react";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
+import AnimatedPage from "@/components/AnimatedPage";
 
 function Home() {
 
   return (
     <div className="bg-nearBlack fixed overflow-hidden left-0 top-0 min-h-screen w-full">
+      <AnimatedPage>
         <main 
-          className="fadeIn justify-between flex flex-col text-white"
+          className="justify-between flex flex-col text-white"
         >
           <Head>Bridger Brown Dev</Head>
 
@@ -24,7 +26,7 @@ function Home() {
             </div>
           </div>
 
-          <header className="w-fit bg-nearBlack z-10 pl-7 pr-2 pt-0 pb-6 flex items-end justify-start">
+          <header className="absolute bottom-boxPosition w-fit bg-nearBlack z-10 pl-7 pr-2 pt-0 pb-0 flex items-end justify-start">
             <h1 className="text-8xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
@@ -33,6 +35,7 @@ function Home() {
             </h2>
           </header>
         </main>
+      </AnimatedPage>
     </div>
   );
 }
