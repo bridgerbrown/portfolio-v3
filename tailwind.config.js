@@ -13,11 +13,20 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       backgroundColor: {
-        'bg-dark': '#0b0b0b'
+        'nearBlack': '#0b0b0b'
       },
       spacing: {
         boxPosition: 'max(20px, 2.5vmin)'
       },
+      keyframes: {
+        fadeOut: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        fadeOut: 'fadeOut 1s ease-in-out linear',
+      }
     },
   },
   plugins: [],
