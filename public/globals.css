@@ -2,14 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0;}
-}
-
-@-webkit-keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0;}
+body {
+  transition: opacity 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -22,14 +16,27 @@
   100% { opacity: 1;}
 }
 
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation: fadeOut 1s ease-out;  
-  animation-name: fadeOut;
-}
-
 .fadeIn {
   -webkit-animation-name: fadeIn;
-  animation: fadeIn 1s ease-in;  
+  animation: fadeIn 0.5s ease-in;  
   animation-name: fadeIn;
 }
+
+@keyframes fadeInSlow {
+  0% { opacity: 0; }
+  50% { opacity: 0.5;}
+  100% { opacity: 1;}
+}
+
+@-webkit-keyframes fadeInSlow {
+  0% { opacity: 0; }
+  50% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+.fadeInSlow {
+  -webkit-animation-name: fadeInSlow;
+  animation: fadeInSlow 1s ease-in;  
+  animation-name: fadeInSlow;
+}
+
