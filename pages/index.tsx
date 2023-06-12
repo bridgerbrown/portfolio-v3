@@ -30,7 +30,7 @@ function Home() {
             <h1 className="text-8xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
-            <h2 className="pl-4 text-3xl font-thin text-white">
+            <h2 className="tracking-wide pl-4 text-2xl font-thin text-white">
               Frontend Developer
             </h2>
           </header>

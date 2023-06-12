@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+input[type="radio"] {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 0px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  -webkit-appearance: none;
+}
+
+input[type="radio"]:after {
+  content: '';
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="radio"]:checked:after {
+  background-color: purple;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}

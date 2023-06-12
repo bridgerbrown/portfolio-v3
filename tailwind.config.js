@@ -16,7 +16,13 @@ module.exports = {
         'nearBlack': '#0b0b0b'
       },
       spacing: {
-        boxPosition: 'max(20px, 2.5vmin)'
+        boxPosition: 'max(20px, 2.5vmin)',
+        pageBoxTop: 'max(20px, 13vmin)',
+        pageBoxRight: 'max(20px, 13vmin)',
+        pageBoxLeft: 'max(20px, 5vmin)',
+        pageBoxBottom: 'max(20px, 8vmin)',
+        pagePosition: 'max(20px, 5vmin)',
+        categoryPosition: 'max(20px, 13.5vmin)'
       },
       keyframes: {
         fadeOut: {
