@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-function Navbar() {
+function PageNavbar() {
   const linkCss: string = `cursor-pointer hover:opacity-80`;
-  const navCss: string = `space-x-4 flex list-none font-thin text-2xl tracking-wider`;
+  const navCss: string = `space-x-4 flex list-none font-thin text-2xl`;
   
   const router = useRouter();
   
@@ -30,4 +30,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default PageNavbar;

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #0b0b0b;
+}
 
 input[type="radio"] {
   background-color: transparent;
@@ -35,3 +38,5 @@ input[type="radio"]:checked:after {
 label {
   cursor: pointer;
 }
+
+

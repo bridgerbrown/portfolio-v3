@@ -1,6 +1,8 @@
 import AnimatedPage from '@/components/AnimatedPage';
 import Navbar from '@/components/navbar';
 import React, { useState } from 'react';
+import WorkRow from '../components/WorkRow'
+import PageNavbar from '@/components/PageNavbar';
 
 function Work(){
   const inputCSS: string = ``;
@@ -12,16 +14,16 @@ function Work(){
   return (
     <div className='min-h-screen w-full bg-nearBlack'>
       <AnimatedPage>
-          <div className="pt-6 pr-7 w-full z-10 flex justify-end">
+          <div className="absolute top-[100px] right-[150px] pt-6 pr-7 w-full z-50 flex justify-end">
             <div className="pl-2 pb-1 bg-nearBlack w-fit">
-              <Navbar />
+              <PageNavbar />
             </div>
           </div>
 
-          <div className="absolute z-10 left-pageBoxLeft right-0 top-pageBoxTop bottom-pageBoxBottom">
+          <div className="absolute z-0 left-pageBoxLeft right-0 top-pageBoxTop bottom-pageBoxBottom">
             <div className="w-[100%] h-[1px] left-0 top-0 absolute bg-white opacity-50"></div>
           </div>
-          <div className="fixed z-10 left-pageBoxLeft right-pageBoxRight top-0 bottom-0">
+          <div className="fixed z-0 left-pageBoxLeft right-pageBoxRight top-0 bottom-0">
             <div className="w-[1px] h-[100%] right-0 top-0 absolute bg-white opacity-50"></div>
           </div>
 
@@ -79,7 +81,14 @@ function Work(){
               </label>
           </div>
           <main className=''>
-
+            <div className='z-10 top-[220px] left-pageBoxLeft absolute w-full'>
+              <WorkRow />
+              <WorkRow />
+              <WorkRow />
+              <WorkRow />
+              <WorkRow />
+              <WorkRow />
+            </div>
           </main>
       </AnimatedPage>
     </div>

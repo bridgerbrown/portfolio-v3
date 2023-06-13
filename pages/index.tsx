@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
-import AnimatedPage from "@/components/AnimatedPage";
+import AnimatedPage from "@/components/AnimatedPage"; 
 
 function Home() {
 
@@ -13,20 +13,18 @@ function Home() {
         >
           <Head>Bridger Brown Dev</Head>
 
-          <div className="fixed z-10 left-boxPosition right-boxPosition top-boxPosition bottom-boxPosition">
+          <div className="fixed z-10 left-homeBoxPosition right-homeBoxPosition top-homeBoxPosition bottom-homeBoxPosition">
             <div className="w-[100%] h-[1px] left-0 top-0 absolute bg-white opacity-50"></div>
             <div className="w-[1px] h-[100%] left-0 top-0 absolute bg-white opacity-50"></div>
             <div className="w-[100%] h-[1px] left-0 bottom-0 absolute bg-white opacity-50"></div>
             <div className="w-[1px] h-[100%] right-0 top-0 absolute bg-white opacity-50"></div>
           </div>
 
-          <div className="pt-6 pr-7 w-full z-10 flex justify-end">
-            <div className="pl-2 pb-1 bg-nearBlack w-fit">
+          <div className="pt-10 pr-12 w-full z-10 flex justify-end">
               <Navbar />
-            </div>
           </div>
 
-          <header className="absolute bottom-boxPosition w-fit bg-nearBlack z-10 pl-7 pr-2 pt-0 pb-0 flex items-end justify-start">
+          <header className="absolute bottom-homeBoxPosition w-fit z-10 pl-12 pr-2 pb-4 flex items-end justify-start">
             <h1 className="text-8xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
