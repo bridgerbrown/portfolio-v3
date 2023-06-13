@@ -32,7 +32,8 @@ module.exports = {
       },
       animation: {
         fadeOut: 'fadeOut 1s ease-in-out linear',
-      }
+      }, 
+      
     },
   },
   plugins: [],

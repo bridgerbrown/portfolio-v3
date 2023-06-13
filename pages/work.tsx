@@ -3,8 +3,9 @@ import Navbar from '@/components/navbar';
 import React, { useState } from 'react';
 
 function Work(){
-  const inputCss: string = ``;
-  const labelCss: string = `pl-1 pr-4 `;
+  const inputCSS: string = ``;
+  const labelCSS: string = `transition tracking-wider pl-1 pr-4 text-lg hover:opacity-100 transition-opacity opacity-60`;
+  const checkedLabelCSS: string = `tracking-wider pl-1 pr-4 text-lg transition-opacity opacity-100`
 
   const [category, setCategory] = useState('all');
 
@@ -38,43 +39,43 @@ function Work(){
               value="all" 
               checked={category === 'all'}
               onClick={() => setCategory('all')}
-              className={inputCss}
+              className={inputCSS}
             />
               <label 
                 htmlFor="all"
-                className={labelCss}
+                className={category === "all" ? checkedLabelCSS : labelCSS}
               >
-                ALL
+                All
               </label>
             <input 
               type="radio" 
               id="solo-projects" 
               name="categories" 
               value="solo-projects"
-              className={inputCss}
+              className={inputCSS}
               checked={category === 'solo-projects'}
               onClick={() => setCategory('solo-projects')}
             />
               <label 
                 htmlFor="solo-projects"
-                className={labelCss}
+                className={category === "solo-projects" ? checkedLabelCSS : labelCSS}
               >
-                SOLO-PROJECTS
+                Solo-Projects
               </label>
             <input 
               type="radio" 
               id="freelance" 
               name="categories" 
               value="freelance"
-              className={inputCss}
+              className={inputCSS}
               checked={category === 'freelance'}
               onClick={() => setCategory('freelance')}
             />
               <label 
                 htmlFor="freelance"
-                className={labelCss}
+                className={category === "freelance" ? checkedLabelCSS : labelCSS}
               >
-                FREELANCE
+                Freelance
               </label>
           </div>
           <main className=''>

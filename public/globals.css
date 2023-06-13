@@ -19,8 +19,8 @@ input[type="radio"] {
 input[type="radio"]:after {
   content: '';
   cursor: pointer;
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,7 +28,7 @@ input[type="radio"]:after {
 }
 
 input[type="radio"]:checked:after {
-  background-color: purple;
+  background-color: #fbff12;
   cursor: pointer;
 }
 
