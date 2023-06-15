@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 function Navbar() {
   const linkCss: string = `cursor-pointer hover:opacity-80`;
-  const navCss: string = `space-x-4 flex list-none font-thin text-2xl tracking-wider`;
+  const navCss: string = `space-x-4 flex list-none font-thin text-xl tracking-wider`;
   
   const router = useRouter();
   

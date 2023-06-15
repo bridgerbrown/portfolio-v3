@@ -6,82 +6,79 @@ import PageNavbar from '@/components/PageNavbar';
 
 function Work(){
   const inputCSS: string = ``;
-  const labelCSS: string = `transition tracking-wider pl-1 pr-4 text-lg hover:opacity-100 transition-opacity opacity-60`;
-  const checkedLabelCSS: string = `tracking-wider pl-1 pr-4 text-lg transition-opacity opacity-100`
+  const labelCSS: string = `uppercase transition tracking-wider pl-1 pr-4 text-regular hover:opacity-100 transition-opacity opacity-60`;
+  const checkedLabelCSS: string = `uppercase tracking-wider pl-1 pr-4 text-regular transition-opacity opacity-100`
 
   const [category, setCategory] = useState('all');
 
   return (
     <div className='min-h-screen w-full bg-nearBlack'>
       <AnimatedPage>
-          <div className="absolute top-[100px] right-[150px] pt-6 pr-7 w-full z-50 flex justify-end">
-            <div className="pl-2 pb-1 bg-nearBlack w-fit">
+          <header className='mx-[150px] mt-[60px] mb-[12px]'>
+            <div className='mb-2 flex justify-between items-end'>
+              <h1 className='text-8xl font-thin text-white uppercase'>
+                Work
+              </h1>
               <PageNavbar />
             </div>
-          </div>
-
-          <div className="absolute z-0 left-pageBoxLeft right-0 top-pageBoxTop bottom-pageBoxBottom">
-            <div className="w-[100%] h-[1px] left-0 top-0 absolute bg-white opacity-50"></div>
-          </div>
-          <div className="fixed z-0 left-pageBoxLeft right-pageBoxRight top-0 bottom-0">
-            <div className="w-[1px] h-[100%] right-0 top-0 absolute bg-white opacity-50"></div>
-          </div>
-
-          <header className='absolute top-pagePosition left-pagePosition'>
-            <h1 className='text-8xl font-thin text-white uppercase'>
-              Work
-            </h1>
+            <div className="">
+              <div className="w-[100%] h-[1px] bg-white opacity-50"></div>
+            </div>
           </header>
+          
+          
 
-          <div className='flex justify-center items-center z-20 absolute top-categoryPosition left-pagePosition text-white font-light'>
-            <input 
-              type="radio" 
-              id="all" 
-              name="categories" 
-              value="all" 
-              checked={category === 'all'}
-              onClick={() => setCategory('all')}
-              className={inputCSS}
-            />
-              <label 
-                htmlFor="all"
-                className={category === "all" ? checkedLabelCSS : labelCSS}
-              >
-                All
-              </label>
-            <input 
-              type="radio" 
-              id="solo-projects" 
-              name="categories" 
-              value="solo-projects"
-              className={inputCSS}
-              checked={category === 'solo-projects'}
-              onClick={() => setCategory('solo-projects')}
-            />
-              <label 
-                htmlFor="solo-projects"
-                className={category === "solo-projects" ? checkedLabelCSS : labelCSS}
-              >
-                Solo-Projects
-              </label>
-            <input 
-              type="radio" 
-              id="freelance" 
-              name="categories" 
-              value="freelance"
-              className={inputCSS}
-              checked={category === 'freelance'}
-              onClick={() => setCategory('freelance')}
-            />
-              <label 
-                htmlFor="freelance"
-                className={category === "freelance" ? checkedLabelCSS : labelCSS}
-              >
-                Freelance
-              </label>
+          <div className='w-full mx-[150px] flex justify-between items-center text-white font-light'>
+            <div>
+              <input 
+                type="radio" 
+                  id="all" 
+                  name="categories" 
+                  value="all" 
+                  checked={category === 'all'}
+                  onClick={() => setCategory('all')}
+                  className={inputCSS}
+                />
+                  <label 
+                    htmlFor="all"
+                    className={category === "all" ? checkedLabelCSS : labelCSS}
+                  >
+                    All
+                  </label>
+                <input 
+                  type="radio" 
+                  id="solo-projects" 
+                  name="categories" 
+                  value="solo-projects"
+                  className={inputCSS}
+                  checked={category === 'solo-projects'}
+                  onClick={() => setCategory('solo-projects')}
+                />
+                  <label 
+                    htmlFor="solo-projects"
+                    className={category === "solo-projects" ? checkedLabelCSS : labelCSS}
+                  >
+                    Solo-Projects
+                  </label>
+                <input 
+                  type="radio" 
+                  id="freelance" 
+                  name="categories" 
+                  value="freelance"
+                  className={inputCSS}
+                  checked={category === 'freelance'}
+                  onClick={() => setCategory('freelance')}
+                />
+                  <label 
+                    htmlFor="freelance"
+                    className={category === "freelance" ? checkedLabelCSS : labelCSS}
+                  >
+                    Freelance
+                  </label>
+              </div>
           </div>
           <main className=''>
-            <div className='z-10 top-[220px] left-pageBoxLeft absolute w-full'>
+            <div className='z-10 flex flex-col mt-[40px] justify-center items-center w-full'>
               <WorkRow />
               <WorkRow />
               <WorkRow />
