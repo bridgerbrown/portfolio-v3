@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 function PageNavbar() {
-  const linkCss: string = `cursor-pointer hover:opacity-80`;
-  const navCss: string = `space-x-4 flex list-none font-thin text-xl`;
+  const linkCss: string = `text-lg uppercase hover:text-neonYellow font-extralight cursor-pointer `;
+  const navCss: string = `space-x-4 flex list-none `;
   
   const router = useRouter();
   

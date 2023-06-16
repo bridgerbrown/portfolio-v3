@@ -28,7 +28,7 @@ function Work(){
           
           
 
-          <div className='w-full mx-[150px] flex justify-between items-center text-white font-light'>
+          <div className='mx-[150px] flex justify-between items-center text-white font-light'>
             <div>
               <input 
                 type="radio" 
@@ -78,7 +78,7 @@ function Work(){
               </div>
           </div>
           <main className=''>
-            <div className='z-10 flex flex-col mt-[40px] justify-center items-center w-full'>
+            <div className='mx-[150px] z-10 flex flex-col mt-[40px] justify-center items-center'>
               <WorkRow />
               <WorkRow />
               <WorkRow />

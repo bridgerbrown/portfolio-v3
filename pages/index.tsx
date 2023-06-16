@@ -25,10 +25,10 @@ function Home() {
           </div>
 
           <header className="absolute bottom-homeBoxPosition w-fit z-10 pl-12 pr-2 pb-4 flex items-end justify-start">
-            <h1 className="text-7xl font-thin text-white">
+            <h1 className="transition-all cursor-pointer text-8xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
-            <h2 className="tracking-wide pl-4 text-2xl font-thin text-white">
+            <h2 className="cursor-pointer tracking-wide pl-4 text-2xl font-thin text-white">
               Frontend Developer
             </h2>
           </header>

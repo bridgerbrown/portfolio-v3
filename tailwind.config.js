@@ -12,6 +12,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'neonYellow': '#fbff12;',
+      },
       backgroundColor: {
         'nearBlack': '#0b0b0b'
       },
@@ -25,7 +28,8 @@ module.exports = {
         pagePositionY: 'max(20px, 15vmin)',
         pagePositionX: 'max(20px, 14vmin)',
         workRowsLeft: 'max(20px, 8vmin)',
-        categoryPosition: 'max(20px, 13.5vmin)'
+        workRowsRight: 'max(20px, 8vmin)',
+        categoryPosition: 'max(20px, 13.5vmin)',
 
       },
       keyframes: {
@@ -37,7 +41,9 @@ module.exports = {
       animation: {
         fadeOut: 'fadeOut 1s ease-in-out linear',
       }, 
-      
+      scale: {
+        '102': '1.02',
+      },     
     },
   },
   plugins: [],
