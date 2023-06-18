@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 function PageNavbar() {
-  const linkCss: string = `text-lg uppercase hover:text-neonYellow font-extralight cursor-pointer `;
+  const linkCss: string = `text-md uppercase hover:opacity-100 opacity-60 transition-opacity font-extralight cursor-pointer `;
   const navCss: string = `space-x-4 flex list-none `;
   
   const router = useRouter();
@@ -19,7 +19,7 @@ function PageNavbar() {
         <Link href="/work" className={linkCss}>
           Work
         </Link>
-        <Link href="/work" className={linkCss}>
+        <Link href="/blog" className={linkCss}>
           Blog
         </Link>
         <Link href="/about" className={linkCss}>

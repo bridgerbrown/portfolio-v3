@@ -1,19 +1,26 @@
-import React from 'react';
+import AnimatedPage from '@/components/AnimatedPage';
+import React, { useState } from 'react';
+import PageNavbar from '@/components/PageNavbar';
 
 function Blog(){
+
   return (
     <div className='min-h-screen w-full bg-nearBlack'>
-      <div className='fadeIn'>
-
-        <header className='absolute top-boxPosition left-boxPosition'>
-          <h1 className='text-8xl font-thin text-white uppercase'>
-            Blog
-          </h1>
-        </header>
-        <main className=''>
-
-        </main>
-      </div>
+      <AnimatedPage>
+          <header className='mx-[150px] mt-[60px] mb-[12px]'>
+            <div className='mb-2 flex justify-between items-end'>
+              <h1 className='text-8xl font-thin text-white uppercase'>
+                Blog
+              </h1>
+              <PageNavbar />
+            </div>
+            <div className="">
+              <div className="w-[100%] h-[1px] bg-white opacity-50"></div>
+            </div>
+          </header>
+          
+          
+      </AnimatedPage>
     </div>
   )
 };

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function WorkRow(props: any){
+function Project(props: any){
 
   return (
     <section className="mb-4 w-full flex"> 
@@ -22,4 +22,4 @@ function WorkRow(props: any){
   )
 }
 
-export default WorkRow;
+export default Project;

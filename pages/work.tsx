@@ -1,15 +1,16 @@
 import AnimatedPage from '@/components/AnimatedPage';
 import Navbar from '@/components/navbar';
 import React, { useState } from 'react';
-import WorkRow from '../components/WorkRow'
 import PageNavbar from '@/components/PageNavbar';
+import Project from '@/components/Project';
 
 function Work(){
   const inputCSS: string = ``;
   const labelCSS: string = `uppercase transition tracking-wider pl-1 pr-4 text-regular hover:opacity-100 transition-opacity opacity-60`;
   const checkedLabelCSS: string = `uppercase tracking-wider pl-1 pr-4 text-regular transition-opacity opacity-100`
 
-  const [category, setCategory] = useState('all');
+  const [category, setCategory] = useState<string>('all');
+  const [viewProject, setViewProject] = useState<string>('');
 
   return (
     <div className='min-h-screen w-full bg-nearBlack'>
@@ -79,12 +80,7 @@ function Work(){
           </div>
           <main className=''>
             <div className='mx-[150px] z-10 flex flex-col mt-[40px] justify-center items-center'>
-              <WorkRow />
-              <WorkRow />
-              <WorkRow />
-              <WorkRow />
-              <WorkRow />
-              <WorkRow />
+              <Project />
             </div>
           </main>
       </AnimatedPage>
