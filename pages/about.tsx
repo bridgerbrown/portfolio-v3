@@ -26,7 +26,7 @@ function About(){
             width={144}
             height={144}
             alt='Portrait of Bridger Brown'
-            className='w-96 h-96'
+            className='w-96 h-96 rounded-sm'
           />
           <div className='w-2/3 text-white font-thin ml-12 flex-col'>
             <h1 className='mb-2 text-white font-thin text-6xl'>
@@ -35,7 +35,8 @@ function About(){
             <h2 className='mb-4 text-white font-thin text-2xl'>
               Frontend Developer
             </h2>
-            <p>Hello, my name is Bridger Brown and I am a Front-End Web developer and designer based out of Portland, Oregon.
+            <p className='text-lg leading-7'>
+              Hello, my name is Bridger Brown and I am a Front-End Web developer and designer based out of Portland, Oregon.
               <br></br>
               <br></br> 
               Websites are an interactive art form and I am passionate about creating that experience through a designers eye.
