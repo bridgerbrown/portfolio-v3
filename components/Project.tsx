@@ -9,18 +9,21 @@ function Project(props: any){
   return (
     <div className="flex flex-col"> 
       <div className="
-        transition cursor-pointer 
+        transition 
         w-full h-[275px] border-white-1 
         flex items-start mb-4
         ">
         <div className="rounded-sm w-1/3 min-w-[300px] max-w-sm bg-white">
-          <Image
-            src={project.img}
-            alt="Project image"
-            width={1280}
-            height={960}
-            className="w-full"
-          />
+          <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={project.img}
+              alt="Project image"
+              width={1280}
+              height={960}
+              className="cursor-pointer w-full"
+              priority={true}
+            />
+          </a>
         </div>
         <div className="h-full w-[66%] ml-8 text-white flex flex-col justify-between">
           <div>
@@ -35,7 +38,13 @@ function Project(props: any){
             </p>
             <br/>
             <p className="font-extralight">
-              Built with {builtWith.map((item: string) => item !== builtWith[builtWith.length - 1] ? <span> <span className="font-light border-b border-white-1">{item}</span>,</span> : <span> and <span className="font-light border-b border-white-1">{item}</span>.</span>)}
+              Built with {builtWith.map((item: string) => 
+                item !== builtWith[builtWith.length - 1] 
+                ? 
+                <span key={builtWith.indexOf(item)}> <span className="font-light border-b border-white-1">{item}</span>,</span> 
+                : 
+                <span key={builtWith.indexOf(item)}> and <span className="font-light border-b border-white-1">{item}</span>.</span>
+                )}
             </p>
           </div>
           <div className="justify-end items-end flex">

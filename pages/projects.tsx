@@ -6,13 +6,17 @@ import Project from '@/components/Project';
 import Footer from '@/components/Footer';
 import projectsData from '@/data/projectsData.json';
 
-function Work(){
+function Projects(){
   const inputCSS: string = ``;
   const labelCSS: string = `uppercase transition tracking-wider pl-1 pr-4 text-regular hover:opacity-100 transition-opacity opacity-60`;
-  const checkedLabelCSS: string = `border-b border-white-1 uppercase tracking-wider pb-1 ml-1 mr-4 text-regular transition-opacity opacity-100`
+  const checkedLabelCSS: string = `border-b border-white-1 uppercase tracking-wider pb-0.5 ml-1 mr-4 text-regular transition-opacity opacity-100`
 
   const [category, setCategory] = useState<string>('all');
-  const [viewProject, setViewProject] = useState<string>('');
+  
+  const allProjects = projectsData.map((project) => <Project key={project.id} project={project} />);
+  const soloProjects = projectsData.filter((project) => project.type == "Solo-Project").map((project) => <Project key={project.id} project={project} />)
+  const workProjects = projectsData.filter((project) => project.type !== "Solo-Project").map((project) => <Project key={project.id} project={project} />)
+
 
   return (
     <div className='relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
@@ -21,7 +25,7 @@ function Work(){
             <div className='w-[80vw] max-w-[1500px]'>
               <div className='mb-2 flex justify-between items-end'>
                 <h1 className='text-8xl font-thin text-white uppercase'>
-                  Work
+                 Projects 
                 </h1>
                 <PageNavbar />
               </div>
@@ -43,6 +47,7 @@ function Work(){
                   checked={category === 'all'}
                   onClick={() => setCategory('all')}
                   className={inputCSS}
+                  readOnly
                 />
                   <label 
                     htmlFor="all"
@@ -58,6 +63,7 @@ function Work(){
                   className={inputCSS}
                   checked={category === 'solo-projects'}
                   onClick={() => setCategory('solo-projects')}
+                  readOnly
                 />
                   <label 
                     htmlFor="solo-projects"
@@ -67,18 +73,19 @@ function Work(){
                   </label>
                 <input 
                   type="radio" 
-                  id="freelance" 
+                  id="work" 
                   name="categories" 
-                  value="freelance"
+                  value="work"
                   className={inputCSS}
-                  checked={category === 'freelance'}
-                  onClick={() => setCategory('freelance')}
+                  checked={category === 'work'}
+                  onClick={() => setCategory('work')}
+                  readOnly
                 />
                   <label 
-                    htmlFor="freelance"
-                    className={category === "freelance" ? checkedLabelCSS : labelCSS}
+                    htmlFor="work"
+                    className={category === "work" ? checkedLabelCSS : labelCSS}
                   >
-                    Freelance
+                    Work 
                   </label>
               </div>
           </div>
@@ -86,7 +93,13 @@ function Work(){
             <div className='w-[80vw] max-w-[1500px] z-10 flex flex-col mt-[50px] justify-center items-center'>
               {
                 projectsData ?
-                projectsData.map((project) => <Project project={project} />)
+                  category == 'all' ?
+                    allProjects
+                    :
+                    category == 'solo-projects' ?
+                      soloProjects
+                      :
+                      workProjects
                 :
                 <div className='text-center absolute top-[50vh]'>
                   <h2 className='text-white text-2xl font-thin tracking-widest animate-pulse'>Loading...</h2>
@@ -100,4 +113,4 @@ function Work(){
   )
 };
 
-export default Work;
+export default Projects;

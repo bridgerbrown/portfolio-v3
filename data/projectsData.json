@@ -1,8 +1,9 @@
 [
   {
+    "id": 0,
     "title": "PayCats (Venmo/Paypal Clone)",
     "type": "Solo-Project",
-    "description": "PayCats is a Venmo/Paypal clone with a database of cat users you can securely sign up, pay and request money from. Like Venmo, you can track your balance, make requests to users, and interact with the history of transactions. Each cat user has a different personality with unique possibilities of responses and comments to your requests!",
+    "description": "A Venmo/Paypal clone with a database of cat users you can securely sign up, pay and request money from. Like Venmo, you can track your balance, make requests to users, and interact with the history of transactions. Each cat user has a different personality with unique possibilities of responses and comments to your requests!",
     "builtWith": ["TypeScript", "React", "Tailwind CSS", "NextJS", "Firestore database", "Firebase user authentication"],
     "projectLink": "https://paycats.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/paycats",
@@ -10,6 +11,7 @@
     "img": "/paycats-preview.jpg"
   },
   {
+    "id": 1,
     "title": "Ecommerce Paintings",
     "type": "Solo-Project",
     "description": "An eCommerce platform pulling products from an API with features such as a database of dynamically updating products, cart functionality, and email user authentication.",
@@ -20,6 +22,7 @@
     "img": "/ecommerce-preview.jpg"
   },
   {
+    "id": 2,
     "title": "3D Spheres Scrolling Animation",
     "type": "Solo-Project",
     "description": "A 3D environment scrolling animation using a mars-themed sky texture and rotating reflective spheres, made using Three.js and WebGL.",
@@ -30,6 +33,7 @@
     "img": "/spheres-preview.jpg"
   },
   {
+    "id": 3,
     "title": "Quizzical Trivia Game",
     "type": "Solo-Project",
     "description": "A trivia question game with multiple categories and difficulties, this React app fetches data from the Open Trivia Database API. This project started out as a part of the Scrimba Front-End Developer Career Path but was fleshed out more on its own.",
@@ -40,6 +44,7 @@
     "img": "/quizzical-preview.jpg"
   },
   {
+    "id": 4,
     "title": "Ricochet Productions Website",
     "type": "Freelance (in development)",
     "description": "A freelance one-pager website currently in development for the company Ricochet Productions.",
@@ -50,6 +55,7 @@
     "img": "/ricochet-productions-preview.jpg"
   },
   {
+    "id": 5,
     "title": "Martini Shot Podcast Website",
     "type": "Freelance",
     "description": "A website for the podcast Martini Shot with writer and TV producer Rob Long (Cheers, Sullivan & Son). This was one of my first website projects and was built using Wordpress, HTML, and CSS. In addition to managing the website, I am also the audio producer/editor and designed the Martini Shot logo.",
