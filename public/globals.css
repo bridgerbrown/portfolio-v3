@@ -7,16 +7,7 @@ html {
 }
 
 input[type="radio"] {
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 0px;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
-  -webkit-appearance: none;
+  display: none;  
 }
 
 input[type="radio"]:after {

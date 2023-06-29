@@ -2,50 +2,48 @@ import Image from "next/image";
 import React from "react";
 
 function Project(props: any){
-  const buttonCSS: string = `rounded-sm hover:bg-gray-100 uppercase text-sm font-regular w-28 mr-6 
-                             text-black h-10 bg-gray-300`;
+  const buttonCSS: string = `flex justify-center items-center rounded-sm text-sm font-regular w-20 mr-6 hover:text-black h-10 bg-gray-300 text-black hover:bg-gray-400 hover:border-none border border-white-1 hover:text-white`;
+  const { project } = props; 
 
   return (
-    <div className="mb-4 flex"> 
+    <div className="flex flex-col"> 
       <div className="
-        hover:scale-102 transition hover:opacity-100 opacity-80  cursor-pointer 
+        transition cursor-pointer 
         w-full h-[275px] border-white-1 
-        flex items-start 
+        flex items-start mb-4
         ">
         <div className="rounded-sm w-1/3 min-w-[300px] max-w-sm bg-white">
           <Image
-            src={"/ecommerce-preview.jpg"}
+            src={project.img}
             alt="Project image"
             width={1280}
             height={960}
-            className=""
+            className="w-full"
           />
         </div>
-        <div className="h-full w-2/3 xl:max-w-[800px] ml-8 text-white flex flex-col justify-between">
+        <div className="h-full w-[66%] ml-8 text-white flex flex-col justify-between">
           <div>
             <h2 className="text-3xl tracking-wide font-light">
-              PayCats (Venmo/Paypal clone)
+              {project.title}
             </h2>
-            <h3 className="mb-4 text-md font-light">
-              January 2023  
+            <h3 className="mb-4 text-md font-light uppercase opacity-80">
+              {project.type}
             </h3>
             <p className="text-white text-md font-extralight">
-              Description text, description text, description text, description text, description text, description text, 
-              Description text, description text, description text, description text, description text, description text, 
-              Description text, description text, description text, description text, description text, description text, 
-              Description text, description text, description text, description text, description text, description text, 
+              {project.description}
             </p>
           </div>
           <div className="justify-end items-end flex">
-            <button className={buttonCSS}>
+            <a className={buttonCSS}>
               View
-            </button>
-            <button className={buttonCSS}>
+            </a>
+            <a className={buttonCSS}>
               Github 
-            </button>
+            </a>
           </div>
         </div>
       </div>
+      <span className="my-12 w-[80vw] max-w-[1500px] h-[1px] bg-white opacity-20"></span>
     </div>
   )
 }
