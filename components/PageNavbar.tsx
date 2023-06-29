@@ -19,11 +19,11 @@ function PageNavbar() {
         <Link href="/projects" className={router.pathname === `/work` ? activeLinkCss : linkCss}>
           Projects 
         </Link>
-        <Link href="/blog" className={router.pathname === `/blog` ? activeLinkCss : linkCss}>
-          Blog
+        <Link href="/about" className={router.pathname === `/blog` ? activeLinkCss : linkCss}>
+          About 
         </Link>
-        <Link href="/about" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
-          About
+        <Link href="/contact" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
+          Contact 
         </Link>
       </ul>
     </nav>

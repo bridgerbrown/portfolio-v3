@@ -1,5 +1,4 @@
 import AnimatedPage from '@/components/AnimatedPage';
-import Navbar from '@/components/navbar';
 import React, { useState } from 'react';
 import PageNavbar from '@/components/PageNavbar';
 import Project from '@/components/Project';
@@ -16,7 +15,6 @@ function Projects(){
   const allProjects = projectsData.map((project) => <Project key={project.id} project={project} />);
   const soloProjects = projectsData.filter((project) => project.type == "Solo-Project").map((project) => <Project key={project.id} project={project} />)
   const workProjects = projectsData.filter((project) => project.type !== "Solo-Project").map((project) => <Project key={project.id} project={project} />)
-
 
   return (
     <div className='relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
@@ -91,20 +89,22 @@ function Projects(){
           </div>
           <main className='mb-72'>
             <div className='w-[80vw] max-w-[1500px] z-10 flex flex-col mt-[50px] justify-center items-center'>
-              {
-                projectsData ?
-                  category == 'all' ?
-                    allProjects
-                    :
-                    category == 'solo-projects' ?
-                      soloProjects
+                {
+                  projectsData ? 
+                    category == 'all' ?
+                      allProjects
                       :
-                      workProjects
-                :
-                <div className='text-center absolute top-[50vh]'>
-                  <h2 className='text-white text-2xl font-thin tracking-widest animate-pulse'>Loading...</h2>
-                </div>
-              } 
+                      category == 'solo-projects' ?
+                        soloProjects
+                        :
+                        workProjects
+                  :
+                  <div className='top-[50vh] text-center flex'>
+                    <h2 className='font-light text-2xl'>
+                      Loading...
+                    </h2>
+                  </div>
+                }
             </div>
           </main>
         <Footer />

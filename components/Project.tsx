@@ -8,11 +8,7 @@ function Project(props: any){
 
   return (
     <div className="flex flex-col"> 
-      <div className="
-        transition 
-        w-full h-[275px] border-white-1 
-        flex items-start mb-4
-        ">
+      <div className="w-full h-[275px] border-white-1 flex items-start mb-4">
         <div className="rounded-sm w-1/3 min-w-[300px] max-w-sm bg-white">
           <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
             <Image

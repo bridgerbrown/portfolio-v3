@@ -20,11 +20,11 @@ function Navbar() {
         <Link href="/projects" className={router.pathname === `/work` ? activeLinkCss : linkCss}>
           Projects  
         </Link>
-        <Link href="/work" className={router.pathname === `/blog` ? activeLinkCss : linkCss}>
-          Blog
-        </Link>
         <Link href="/about" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
           About
+        </Link>
+        <Link href="/contact" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
+          Contact 
         </Link>
       </ul>
     </nav>
