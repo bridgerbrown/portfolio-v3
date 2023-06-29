@@ -4,6 +4,7 @@ import React from "react";
 function Project(props: any){
   const buttonCSS: string = `flex justify-center items-center rounded-sm text-sm font-regular w-20 mr-6 hover:text-black h-10 bg-gray-300 text-black hover:bg-gray-400 hover:border-none border border-white-1 hover:text-white`;
   const { project } = props; 
+  const builtWith = project.builtWith;
 
   return (
     <div className="flex flex-col"> 
@@ -32,12 +33,16 @@ function Project(props: any){
             <p className="text-white text-md font-extralight">
               {project.description}
             </p>
+            <br/>
+            <p className="font-extralight">
+              Built with {builtWith.map((item: string) => item !== builtWith[builtWith.length - 1] ? <span> <span className="font-light border-b border-white-1">{item}</span>,</span> : <span> and <span className="font-light border-b border-white-1">{item}</span>.</span>)}
+            </p>
           </div>
           <div className="justify-end items-end flex">
-            <a className={buttonCSS}>
+            <a className={buttonCSS} href={project.projectLink} target="_blank" rel="noopener noreferrer">
               View
             </a>
-            <a className={buttonCSS}>
+            <a className={buttonCSS} href={project.githubLink} target="_blank" rel="noopener noreferrer">
               Github 
             </a>
           </div>
