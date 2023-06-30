@@ -4,6 +4,7 @@ import PageNavbar from '@/components/PageNavbar';
 import Project from '@/components/Project';
 import Footer from '@/components/Footer';
 import projectsData from '@/data/projectsData.json';
+import PageHeader from '@/components/PageHeader';
 
 function Projects(){
   const inputCSS: string = ``;
@@ -19,22 +20,7 @@ function Projects(){
   return (
     <div className='relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
       <AnimatedPage>
-          <header className='flex justify-center w-full mt-[60px] mb-[12px]'>
-            <div className='w-[80vw] max-w-[1500px]'>
-              <div className='mb-2 flex justify-between items-end'>
-                <h1 className='text-8xl font-thin text-white uppercase'>
-                 Projects 
-                </h1>
-                <PageNavbar />
-              </div>
-              <div className="">
-                <div className="w-[100%] h-[1px] bg-white opacity-50"></div>
-              </div>
-            </div>
-          </header>
-          
-          
-
+        <PageHeader pageTitle={"Projects"} />
           <div className='flex justify-center items-center text-white font-light'>
             <div className='w-[80vw] max-w-[1500px]'>
               <input 
@@ -57,56 +43,56 @@ function Projects(){
                   type="radio" 
                   id="solo-projects" 
                   name="categories" 
-                  value="solo-projects"
-                  className={inputCSS}
-                  checked={category === 'solo-projects'}
-                  onClick={() => setCategory('solo-projects')}
-                  readOnly
-                />
-                  <label 
-                    htmlFor="solo-projects"
-                    className={category === "solo-projects" ? checkedLabelCSS : labelCSS}
-                  >
-                    Solo-Projects
-                  </label>
-                <input 
-                  type="radio" 
-                  id="work" 
-                  name="categories" 
-                  value="work"
-                  className={inputCSS}
-                  checked={category === 'work'}
-                  onClick={() => setCategory('work')}
-                  readOnly
-                />
-                  <label 
-                    htmlFor="work"
-                    className={category === "work" ? checkedLabelCSS : labelCSS}
-                  >
-                    Work 
-                  </label>
-              </div>
-          </div>
-          <main className='mb-72'>
-            <div className='w-[80vw] max-w-[1500px] z-10 flex flex-col mt-[50px] justify-center items-center'>
-                {
-                  projectsData ? 
-                    category == 'all' ?
-                      allProjects
-                      :
-                      category == 'solo-projects' ?
-                        soloProjects
-                        :
-                        workProjects
-                  :
-                  <div className='top-[50vh] text-center flex'>
-                    <h2 className='font-light text-2xl'>
-                      Loading...
-                    </h2>
-                  </div>
-                }
+                value="solo-projects"
+                className={inputCSS}
+                checked={category === 'solo-projects'}
+                onClick={() => setCategory('solo-projects')}
+                readOnly
+              />
+                <label 
+                  htmlFor="solo-projects"
+                  className={category === "solo-projects" ? checkedLabelCSS : labelCSS}
+                >
+                  Solo-Projects
+                </label>
+              <input 
+                type="radio" 
+                id="work" 
+                name="categories" 
+                value="work"
+                className={inputCSS}
+                checked={category === 'work'}
+                onClick={() => setCategory('work')}
+                readOnly
+              />
+                <label 
+                  htmlFor="work"
+                  className={category === "work" ? checkedLabelCSS : labelCSS}
+                >
+                  Work 
+                </label>
             </div>
-          </main>
+        </div>
+        <main className='mb-72'>
+          <div className='w-[80vw] max-w-[1500px] z-10 flex flex-col mt-[50px] justify-center items-center'>
+              {
+                projectsData ? 
+                  category == 'all' ?
+                    allProjects
+                    :
+                    category == 'solo-projects' ?
+                      soloProjects
+                      :
+                      workProjects
+                :
+                <div className='top-[50vh] text-center flex'>
+                  <h2 className='font-light text-2xl'>
+                    Loading...
+                  </h2>
+                </div>
+              }
+          </div>
+        </main>
         <Footer />
       </AnimatedPage>
     </div>

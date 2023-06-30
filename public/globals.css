@@ -30,4 +30,8 @@ label {
   cursor: pointer;
 }
 
-
+.skillIcon {
+  font-size: 3rem;
+  color: white;
+  opacity: 0.9;
+}
