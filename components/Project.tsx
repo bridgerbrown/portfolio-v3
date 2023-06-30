@@ -7,8 +7,8 @@ function Project(props: any){
   const builtWith = project.builtWith;
 
   return (
-    <div className="max-w-[1300px] flex flex-col"> 
-      <div className="w-full h-[275px] border-white-1 flex items-start mb-4">
+    <section className="max-w-[1300px] flex flex-col"> 
+      <div className="cursor-pointer opacity-90 transition hover:opacity-100 hover:scale-102 w-full h-[275px] border-white-1 flex items-start mb-4">
         <div className="rounded-sm w-1/3 min-w-[300px] max-w-sm bg-white">
           <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
             <Image
@@ -54,7 +54,7 @@ function Project(props: any){
         </div>
       </div>
       <span className="my-12 w-[80vw] max-w-[1300px] h-[1px] bg-white opacity-20"></span>
-    </div>
+    </section>
   )
 }
 
