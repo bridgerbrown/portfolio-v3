@@ -7,7 +7,7 @@ function Project(props: any){
   const builtWith = project.builtWith;
 
   return (
-    <div className="flex flex-col"> 
+    <div className="max-w-[1300px] flex flex-col"> 
       <div className="w-full h-[275px] border-white-1 flex items-start mb-4">
         <div className="rounded-sm w-1/3 min-w-[300px] max-w-sm bg-white">
           <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
@@ -53,7 +53,7 @@ function Project(props: any){
           </div>
         </div>
       </div>
-      <span className="my-12 w-[80vw] max-w-[1500px] h-[1px] bg-white opacity-20"></span>
+      <span className="my-12 w-[80vw] max-w-[1300px] h-[1px] bg-white opacity-20"></span>
     </div>
   )
 }

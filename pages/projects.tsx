@@ -22,7 +22,7 @@ function Projects(){
       <AnimatedPage>
         <PageHeader pageTitle={"Projects"} />
           <div className='flex justify-center items-center text-white font-light'>
-            <div className='w-[80vw] max-w-[1500px]'>
+            <div className='w-[80vw] max-w-[1300px]'>
               <input 
                 type="radio" 
                   id="all" 
@@ -74,7 +74,7 @@ function Projects(){
             </div>
         </div>
         <main className='mb-72'>
-          <div className='w-[80vw] max-w-[1500px] z-10 flex flex-col mt-[50px] justify-center items-center'>
+          <div className='w-[80vw] max-w-[1300px] z-10 flex flex-col mt-[50px] justify-center items-center'>
               {
                 projectsData ? 
                   category == 'all' ?

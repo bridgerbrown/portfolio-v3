@@ -6,7 +6,7 @@ function PageHeader(props: any){
 
   return (
     <header className='flex justify-center w-full mt-[60px] mb-[12px]'>
-      <div className='w-[80vw] max-w-[1500px]'>
+      <div className='w-[80vw] max-w-[1300px]'>
         <div className='mb-2 flex justify-between items-end'>
           <h1 className='text-8xl font-thin text-white uppercase'>
             {pageTitle}
