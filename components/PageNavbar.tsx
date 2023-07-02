@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 function PageNavbar() {
-  const activeLinkCss: string = `opacity-100 text-md uppercase hover:opacity-100 transition-opacity font-extralight cursor-pointer `;
-  const linkCss: string = `text-md uppercase hover:opacity-100 opacity-60 transition-opacity font-extralight cursor-pointer `;
+  const activeLinkCss: string = `border-b border-white-1 opacity-100 text-md uppercase hover:opacity-100 transition-opacity font-extralight cursor-pointer `;
+  const linkCss: string = `hover:border-b border-white-1 text-md uppercase hover:opacity-100 opacity-60 transition-opacity font-extralight cursor-pointer `;
   const navCss: string = `space-x-4 flex list-none`;
   const router = useRouter();
   
