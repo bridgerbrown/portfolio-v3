@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 function Project(props: any){
-  const buttonCSS: string = `flex justify-center items-center rounded-sm text-sm font-regular w-20 mr-6 hover:text-black h-10 bg-gray-300 text-black hover:bg-gray-400 hover:border-none border border-white-1 hover:text-white`;
+  const buttonCSS: string = `flex justify-center items-center rounded-sm text-sm font-regular w-20 mr-6 hover:text-black h-10 bg-gray-300 text-black hover:bg-gray-400 hover:border-none border border-white-1 hover:text-white transition-colors`;
   const { project } = props; 
   const builtWith = project.builtWith;
 

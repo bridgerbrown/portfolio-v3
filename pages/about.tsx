@@ -156,7 +156,7 @@ function About(){
 
                   <div className='w-full mt-6 flex justify-start'>
                     <Link href="/contact">
-                      <button className='font-light text-md w-28 h-14 rounded-sm bg-gray-300 text-black'>
+                      <button className='hover:bg-gray-400 hover:text-white transition-colors font-regular text-sm w-24 h-12 rounded-sm bg-gray-300 text-black'>
                         Resume
                       </button>
                     </Link>
