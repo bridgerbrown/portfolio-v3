@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 
 function About(){
   const socialIconCss: string = `w-8 opacity-90 h-fit invert mb-1`;
-  const skillCss: string = `mb-2 space-y-1 font-extralight text-sm tracking-widest text-white flex justify-start items-center `;
+  const skillCss: string = `font-extralight text-sm tracking-widest text-white`;
 
   return (
     <div className='relative min-h-screen w-full bg-nearBlack'>
@@ -86,16 +86,13 @@ function About(){
 
         <section className='mt-[100px] flex flex-col justify-center items-center'>
           <div className='max-w-[1300px] w-[80vw] flex'>
-            <div className='w-2/3 text-white mr-12 flex-col'>
+            <div className='w-full justify-start text-white flex flex-col'>
+              
               <div className='pt-4'>
-                <h4 className='mb-6 uppercase border-b border-white-1 w-fit tracking-wider text-white font-extralight text-2xl'>
+                <h4 className='text-xl mb-6 uppercase border-b border-white-1 w-fit tracking-wider text-white font-extralight'>
                   Education 
                 </h4>
                 <ul className='space-y-3 list-inside list-disc font-medium'>
-                  <li>
-                    Berklee College of Music - 
-                    <span className='font-extralight'> Bachelors in Performance</span>
-                  </li>
                   <li>
                     Scrimba Bootcamp -
                     <span className='font-extralight'> Frontend Developer Career Path</span>
@@ -108,103 +105,113 @@ function About(){
                     School of Motion -
                     <span className='font-extralight'> Design Kickstart, PS + AI Unleashed</span>
                   </li>
-                </ul>
-              </div>
-            <div className='mt-16'>
-              <h4 className='mb-9 uppercase border-b border-white-1 w-fit tracking-wider text-white font-extralight text-2xl'>
-                Skills  
-              </h4>
-            </div>
-            <div className='mx-8 flex justify-between'>
-              <ul className="space-y-6">
-                <li className={skillCss}>          
-                    <i className="devicon-javascript-plain skillIcon"></i>
-                    <p>JAVASCRIPT</p>
-                </li>
-                <li className={skillCss}>       
-                    <i className="devicon-typescript-original skillIcon"></i>
-                    <p>TYPESCRIPT</p>
-                </li>
-                <li className={skillCss}>     
-                    <i className="devicon-react-original skillIcon"></i>
-                    <p>REACT</p>
-                </li>
-                <li className={skillCss}>       
-                    <i className="devicon-python-plain skillIcon"></i>
-                    <p>PYTHON</p>
-                </li>
-                <li className={skillCss}>       
-                    <i className="devicon-nextjs-original skillIcon"></i>
-                    <p>NEXT.JS</p>
-                </li>
-                <li className={skillCss}>
-                    <i className="devicon-html5-plain skillIcon"></i>
-                    <p>HTML</p>
-                </li>
-              </ul>
-              <ul className="space-y-6">
-                <li className={skillCss}>          
-                    <i className="devicon-javascript-plain skillIcon"></i>
-                    <p>JAVASCRIPT</p>
-                </li>
-                <li className={skillCss}>       
-                    <i className="devicon-typescript-original skillIcon"></i>
-                    <p>TYPESCRIPT</p>
-                </li>
-                <li className={skillCss}>     
-                    <i className="devicon-react-original skillIcon"></i>
-                    <p>REACT</p>
-                </li>
-                <li className={skillCss}>       
-                    <i className="devicon-python-plain skillIcon"></i>
-                    <p>PYTHON</p>
-                </li>
-                <li className={skillCss}>       
-                    <i className="devicon-nextjs-original skillIcon"></i>
-                    <p>NEXT.JS</p>
-                </li>
-                <li className={skillCss}>
-                    <i className="devicon-html5-plain skillIcon"></i>
-                    <p>HTML</p>
-                </li>
-              </ul>
-              <ul className='space-y-6'>
-                <li className={skillCss}>       
-                    <i className="devicon-jest-plain skillIcon"></i>
-                    <p>JEST</p>
-                </li>
-                <li className={skillCss}>       
-                    <i className="devicon-mongodb-plain skillIcon"></i>
-                      <p>MONGODB</p>
-                  </li>
-                  <li className={skillCss}>       
-                      <i className="devicon-photoshop-plain skillIcon"></i>
-                      <p>PHOTOSHOP</p>
-                  </li>
-                  <li className={skillCss}>       
-                      <i className="devicon-illustrator-plain skillIcon"></i>
-                      <p>ILLUSTRATOR</p>
-                  </li>
-                  <li className={skillCss}>       
-                      <i className="devicon-tailwindcss-plain skillIcon"></i>
-                      <p>TAILWIND CSS</p>
-                  </li>
-                  <li className={skillCss}>       
-                      <i className="devicon-mongodb-plain skillIcon"></i>
-                      <p>MONGODB</p>
+                  <li>
+                    Berklee College of Music - 
+                    <span className='font-extralight'> Bachelors in Performance</span>
                   </li>
                 </ul>
               </div>
+
+              <div className='mt-16 w-full pr-20 flex flex-col'>
+                <h4 className='text-xl mb-9 uppercase border-b border-white-1 w-fit tracking-wider text-white font-extralight'>
+                  Skills  
+                </h4>
+                <div className='flex justify-between'>
+                  <ul className="space-y-16">
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-javascript-plain skillIcon"></i>
+                        <p className='relative top-1'>JAVASCRIPT</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-html5-plain skillIcon"></i>
+                        <p className='relative top-1'>HTML</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-jest-plain skillIcon"></i>
+                        <p className='relative top-1'>JEST</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul className="space-y-16">
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-react-original skillIcon"></i>
+                        <p className='relative top-1'>REACT</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-css3-plain skillIcon"></i>
+                        <p className='relative top-1'>CSS</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-mongodb-plain skillIcon"></i>
+                        <p className='relative top-1'>MONGODB</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul className="space-y-16">
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-typescript-original skillIcon"></i>
+                        <p className='relative top-1'>TYPESCRIPT</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-nextjs-original skillIcon"></i>
+                        <p className='relative top-1'>NEXTJS</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-photoshop-plain skillIcon"></i>
+                        <p className='relative top-1'>PHOTOSHOP</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul className="space-y-16">
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-python-plain skillIcon"></i>
+                        <p className='relative top-1'>PYTHON</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-tailwindcss-plain skillIcon"></i>
+                        <p className='relative top-1'>TAILWIND</p>
+                      </div>
+                    </li>
+                    <li className={skillCss}>
+                      <div className='flex justify-start items-center'>
+                        <i className="relative top-1 devicon-illustrator-plain skillIcon"></i>
+                        <p className='relative top-1'>ILLUSTRATOR</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className='cursor-pointer flex justify-start'>
-              <Image
-                src={"/b-tetono.jpg"}
-                width={1500}
-                height={1500}
-                alt='Portrait of Bridger Brown'
-                className='w-[600px] bg-white h-[700px] rounded-sm'
-              />
-            </div>
+              <div className='flex justify-end'>
+                <Image
+                  src={"/nvim-code.jpg"}
+                  width={1500}
+                  height={1500}
+                  alt='Portrait of Bridger Brown'
+                  className='w-[1000px] h-[800px] object-cover rounded-sm'
+                />
+              </div>
           </div>
         </section>
 
@@ -213,6 +220,7 @@ function About(){
             <h4 className='tracking-wider text-white uppercase font-extralight text-2xl mb-6'>
             </h4>
           </div>
+
           <p>
 
           </p>

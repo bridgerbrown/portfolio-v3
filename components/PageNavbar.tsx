@@ -16,7 +16,7 @@ function PageNavbar() {
         >
           Home 
         </Link>
-        <Link href="/projects" className={router.pathname === `/work` ? activeLinkCss : linkCss}>
+        <Link href="/projects" className={router.pathname === `/projects` ? activeLinkCss : linkCss}>
           Projects 
         </Link>
         <Link href="/about" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
