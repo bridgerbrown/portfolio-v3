@@ -38,15 +38,17 @@ function Home() {
             <div className="w-[1px] h-[100%] right-0 top-0 absolute bg-white opacity-50"></div>
           </div>
 
-          <div className="pt-10 pr-12 w-full z-10 flex justify-end">
-              <Navbar />
+          <div className="pt-16 pr-24 w-full z-10 flex justify-end">
+            <Navbar />
           </div>
-
-          <div ref={observe} className="absolute top-0 left-0 w-screen min-h-screen z-50">
-            <Surface width={width} height={height}>
-              <Shader time={time} n={n} />
-            </Surface>
-          </div>
+          
+          <section className="absolute top-shaderBox left-shaderBox right-shaderBox flex justify-center items-center">
+            <div ref={observe} className="w-full h-[84.5vh] z-50">
+              <Surface width={width} height={height}>
+                <Shader time={time} n={n} />
+              </Surface>
+            </div>
+          </section>
 
           <header className="absolute bottom-[20px] w-fit z-10 pl-24 pr-2 pb-4 flex items-end justify-start">
             <h1 className="transition-all cursor-pointer text-5xl font-thin text-white">
