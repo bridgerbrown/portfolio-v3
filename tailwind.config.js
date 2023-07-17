@@ -19,8 +19,10 @@ module.exports = {
         'nearBlack': '#0b0b0b'
       },
       spacing: {
-        homeBoxPosition: 'max(125px, 2.5vmin)',
-        shaderBox: 'max(127px, 2.5vmin)',
+        homeBoxY: 'max(125px, 2.5vmin)',
+        homeBoxX: 'max(75px, 2.5vmin)',
+        shaderBoxY: 'max(127px, 2.5vmin)',
+        shaderBoxX: 'max(76px, 2.5vmin)',
 
         pageBoxTop: 'max(20px, 13vmin)',
         pageBoxRight: 'max(20px, 12vmin)',

@@ -31,18 +31,18 @@ function Home() {
         >
           <Head>Bridger Brown Dev</Head>
 
-          <div className="fixed z-10 left-homeBoxPosition right-homeBoxPosition top-homeBoxPosition bottom-homeBoxPosition">
+          <div className="fixed z-10 left-homeBoxX right-homeBoxX top-homeBoxY bottom-homeBoxY">
             <div className="w-[100%] h-[1px] left-0 top-0 absolute bg-white opacity-50"></div>
             <div className="w-[1px] h-[100%] left-0 top-0 absolute bg-white opacity-50"></div>
             <div className="w-[100%] h-[1px] left-0 bottom-0 absolute bg-white opacity-50"></div>
             <div className="w-[1px] h-[100%] right-0 top-0 absolute bg-white opacity-50"></div>
           </div>
 
-          <div className="pt-[94px] pr-32 w-full z-10 flex justify-end">
+          <div className="pt-[94px] pr-20 w-full z-10 flex justify-end">
             <Navbar />
           </div>
           
-          <section className="absolute top-shaderBox left-shaderBox right-shaderBox bottom-shaderBox flex justify-center items-center">
+          <section className="absolute top-shaderBoxY left-shaderBoxX right-shaderBoxX bottom-shaderBoxY flex justify-center items-center">
             <div ref={observe} className="w-full h-[79.75vh] z-50">
               <Surface width={width} height={height}>
                 <Shader time={time} n={n} />
@@ -50,7 +50,7 @@ function Home() {
             </div>
           </section>
 
-          <header className="absolute bottom-[10px] w-fit z-10 pl-[122px] pr-2 pb-4 flex items-end justify-start">
+          <header className="absolute bottom-[10px] w-fit z-10 pl-[73px] pr-2 pb-4 flex items-end justify-start">
             <h1 className="transition-all cursor-pointer text-8xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
