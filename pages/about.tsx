@@ -31,17 +31,13 @@ function About(){
                 Bridger Brown
               </h2>
               <p className='text-md font-extralight'>
-                Hello, my name is Bridger Brown and I am a Frontend Developer based out of Portland, Oregon.
-                I am a creative devloper who is always trying to improve my craft by learning new technologies and building new projects. Websites are an interactive art form and I am passionate about creating that functional experience with a designers eye.
-                <br/>
-                <br/>
-                I attended the Scrimba Front-End Developer Bootcamp, multiple School of Motion design courses, and am a graduate of Berklee College of Music with a Bachelors in Performance.
-
-                <br/>
-                <br/>
-                I am also very passionate about music, mindfulness, and keyboards.
-                Hello, my name is Bridger Brown and I am a Frontend Developer based out of Portland, Oregon.
-                I am a creative devloper who is always trying to improve my craft by learning new technologies and building new projects. Websites are an interactive art form and I am passionate about creating that functional experience with a designers eye.
+                Hello! My name is Bridger Brown, and I am a passionate Front-End Developer based out of Portland, Oregon. With a deep love for the craft of programming, I bring curiousity and dedication to every project I’m on. I have a strong background in web development and a keen eye for design, specializing in the creation of immersive and intuitive user experiences. 
+               <br/>
+               <br/>
+                My journey in web development began a couple years ago when I discovered my love for crafting pixel-perfect interfaces that blend aesthetics with functionality and efficiency. Since then, I have honed my skills in technologies such as JavaScript, React, TypeScript, and Python, always seeking to expand my knowledge in any way I can.
+               <br/>
+               <br/>
+                I am excited about the opportunity to work on challenging projects, pushing boundaries and exploring new frontiers in web development. If you're looking for a dedicated and skilled developer to bring your ideas to reality, I would love to connect with you.
               </p>
               <br/>
 
@@ -163,15 +159,8 @@ function About(){
                   </div>
 
                   <div className='mt-20'>
-                    <h3 className='italic mb-8 text-white font-thin text-3xl w-fit'>
-                      "Quote about some crazy stuff lol and this that"
-                    </h3>
                     <p className='text-md font-extralight'>
-                      Hello, my name is Bridger Brown and I am a Frontend Developer based out of Portland, Oregon.
-                      I am a creative devloper who is always trying to improve my craft by learning new technologies and building new projects. Websites are an interactive art form and I am passionate about creating that functional experience with a designers eye.
-                      <br/>
-                      <br/>
-                      I attended the Scrimba Front-End Developer Bootcamp, multiple School of Motion design courses, and am a graduate of Berklee College of Music with a Bachelors in Performance.
+                      In addition to programming, I am also passionate about music, guitar, coffee, mindfulness, gaming, and split-keyboards!
                     </p>
                   </div>
                 </div>

@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 
 function Contact(){
-  const socialIconCss: string = `w-8 opacity-90 hover:opacity-70 h-fit invert mb-1`;
+  const socialIconCss: string = `w-8 transition-opacity opacity-90 hover:opacity-60 h-fit invert mb-1`;
   const skillCss: string = `mb-10 font-extralight text-sm tracking-widest text-white`;
 
   function copyContact(): void{
@@ -28,22 +28,6 @@ function Contact(){
                 I am currently available for work. Feel free to reach out with any inquiries.
             </p>
             <div className='items-center justify-end flex'>
-               <div className='cursor-pointer mr-10'>
-                <a href='https://www.linkedin.com/in/bridger-brown/' target="_blank" rel="noopener noreferrer"
-                   className='flex flex-col justify-center items-center'
-                >
-                <Image
-                  src={"/linkedin-logo.png"}
-                  alt="LinkedIn link"
-                  width={192}
-                  height={192}
-                  className={socialIconCss}
-                />
-                <p className='text-sm font-extralight text-white'>
-                    LinkedIn 
-                  </p>
-                </a>
-              </div>
               <div className='cursor-pointer mr-10 flex flex-col justify-center items-center'>
                 <a href='https://github.com/bridgerbrown' target="_blank" rel="noopener noreferrer"
                    className='flex flex-col justify-center items-center'
@@ -58,6 +42,22 @@ function Contact(){
                 <p className='text-sm font-extralight text-white'>
                   Github
                 </p>
+                </a>
+              </div>
+               <div className='cursor-pointer mr-10'>
+                <a href='https://www.linkedin.com/in/bridger-brown/' target="_blank" rel="noopener noreferrer"
+                   className='flex flex-col justify-center items-center'
+                >
+                <Image
+                  src={"/linkedin-logo.png"}
+                  alt="LinkedIn link"
+                  width={192}
+                  height={192}
+                  className={socialIconCss}
+                />
+                <p className='text-sm font-extralight text-white'>
+                    LinkedIn 
+                  </p>
                 </a>
               </div>
               <div className='cursor-pointer mr-4 flex flex-col justify-center items-center'>
