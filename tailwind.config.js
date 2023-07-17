@@ -19,7 +19,7 @@ module.exports = {
         'nearBlack': '#0b0b0b'
       },
       spacing: {
-        homeBoxPosition: 'max(20px, 2.5vmin)',
+        homeBoxPosition: 'max(95px, 2.5vmin)',
 
         pageBoxTop: 'max(20px, 13vmin)',
         pageBoxRight: 'max(20px, 12vmin)',

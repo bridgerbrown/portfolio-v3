@@ -1,9 +1,27 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
-import AnimatedPage from "@/components/AnimatedPage"; 
+import AnimatedPage from "@/components/AnimatedPage";
+import { Surface } from "gl-react-dom";
+import { Shader } from "../components/Shader";
+import useDimensions from "react-cool-dimensions";
 
 function Home() {
+  const { observe, width, height } = useDimensions({});
+  const [n, setN] = useState(0);
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    let startT: any;
+    let h: any;
+    function loop(t: any) {
+      h = requestAnimationFrame(loop);
+      if (!startT) startT = t;
+      setTime((t - startT) / 1000);
+    }
+    h = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(h);
+  }, [n]);
 
   return (
     <div className="bg-nearBlack fixed overflow-hidden left-0 top-0 min-h-screen w-full">
@@ -24,8 +42,14 @@ function Home() {
               <Navbar />
           </div>
 
-          <header className="absolute bottom-homeBoxPosition w-fit z-10 pl-12 pr-2 pb-4 flex items-end justify-start">
-            <h1 className="transition-all cursor-pointer text-8xl font-thin text-white">
+          <div ref={observe} className="absolute top-0 left-0 w-screen min-h-screen z-50">
+            <Surface width={width} height={height}>
+              <Shader time={time} n={n} />
+            </Surface>
+          </div>
+
+          <header className="absolute bottom-[20px] w-fit z-10 pl-24 pr-2 pb-4 flex items-end justify-start">
+            <h1 className="transition-all cursor-pointer text-5xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
             <h2 className="cursor-pointer tracking-wide pl-4 text-2xl font-thin text-white">
