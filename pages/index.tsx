@@ -38,20 +38,20 @@ function Home() {
             <div className="w-[1px] h-[100%] right-0 top-0 absolute bg-white opacity-50"></div>
           </div>
 
-          <div className="pt-16 pr-24 w-full z-10 flex justify-end">
+          <div className="pt-[94px] pr-32 w-full z-10 flex justify-end">
             <Navbar />
           </div>
           
-          <section className="absolute top-shaderBox left-shaderBox right-shaderBox flex justify-center items-center">
-            <div ref={observe} className="w-full h-[84.5vh] z-50">
+          <section className="absolute top-shaderBox left-shaderBox right-shaderBox bottom-shaderBox flex justify-center items-center">
+            <div ref={observe} className="w-full h-[79.75vh] z-50">
               <Surface width={width} height={height}>
                 <Shader time={time} n={n} />
               </Surface>
             </div>
           </section>
 
-          <header className="absolute bottom-[20px] w-fit z-10 pl-24 pr-2 pb-4 flex items-end justify-start">
-            <h1 className="transition-all cursor-pointer text-5xl font-thin text-white">
+          <header className="absolute bottom-[10px] w-fit z-10 pl-[122px] pr-2 pb-4 flex items-end justify-start">
+            <h1 className="transition-all cursor-pointer text-8xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
             <h2 className="cursor-pointer tracking-wide pl-4 text-2xl font-thin text-white">
