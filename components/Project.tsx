@@ -7,9 +7,9 @@ function Project(props: any){
   const builtWith = project.builtWith;
 
   return (
-    <section className="max-w-[1300px] flex flex-col"> 
-      <div className="cursor-pointer opacity-90 transition hover:opacity-100 hover:scale-102 w-full sm:h-[275px] border-white-1 flex sm:flex-row flex-col items-center sm:items-start mb-4">
-        <div className="rounded-sm w-mobileWidth sm:w-1/3 min-w-[300px] max-w-none sm:max-w-sm bg-white">
+    <section className="w-full max-w-[1300px] flex flex-col"> 
+      <div className="cursor-pointer opacity-90 transition hover:opacity-100 hover:scale-102 w-full lg:h-fit xl:h-[275px] border-white-1 flex lg:flex-row flex-col items-center lg:items-start mb-4">
+        <div className="rounded-sm w-11/12 sm:w-2/3 lg:w-1/3 min-w-[300px] max-w-none lg:max-w-sm bg-white">
           <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
             <Image
               src={project.img}
@@ -21,7 +21,7 @@ function Project(props: any){
             />
           </a>
         </div>
-        <div className="h-full w-mobileWidth sm:w-[66%] ml-0 mt-4 sm:mt-0 sm:ml-8 text-white flex flex-col justify-between">
+        <div className="h-full w-mobileWidth sm:w-[80vw] lg:w-[66%] ml-0 mt-4 lg:mt-0 lg:ml-8 text-white flex flex-col justify-between">
           <div>
             <h2 className="text-2xl sm:text-3xl tracking-wide font-light">
               {project.title}
@@ -43,7 +43,7 @@ function Project(props: any){
                 )}
             </p>
           </div>
-          <div className="mt-8 sm:mt-0 justify-end items-end flex">
+          <div className="mt-8 sm:mt-6 xl:mt-0 justify-end items-end flex">
             <a className={buttonCSS} href={project.projectLink} target="_blank" rel="noopener noreferrer">
               View
             </a>
