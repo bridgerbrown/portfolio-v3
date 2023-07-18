@@ -19,10 +19,7 @@ module.exports = {
         'nearBlack': '#0b0b0b'
       },
       spacing: {
-        homeBoxY: 'max(125px, 2.5vmin)',
-        homeBoxX: 'max(75px, 2.5vmin)',
-        shaderBoxY: 'max(127px, 2.5vmin)',
-        shaderBoxX: 'max(76px, 2.5vmin)',
+        homeBoxPosition: 'max(20px, 2.5vmin)',
 
         pageBoxTop: 'max(20px, 13vmin)',
         pageBoxRight: 'max(20px, 12vmin)',
@@ -46,7 +43,10 @@ module.exports = {
       }, 
       scale: {
         '102': '1.02',
-      },     
+      },
+      width: {
+        mobileWidth: '93vw',
+      },
     },
   },
   plugins: [],

@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { useRouter, pathname } from "next/router";
 
-function Navbar() {
+function HomeNavbar() {
   const activeLinkCss: string = `opacity-100 text-md uppercase transition-opacity font-extralight cursor-pointer `;
-  const linkCss: string = `text-md uppercase cursor-pointer font-extralight hover:opacity-100 opacity-60 transition-opacity`;
+  const linkCss: string = `py-2 text-sm sm:text-base uppercase cursor-pointer font-extralight hover:opacity-100 opacity-60 transition-opacity`;
   const navCss: string = `space-x-4 flex list-none`;
   
   const router = useRouter();
@@ -31,4 +31,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default HomeNavbar;
