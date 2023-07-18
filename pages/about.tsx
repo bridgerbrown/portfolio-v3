@@ -7,14 +7,14 @@ import Link from 'next/link';
 
 function About(){
   const socialIconCss: string = `w-8 opacity-90 h-fit invert mb-1`;
-  const skillCss: string = `mb-10 font-extralight text-sm tracking-widest text-white`;
+  const skillCss: string = `mb-10 font-extralight sm:text-sm text-xs tracking-widest text-white`;
 
   return (
-    <div className='relative min-h-screen w-full bg-nearBlack'>
+    <div className='overflow-hidden relative min-h-screen w-full bg-nearBlack'>
       <AnimatedPage>
         <PageHeader pageTitle={"About"} />
         <section className='mt-[80px] flex justify-center items-center'>
-          <div className='max-w-[1300px] w-[80vw] flex justify-center'>
+          <div className='max-w-[1300px] w-mobileWidth sm:w-[80vw] flex sm:flex-row flex-col justify-center'>
             
             <div className='cursor-pointer flex justify-center'>
               <Image
@@ -22,11 +22,11 @@ function About(){
                 width={1500}
                 height={1500}
                 alt='Portrait of Bridger Brown'
-                className='w-[400px] h-min rounded-sm'
+                className='w-[350px] sm:w-[400px] h-min rounded-sm'
               />
             </div>
 
-            <section className='ml-12 max-w-[550px] text-white flex-col'>
+            <section className='ml-0 mt-8 sm:mt-0 sm:ml-12 max-w-[550px] text-white flex-col'>
               <h2 className='mb-5 text-white font-extralight text-6xl w-fit'>
                 Bridger Brown
               </h2>
@@ -73,7 +73,7 @@ function About(){
                       Skills 
                     </h4>
                     <div className='flex'>
-                      <ul className="grid grid-cols-3 w-[600px]">
+                      <ul className="grid grid-cols-3 w-mobileWidth sm:w-[600px]">
                         <li className={skillCss}>
                           <div className='flex justify-start items-center'>
                             <i className="relative top-1 devicon-javascript-plain skillIcon"></i>

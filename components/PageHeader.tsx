@@ -5,10 +5,10 @@ function PageHeader(props: any){
   const { pageTitle } = props;
 
   return (
-    <header className='flex justify-center w-screen mt-[60px] mb-1.5 sm:mb-[12px]'>
+    <header className='flex justify-center w-screen sm:mt-[60px] mt-[40px] mb-1.5 sm:mb-[12px]'>
       <div className='w-mobileWidth md:w-[80vw] max-w-[1300px]'>
         <div className='mb-0 lg:mb-1 flex justify-between items-end'>
-          <h1 className='mb-1.5 lg:mb-0 text-5xl sm:text-6xl lg:text-8xl font-thin text-white uppercase'>
+          <h1 className='mb-1.5 lg:mb-0 text-4xl sm:text-6xl lg:text-8xl font-thin text-white uppercase'>
             {pageTitle}
           </h1>
         <PageNavbar />

@@ -74,7 +74,7 @@ function Projects(){
             </div>
         </div>
         <main className='mb-72 flex items-center justify-center'>
-          <div className='w-[80vw] max-w-[1300px] z-10 flex flex-col mt-[50px] justify-center items-center'>
+          <div className='w-mobileWidth sm:w-[80vw] max-w-[1300px] z-10 flex flex-col mt-[50px] justify-center items-center'>
               {
                 projectsData ? 
                   category == 'all' ?
