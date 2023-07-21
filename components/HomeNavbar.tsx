@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter, pathname } from "next/router";
+import { useRouter } from "next/router";
 
 function HomeNavbar() {
   const activeLinkCss: string = `opacity-100 text-md uppercase transition-opacity font-extralight cursor-pointer `;
