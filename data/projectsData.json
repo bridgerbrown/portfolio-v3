@@ -1,6 +1,17 @@
 [
   {
     "id": 0,
+    "title": "DayNotes",
+    "type": "Solo-Project",
+    "description": "A date-based note taking platform with calendar integration that uses web sockets for seamless synchronization between browser tabs. Through Socket.io, the client-side website communicates with a server built with Node.js, Express, and HTTP to save notes made with the Quill.js text editor to a MongoDB database. Users sign in securely through Auth0's user authorization.",
+    "builtWith": ["React", "TypeScript", "Socket.io", "MongoDB", "Node.js", "Quill.js", "Auth0", "Date-fns", "TailwindCSS", "NextJS"],
+    "projectLink": "https://daynotes-client.vercel.app",
+    "githubLink": "https://github.com/bridgerbrown/daynotes",
+    "date": "July 2023",
+    "img": "/daynotes-preview.jpg"
+  },
+  {
+    "id": 1,
     "title": "PayCats (Venmo/Paypal Clone)",
     "type": "Solo-Project",
     "description": "A Venmo/Paypal clone with a database of cat users you can securely sign up, pay and request money from. Like Venmo, you can track your balance, make requests to users, and interact with the history of transactions. Each cat user has a different personality with unique possibilities of responses and comments to your requests!",
@@ -11,7 +22,7 @@
     "img": "/paycats-preview.jpg"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Ecommerce Paintings",
     "type": "Solo-Project",
     "description": "An eCommerce platform pulling products from an API with features such as a database of dynamically updating products, cart functionality, and email user authentication.",
@@ -22,7 +33,7 @@
     "img": "/ecommerce-preview.jpg"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "3D Spheres Scrolling Animation",
     "type": "Solo-Project",
     "description": "A 3D environment scrolling animation using a mars-themed sky texture and rotating reflective spheres, made using Three.js and WebGL.",
@@ -33,7 +44,7 @@
     "img": "/spheres-preview.jpg"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Quizzical Trivia Game",
     "type": "Solo-Project",
     "description": "A trivia question game with multiple categories and difficulties, this React app fetches data from the Open Trivia Database API. This project started out as a part of the Scrimba Front-End Developer Career Path but was fleshed out more on its own.",
@@ -44,7 +55,7 @@
     "img": "/quizzical-preview.jpg"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Ricochet Productions Website",
     "type": "Freelance (in development)",
     "description": "A freelance one-pager website currently in development for the company Ricochet Productions.",
@@ -55,7 +66,7 @@
     "img": "/ricochet-productions-preview.jpg"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Martini Shot Podcast Website",
     "type": "Freelance",
     "description": "A website for the podcast Martini Shot with writer and TV producer Rob Long (Cheers, Sullivan & Son). This was one of my first website projects and was built using Wordpress, HTML, and CSS. In addition to managing the website, I am also the audio producer/editor and designed the Martini Shot logo.",
