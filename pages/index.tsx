@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Head from "next/head";
-import Navbar from "@/components/navbar";
+import HomeNavbar from "@/components/HomeNavbar";
 import AnimatedPage from "@/components/AnimatedPage"; 
 
 function Home() {
@@ -21,7 +21,7 @@ function Home() {
           </div>
 
           <div className="pt-10 pr-12 w-full z-10 flex justify-end">
-              <Navbar />
+              <HomeNavbar />
           </div>
 
           <header className="absolute bottom-homeBoxPosition w-fit z-10 pl-12 pr-2 pb-4 flex items-end justify-start">
