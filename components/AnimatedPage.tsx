@@ -6,7 +6,7 @@ const animations = {
   exit: {opacity: 0},
 }
 
-function AnimatedPage({children}){
+function AnimatedPage({children}: any){
   return (
     <motion.div 
       variants={animations} 
