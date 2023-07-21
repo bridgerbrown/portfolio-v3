@@ -11,7 +11,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <div>
         <Head>
           <meta property="og:title" content="Bridger Brown Dev" />
-          //
           <meta property="og:image" content={"/bbdev-meta.png"} />
           <meta
             property="og:description"

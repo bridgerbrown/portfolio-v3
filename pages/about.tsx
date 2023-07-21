@@ -31,13 +31,13 @@ function About(){
                 Bridger Brown
               </h2>
               <p className='text-md font-extralight'>
-                Hello! My name is Bridger Brown, and I am a passionate Front-End Developer based out of Portland, Oregon. With a deep love for the craft of programming, I bring curiousity and dedication to every project I’m on. I have a strong background in web development and a keen eye for design, specializing in the creation of immersive and intuitive user experiences. 
+                Hello! My name is Bridger Brown, and I am a passionate Front-End Developer based out of Portland, Oregon. With a deep love for the craft of programming, I bring curiousity and dedication to every project I&apos;m on. I have a strong background in web development and a keen eye for design, specializing in the creation of immersive and intuitive user experiences. 
                <br/>
                <br/>
                 My journey in web development began a couple years ago when I discovered my love for crafting pixel-perfect interfaces that blend aesthetics with functionality and efficiency. Since then, I have honed my skills in technologies such as JavaScript, React, TypeScript, and Python, always seeking to expand my knowledge in any way I can.
                <br/>
                <br/>
-                I am excited about the opportunity to work on challenging projects, pushing boundaries and exploring new frontiers in web development. If you're looking for a dedicated and skilled developer to bring your ideas to reality, I would love to connect with you.
+                I am excited about the opportunity to work on challenging projects, pushing boundaries and exploring new frontiers in web development. If you&apos;re looking for a dedicated and skilled developer to bring your ideas to reality, I would love to connect with you.
               </p>
               <br/>
 
