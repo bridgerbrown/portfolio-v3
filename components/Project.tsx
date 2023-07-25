@@ -23,9 +23,25 @@ function Project(props: any){
         </div>
         <div className="h-full w-mobileWidth sm:w-[80vw] lg:w-[66%] ml-0 mt-4 lg:mt-0 lg:ml-8 text-white flex flex-col justify-between">
           <div>
-            <h2 className="text-2xl sm:text-3xl tracking-wide font-light">
-              {project.title}
-            </h2>
+            <div className="flex items-center">
+              <h2 className="text-2xl sm:text-3xl tracking-wide font-light">
+                {project.title}
+              </h2>
+              {
+                project.featured === "true" ?
+                <div className="flex items-center">
+                  <Image
+                    src={"/star.png"}
+                    width={96}
+                    height={96}
+                    alt="Featured project icon, star"
+                    className="ml-2 h-fit w-4 mt-1"
+                  />
+                </div>
+                :
+                <div></div>
+              }
+            </div>
             <h3 className="mb-4 text-md font-light uppercase opacity-80">
               {project.type}
             </h3>

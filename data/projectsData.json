@@ -3,12 +3,13 @@
     "id": 0,
     "title": "DayNotes",
     "type": "Solo-Project",
-    "description": "A date-based note taking platform with calendar integration that uses web sockets for seamless synchronization between browser tabs. Through Socket.io, the client-side website communicates with a server built with Node.js, Express, and HTTP to save notes made with the Quill.js text editor to a MongoDB database. Users sign in securely through Auth0's user authorization.",
+    "description": "A calendar-based note taking platform that uses web sockets for seamless synchronization between browser tabs. Through Socket.io, the client-side website communicates with a server built with Node.js, Express, and HTTP to save notes made with the Quill.js text editor to a MongoDB database. Users sign in securely through Auth0's user authorization.",
     "builtWith": ["React", "TypeScript", "Socket.io", "MongoDB", "Node.js", "Quill.js", "Auth0", "Date-fns", "TailwindCSS", "NextJS"],
     "projectLink": "https://daynotes-client.vercel.app",
     "githubLink": "https://github.com/bridgerbrown/daynotes",
     "date": "July 2023",
-    "img": "/daynotes-preview.jpg"
+    "img": "/daynotes-preview.jpg",
+    "featured": "true"
   },
   {
     "id": 1,
@@ -19,7 +20,8 @@
     "projectLink": "https://paycats.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/paycats",
     "date": "April 2023",
-    "img": "/paycats-preview.jpg"
+    "img": "/paycats-preview.jpg",
+    "featured": "true"
   },
   {
     "id": 2,
@@ -30,7 +32,8 @@
     "projectLink": "https://ecommerce-paintings.vercel.app",
     "githubLink": "https://github.com/bridgerbrown/ecommerce-paintings",
     "date": "January 2023",
-    "img": "/ecommerce-preview.jpg"
+    "img": "/ecommerce-preview.jpg",
+    "featured": "false"
   },
   {
     "id": 3,
@@ -41,7 +44,8 @@
     "projectLink": "https://mars-sphere-animation.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/mars-spheres-animation",
     "date": "April 2023",
-    "img": "/spheres-preview.jpg"
+    "img": "/spheres-preview.jpg",
+    "featured": "false"
   },
   {
     "id": 4,
@@ -52,7 +56,8 @@
     "projectLink": "https://quiz-o8z5ipsoe-bridgerbrown.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/quiz-app-project",
     "date": "October 2022",
-    "img": "/quizzical-preview.jpg"
+    "img": "/quizzical-preview.jpg",
+    "featured": "false"
   },
   {
     "id": 5,
@@ -63,7 +68,8 @@
     "projectLink": "https://ricochet-productions.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/ricochet-productions",
     "date": "May 2023",
-    "img": "/ricochet-productions-preview.jpg"
+    "img": "/ricochet-productions-preview.jpg",
+    "featured": "false"
   },
   {
     "id": 6,
@@ -74,6 +80,7 @@
     "projectLink": "https://www.martinishotpodcast.com/",
     "githubLink": "",
     "date": "January 2022",
-    "img": "/martini-shot-preview.jpg"
+    "img": "/martini-shot-preview.jpg",
+    "featured": "false"
   }
 ]

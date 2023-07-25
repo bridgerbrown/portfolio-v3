@@ -14,6 +14,7 @@ function Projects(){
   const [category, setCategory] = useState<string>('all');
   
   const allProjects = projectsData.map((project) => <Project key={project.id} project={project} />);
+  const featuredProjects = projectsData.filter((project) => project.featured == "true").map((project) => <Project key={project.id} project={project} />)
   const soloProjects = projectsData.filter((project) => project.type == "Solo-Project").map((project) => <Project key={project.id} project={project} />)
   const workProjects = projectsData.filter((project) => project.type !== "Solo-Project").map((project) => <Project key={project.id} project={project} />)
 
@@ -41,8 +42,24 @@ function Projects(){
                   </label>
                 <input 
                   type="radio" 
-                  id="solo-projects" 
+                  id="featured" 
                   name="categories" 
+                  value="featured"
+                  className={inputCSS}
+                  checked={category === 'featured'}
+                  onClick={() => setCategory('featured')}
+                  readOnly
+                />
+                  <label 
+                    htmlFor="featured"
+                    className={category === "featured" ? checkedLabelCSS : labelCSS}
+                  >
+                    Featured 
+                  </label>
+              <input 
+                type="radio" 
+                id="solo-projects" 
+                name="categories" 
                 value="solo-projects"
                 className={inputCSS}
                 checked={category === 'solo-projects'}
@@ -82,6 +99,9 @@ function Projects(){
                     :
                     category == 'solo-projects' ?
                       soloProjects
+                      :
+                      category == 'featured' ?
+                      featuredProjects
                       :
                       workProjects
                 :
