@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 function HomeNavbar() {
-  const activeLinkCss: string = `opacity-100 text-md uppercase transition-opacity font-extralight cursor-pointer `;
+  const activeLinkCss: string = `py-2 opacity-100 text-md uppercase transition-opacity font-extralight cursor-pointer `;
   const linkCss: string = `py-2 text-sm sm:text-base uppercase cursor-pointer font-extralight hover:opacity-100 opacity-60 transition-opacity`;
   const navCss: string = `space-x-4 flex list-none`;
   
