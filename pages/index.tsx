@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import HomeNavbar from "@/components/HomeNavbar";
 import AnimatedPage from "@/components/AnimatedPage";
 
 function Home() {
+
+  useEffect(() => {
+    import('/public/daynotes-preview.jpg');
+    import('/public/ecommerce-preview.jpg');
+    import('/public/paycats-preview.jpg');
+    import('/public/martini-shot-preview.jpg');
+    import('/public/quizzical-preview.jpg');
+    import('/public/ricochet-productions-preview.jpg');
+    import('/public/spheres-preview.jpg');
+    import('/public/daynotes-preview.jpg');
+    import('/public/cortona-headshot.png');
+  }, [])
 
   return (
     <div className="bg-nearBlack fixed overflow-hidden left-0 top-0 min-h-screen w-full">
