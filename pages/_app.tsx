@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
       <div>
         <Head>
+          <title>Bridger Brown Dev</title>
           <meta property="og:title" content="Bridger Brown Dev" />
           <meta property="og:image" content={"/bbdev-meta.png"} />
           <meta
@@ -20,6 +21,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi"
           />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+          <link rel="manifest" href="/favicon/site.webmanifest"/>
         </Head>
         <AnimatePresence mode="wait" initial={false}>
             <Component {...pageProps} key={router.asPath} />
