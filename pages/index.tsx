@@ -2,20 +2,20 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import HomeNavbar from "@/components/HomeNavbar";
 import AnimatedPage from "@/components/AnimatedPage";
+import Image from "next/image";
 
 function Home() {
 
-  useEffect(() => {
-    import('/public/daynotes-preview.jpg');
-    import('/public/ecommerce-preview.jpg');
-    import('/public/paycats-preview.jpg');
-    import('/public/martini-shot-preview.jpg');
-    import('/public/quizzical-preview.jpg');
-    import('/public/ricochet-productions-preview.jpg');
-    import('/public/spheres-preview.jpg');
-    import('/public/daynotes-preview.jpg');
-    import('/public/cortona-headshot.png');
-  }, [])
+  const imagePaths = [
+    '/public/daynotes-preview.jpg',
+    '/public/ecommerce-preview.jpg',
+    '/public/paycats-preview.jpg',
+    '/public/martini-shot-preview.jpg',
+    '/public/quizzical-preview.jpg',
+    '/public/ricochet-productions-preview.jpg',
+    '/public/spheres-preview.jpg',
+    '/public/b-teton.jpg',
+  ]
 
   return (
     <div className="bg-nearBlack fixed overflow-hidden left-0 top-0 min-h-screen w-full">
@@ -46,6 +46,18 @@ function Home() {
           </header>
         </main>
       </AnimatedPage>
+      {
+        imagePaths.map((path: string) => 
+          <Image
+            key={path}
+            src={path}
+            height={1}
+            width={1}
+            alt="hidden image for cache"
+            className="hidden"
+          />
+        )
+      }
     </div>
   );
 }
