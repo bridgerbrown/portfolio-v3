@@ -14,19 +14,19 @@ function About(){
       <AnimatedPage>
         <PageHeader pageTitle={"About"} />
         <section className='mt-[80px] flex justify-center items-center'>
-          <div className='max-w-[1300px] w-mobileWidth sm:w-[80vw] flex sm:flex-row flex-col justify-center'>
+          <div className='max-w-[1300px] w-mobileWidth lg:w-[80vw] items-center lg:items-start flex lg:flex-row flex-col justify-center'>
             
             <div className='cursor-pointer flex justify-center'>
               <Image
                 src={"/b-teton.jpg"}
-                width={1500}
-                height={1500}
+                width={500}
+                height={500}
                 alt='Portrait of Bridger Brown'
                 className='w-[350px] sm:w-[400px] h-min rounded-sm'
               />
             </div>
 
-            <section className='ml-0 mt-8 sm:mt-0 sm:ml-12 max-w-[550px] text-white flex-col'>
+            <section className='ml-0 mt-8 lg:mt-0 lg:ml-12 max-w-[550px] text-white flex-col'>
               <h2 className='mb-5 text-white font-extralight text-5xl sm:text-6xl w-fit'>
                 Bridger Brown
               </h2>

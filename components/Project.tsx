@@ -14,8 +14,8 @@ function Project(props: any){
             <Image
               src={project.img}
               alt="Project image"
-              width={500}
-              height={375}
+              width={450}
+              height={338}
               className="cursor-pointer w-full"
               priority={true}
             />
