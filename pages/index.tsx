@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import HomeNavbar from "@/components/HomeNavbar";
 import AnimatedPage from "@/components/AnimatedPage";
@@ -7,14 +7,14 @@ import Image from "next/image";
 function Home() {
 
   const imagePaths = [
-    '/public/daynotes-preview.jpg',
-    '/public/ecommerce-preview.jpg',
-    '/public/paycats-preview.jpg',
-    '/public/martini-shot-preview.jpg',
-    '/public/quizzical-preview.jpg',
-    '/public/ricochet-productions-preview.jpg',
-    '/public/spheres-preview.jpg',
-    '/public/b-teton.jpg',
+    '/daynotes-preview.jpg',
+    '/ecommerce-preview.jpg',
+    '/paycats-preview.jpg',
+    '/martini-shot-preview.jpg',
+    '/quizzical-preview.jpg',
+    '/ricochet-productions-preview.jpg',
+    '/spheres-preview.jpg',
+    '/b-teton.jpg',
   ]
 
   return (
