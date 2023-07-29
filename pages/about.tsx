@@ -27,7 +27,7 @@ function About(){
             </div>
 
             <section className='ml-0 mt-8 sm:mt-0 sm:ml-12 max-w-[550px] text-white flex-col'>
-              <h2 className='mb-5 text-white font-extralight text-6xl w-fit'>
+              <h2 className='mb-5 text-white font-extralight text-5xl sm:text-6xl w-fit'>
                 Bridger Brown
               </h2>
               <p className='text-md font-extralight'>

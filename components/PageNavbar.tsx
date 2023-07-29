@@ -1,12 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 function PageNavbar() {
-  const activeLinkCss: string = `opacity-100 text-sm sm:text-base uppercase hover:opacity-100 transition-opacity font-extralight cursor-pointer `;
-  const linkCss: string = `border-white-1 text-sm sm:text-base uppercase hover:opacity-100 opacity-60 transition-opacity font-extralight cursor-pointer `;
-  const navCss: string = `space-x-4 flex list-none`;
-  const router = useRouter();
+  const linkCss: string = `border-white-1 sm:text-base uppercase hover:opacity-100 opacity-60 transition-opacity font-extralight cursor-pointer `;
+  const navCss: string = `sm:space-x-4 space-x-8 flex list-none`;
   
   return (
     <nav className="py-1.5 lg:py-1 text-white justify-end flex">
@@ -16,13 +13,13 @@ function PageNavbar() {
         >
           Home 
         </Link>
-        <Link href="/projects" className={router.pathname === `/projects` ? activeLinkCss : linkCss}>
+        <Link href="/projects" className={linkCss}>
           Projects 
         </Link>
-        <Link href="/about" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
+        <Link href="/about" className={linkCss}>
           About 
         </Link>
-        <Link href="/contact" className={router.pathname === `/contact` ? activeLinkCss : linkCss}>
+        <Link href="/contact" className={linkCss}>
           Contact 
         </Link>
       </ul>

@@ -1,13 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 function HomeNavbar() {
-  const activeLinkCss: string = `py-2 opacity-100 text-md uppercase transition-opacity font-extralight cursor-pointer `;
   const linkCss: string = `py-2 text-sm sm:text-base uppercase cursor-pointer font-extralight hover:opacity-100 opacity-60 transition-opacity`;
   const navCss: string = `space-x-4 flex list-none`;
-  
-  const router = useRouter();
   
   return (
     <nav className="text-white w-full justify-end flex">
@@ -17,13 +13,13 @@ function HomeNavbar() {
         >
           Home 
         </Link>
-        <Link href="/projects" className={router.pathname === `/work` ? activeLinkCss : linkCss}>
+        <Link href="/projects" className={linkCss}>
           Projects  
         </Link>
-        <Link href="/about" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
+        <Link href="/about" className={linkCss}>
           About
         </Link>
-        <Link href="/contact" className={router.pathname === `/about` ? activeLinkCss : linkCss}>
+        <Link href="/contact" className={linkCss}>
           Contact 
         </Link>
       </ul>

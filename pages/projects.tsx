@@ -8,8 +8,8 @@ import PageHeader from '@/components/PageHeader';
 
 function Projects(){
   const inputCSS: string = ``;
-  const labelCSS: string = `text-sm md:text-base uppercase transition tracking-wider ml-1 mr-3 md:mr-4 text-light hover:opacity-100 transition-opacity opacity-60`;
-  const checkedLabelCSS: string = `text-sm md:text-base border-b border-white-1 uppercase tracking-wider pb-0.5 ml-1 mr-3 md:mr-4 text-light transition-opacity opacity-100`
+  const labelCSS: string = `text-xs md:text-base uppercase transition tracking-wider ml-1 mr-3 md:mr-4 text-light hover:opacity-100 transition-opacity opacity-60`;
+  const checkedLabelCSS: string = `text-xs md:text-base border-b border-white-1 uppercase tracking-wider pb-0.5 ml-1 mr-3 md:mr-4 text-light transition-opacity opacity-100`
 
   const [category, setCategory] = useState<string>('all');
   
