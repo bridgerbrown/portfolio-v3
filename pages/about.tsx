@@ -23,6 +23,7 @@ function About(){
                 height={500}
                 alt='Portrait of Bridger Brown'
                 className='w-[350px] sm:w-[400px] h-min rounded-sm'
+                priority={true}
               />
             </div>
 

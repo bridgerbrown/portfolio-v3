@@ -17,7 +17,7 @@ function Project(props: any){
               width={450}
               height={338}
               className="cursor-pointer w-full"
-              priority={true}
+              priority={project.id < 3 ? true : false}
             />
           </a>
         </div>
