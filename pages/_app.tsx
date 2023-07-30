@@ -17,9 +17,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             property="og:description"
             content="Hello, my name is Bridger Brown and I am a Front-End Developer and Designer based out of Portland, Oregon."
           />
+          <meta name="title" content="Bridger Brown Dev" />
+          <meta name="image" content={"/bbdev-meta.png"} />
+          <meta
+            name="description"
+            content="Hello, my name is Bridger Brown and I am a Front-End Developer and Designer based out of Portland, Oregon."
+          />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi"
+            content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=5.0, target-densityDpi=device-dpi"
           />
           <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>

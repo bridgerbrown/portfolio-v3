@@ -7,7 +7,7 @@ function PageNavbar() {
   
   return (
     <nav className="py-1.5 lg:py-1 text-white justify-end flex">
-      <ul className={navCss}>
+      <div className={navCss}>
         <Link href="/" 
           className={linkCss}
         >
@@ -22,7 +22,7 @@ function PageNavbar() {
         <Link href="/contact" className={linkCss}>
           Contact 
         </Link>
-      </ul>
+      </div>
     </nav>
   );
 }

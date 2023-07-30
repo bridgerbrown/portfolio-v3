@@ -7,7 +7,7 @@ function HomeNavbar() {
   
   return (
     <nav className="text-white w-full justify-end flex">
-      <ul className={navCss}>
+      <div className={navCss}>
         <Link href="/" 
           className={linkCss}
         >
@@ -22,7 +22,7 @@ function HomeNavbar() {
         <Link href="/contact" className={linkCss}>
           Contact 
         </Link>
-      </ul>
+      </div>
     </nav>
   );
 }
