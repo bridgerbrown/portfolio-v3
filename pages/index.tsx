@@ -7,14 +7,14 @@ import Image from "next/image";
 function Home() {
 
   const imagePaths = [
-    '/daynotes-preview.jpg',
-    '/ecommerce-preview.jpg',
-    '/paycats-preview.jpg',
-    '/martini-shot-preview.jpg',
-    '/quizzical-preview.jpg',
-    '/ricochet-productions-preview.jpg',
-    '/spheres-preview.jpg',
-    '/b-teton.jpg',
+    '/large-previews/daynotes-preview.jpg',
+    '/large-previews/ecommerce-preview.jpg',
+    '/large-previews/paycats-preview.jpg',
+    '/large-previews/martini-shot-preview.jpg',
+    '/large-previews/quizzical-preview.jpg',
+    '/large-previews/ricochet-productions-preview.jpg',
+    '/large-previews/spheres-preview.jpg',
+    '/large-previews/b-teton.jpg',
   ]
 
   return (

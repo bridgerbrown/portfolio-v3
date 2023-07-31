@@ -8,7 +8,7 @@
     "projectLink": "https://daynotes-client.vercel.app",
     "githubLink": "https://github.com/bridgerbrown/daynotes",
     "date": "July 2023",
-    "img": "/daynotes-preview.jpg",
+    "img": "/large-previews/daynotes-preview.jpg",
     "featured": "true"
   },
   {
@@ -20,7 +20,7 @@
     "projectLink": "https://paycats.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/paycats",
     "date": "April 2023",
-    "img": "/paycats-preview.jpg",
+    "img": "/large-previews/paycats-preview.jpg",
     "featured": "true"
   },
   {
@@ -32,7 +32,7 @@
     "projectLink": "https://ecommerce-paintings.vercel.app",
     "githubLink": "https://github.com/bridgerbrown/ecommerce-paintings",
     "date": "January 2023",
-    "img": "/ecommerce-preview.jpg",
+    "img": "/large-previews/ecommerce-preview.jpg",
     "featured": "false"
   },
   {
@@ -44,7 +44,7 @@
     "projectLink": "https://mars-sphere-animation.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/mars-spheres-animation",
     "date": "April 2023",
-    "img": "/spheres-preview.jpg",
+    "img": "/large-previews/spheres-preview.jpg",
     "featured": "false"
   },
   {
@@ -56,7 +56,7 @@
     "projectLink": "https://quiz-o8z5ipsoe-bridgerbrown.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/quiz-app-project",
     "date": "October 2022",
-    "img": "/quizzical-preview.jpg",
+    "img": "/large-previews/quizzical-preview.jpg",
     "featured": "false"
   },
   {
@@ -68,7 +68,7 @@
     "projectLink": "https://ricochet-productions.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/ricochet-productions",
     "date": "May 2023",
-    "img": "/ricochet-productions-preview.jpg",
+    "img": "/large-previews/ricochet-productions-preview.jpg",
     "featured": "false"
   },
   {
@@ -80,7 +80,7 @@
     "projectLink": "https://www.martinishotpodcast.com/",
     "githubLink": "",
     "date": "January 2022",
-    "img": "/martini-shot-preview.jpg",
+    "img": "/large-previews/martini-shot-preview.jpg",
     "featured": "false"
   }
 ]
