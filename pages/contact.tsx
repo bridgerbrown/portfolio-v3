@@ -8,7 +8,8 @@ function Contact(){
   const socialIconCss: string = `w-8 transition-opacity opacity-90 hover:opacity-60 h-fit invert mb-1`;
 
   function copyContact(): void{
-      navigator.clipboard.writeText(process.env.contactEmail!);
+      const secret = ['m', 'o', 'c', '.', 'l', 'i', 'a', 'm', 'g', '@', 'v', 'e', 'd', 'n', 'w', 'o', 'r', 'b', 'r', 'e', 'g', 'd', 'i', 'r', 'b']
+      navigator.clipboard.writeText(secret.reverse().join(''));
       const button: HTMLElement | null = document.getElementById("copy-button")
       if (button) {
         button.innerText = "Copied! ✔"
