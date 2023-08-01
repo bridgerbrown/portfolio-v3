@@ -14,10 +14,10 @@ function Project(props: any){
             <Image
               src={project.img}
               alt="Project image"
-              width={450}
-              height={338}
+              width={800}
+              height={600}
               className="cursor-pointer w-full"
-              priority={project.id < 3 ? true : false}
+              priority={project.id < 2 ? true : false}
             />
           </a>
         </div>

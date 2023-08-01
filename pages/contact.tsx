@@ -6,11 +6,9 @@ import Footer from '@/components/Footer';
 
 function Contact(){
   const socialIconCss: string = `w-8 transition-opacity opacity-90 hover:opacity-60 h-fit invert mb-1`;
-  const skillCss: string = `mb-10 font-extralight text-sm tracking-widest text-white`;
 
   function copyContact(): void{
-      const email: string = 'bridgerbrowndev@gmail.com'
-      navigator.clipboard.writeText(email);
+      navigator.clipboard.writeText(process.env.contactEmail!);
       const button: HTMLElement | null = document.getElementById("copy-button")
       if (button) {
         button.innerText = "Copied! ✔"
