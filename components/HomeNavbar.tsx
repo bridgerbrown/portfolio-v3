@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 function HomeNavbar() {
-  const linkCss: string = `py-2 text-sm sm:text-base uppercase cursor-pointer font-extralight hover:opacity-100 opacity-60 transition-opacity`;
+  const linkCss: string = `tracking-wide py-2 text-sm sm:text-base uppercase cursor-pointer font-extralight hover:opacity-100 opacity-60 transition-opacity`;
   const navCss: string = `space-x-4 flex list-none`;
   
   return (

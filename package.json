@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/gl-react-dom": "^3.15.4",
+    "lqip-loader": "^2.2.1",
     "tailwindcss": "^3.3.2",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 function PageNavbar() {
-  const linkCss: string = `border-white-1 sm:text-base uppercase hover:opacity-100 opacity-60 transition-opacity font-extralight cursor-pointer `;
+  const linkCss: string = `tracking-wide border-white-1 sm:text-base uppercase hover:opacity-100 opacity-60 transition-opacity font-extralight cursor-pointer `;
   const navCss: string = `sm:space-x-4 space-x-8 flex list-none`;
   
   return (
