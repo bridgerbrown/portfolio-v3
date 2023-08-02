@@ -14,7 +14,10 @@ function Home() {
     '/large-previews/quizzical-preview.jpg',
     '/large-previews/ricochet-productions-preview.jpg',
     '/large-previews/spheres-preview.jpg',
-    '/large-previews/b-teton.jpg',
+    '/github-logo.png',
+    '/instagram-logo.png',
+    '/linkedin-logo.png',
+    '/b-teton.jpg',
   ]
 
   return (
@@ -54,7 +57,7 @@ function Home() {
             height={1}
             width={1}
             alt="hidden image for cache"
-            className="hidden"
+            className="transparent"
           />
         )
       }
