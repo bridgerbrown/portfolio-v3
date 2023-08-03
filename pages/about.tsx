@@ -1,12 +1,11 @@
 import AnimatedPage from '@/components/AnimatedPage';
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 function About(){
-  const socialIconCss: string = `w-8 opacity-90 h-fit invert mb-1`;
   const skillCss: string = `mb-10 font-extralight sm:text-sm text-xs tracking-widest text-white`;
 
   return (

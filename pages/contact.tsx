@@ -1,5 +1,5 @@
 import AnimatedPage from '@/components/AnimatedPage';
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';

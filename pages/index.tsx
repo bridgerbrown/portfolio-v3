@@ -53,7 +53,7 @@ function Home() {
             height={1}
             width={1}
             alt="hidden image for cache"
-            className="transparent"
+            className="transparent absolute"
           />
         )
       }
