@@ -17,7 +17,7 @@ function About(){
             
             <div className='cursor-pointer flex justify-center'>
               <Image
-                src={"/b-teton.jpg"}
+                src={"/b-teton.webp"}
                 width={500}
                 height={500}
                 alt='Portrait of Bridger Brown'

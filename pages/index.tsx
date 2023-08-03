@@ -7,13 +7,13 @@ import Image from "next/image";
 function Home() {
 
   const imagePaths = [
-    '/large-previews/daynotes-preview.jpg',
-    '/large-previews/ecommerce-preview.jpg',
-    '/large-previews/paycats-preview.jpg',
-    '/github-logo.png',
-    '/instagram-logo.png',
-    '/linkedin-logo.png',
-    '/b-teton.jpg',
+    '/project-previews/daynotes-preview.webp',
+    '/project-previews/ecommerce-preview.webp',
+    '/project-previews/paycats-preview.webp',
+    '/github-logo.webp',
+    '/instagram-logo.webp',
+    '/linkedin-logo.webp',
+    '/b-teton.webp',
   ]
 
   return (

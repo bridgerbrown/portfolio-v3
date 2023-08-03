@@ -33,10 +33,10 @@ function Contact(){
                      className='flex flex-col justify-center items-center'
                   >
                     <Image
-                      src={"/github-logo.png"}
+                      src={"/github-logo.webp"}
                       alt="Github link"
-                    width={192}
-                    height={192}
+                    width={50}
+                    height={50}
                     className={socialIconCss}
                   />
                   <p className='text-sm font-extralight text-white'>
@@ -49,10 +49,10 @@ function Contact(){
                      className='flex flex-col justify-center items-center'
                   >
                   <Image
-                    src={"/linkedin-logo.png"}
+                    src={"/linkedin-logo.webp"}
                     alt="LinkedIn link"
-                    width={192}
-                    height={192}
+                    width={50}
+                    height={50}
                     className={socialIconCss}
                   />
                   <p className='text-sm font-extralight text-white'>
@@ -65,10 +65,10 @@ function Contact(){
                      className='flex flex-col justify-center items-center'
                   >
                     <Image
-                      src={"/instagram-logo.png"}
+                      src={"/instagram-logo.webp"}
                       alt="Instagram link"
-                    width={192}
-                    height={192}
+                    width={50}
+                    height={50}
                     className={socialIconCss}
                   />
                   <p className='text-sm font-extralight text-white'>
