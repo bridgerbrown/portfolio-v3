@@ -18,8 +18,8 @@ function About(){
             <div className='cursor-pointer flex justify-center'>
               <Image
                 src={"/b-teton.webp"}
-                width={500}
-                height={500}
+                width={450}
+                height={450}
                 alt='Portrait of Bridger Brown'
                 className='w-[350px] sm:w-[400px] h-min rounded-sm'
                 priority={true}

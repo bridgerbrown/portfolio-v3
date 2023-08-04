@@ -6,15 +6,43 @@ import Image from "next/image";
 
 function Home() {
 
-  const imagePaths = [
-    '/project-previews/daynotes-preview.webp',
-    '/project-previews/ecommerce-preview.webp',
-    '/project-previews/paycats-preview.webp',
-    '/github-logo.webp',
-    '/instagram-logo.webp',
-    '/linkedin-logo.webp',
-    '/b-teton.webp',
-  ]
+const imagePreloads = [
+  {
+    src: '/project-previews/daynotes-preview.webp',
+    height: 800,
+    width: 599,
+  },
+  {
+    src: '/project-previews/ecommerce-preview.webp',
+    height: 800,
+    width: 600,
+  },
+  {
+    src: '/project-previews/paycats-preview.webp',
+    height: 800,
+    width: 600,
+  },
+  {
+    src: '/github-logo.webp',
+    height: 50,
+    width: 50,
+  },
+  {
+    src: '/instagram-logo.webp',
+    height: 50,
+    width: 50,
+  },
+  {
+    src: '/linkedin-logo.webp',
+    height: 50,
+    width: 50,
+  },
+  {
+    src: '/b-teton.webp',
+    height: 450,
+    width: 450,
+  },
+];
 
   return (
     <div className="bg-nearBlack fixed left-0 top-0 min-h-screen w-full">
@@ -46,14 +74,14 @@ function Home() {
         </main>
       </AnimatedPage>
       {
-        imagePaths.map((path: string) => 
+        imagePreloads.map((image: any) => 
           <Image
-            key={path}
-            src={path}
-            height={1}
-            width={1}
+            key={image.src}
+            src={image.src}
+            height={image.height}
+            width={image.width}
             alt="hidden image for cache"
-            className="transparent absolute"
+            className="opacity-0 absolute"
           />
         )
       }
