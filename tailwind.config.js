@@ -47,6 +47,9 @@ module.exports = {
       width: {
         mobileWidth: '93vw',
       },
+      screens: {
+        'xs': '450px'
+      }
     },
   },
   plugins: [],
