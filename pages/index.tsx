@@ -75,9 +75,11 @@ const imagePreloads = [
       </AnimatedPage>
         {
           imagePreloads.map((image: any) => 
-            <div className="w-11/12 sm:w-2/3 lg:w-1/3 min-w-[300px] max-w-none lg:max-w-sm absolute">
+            <div 
+              className="w-11/12 sm:w-2/3 lg:w-1/3 min-w-[300px] max-w-none lg:max-w-sm absolute"
+              key={image.src}
+            >
               <Image
-                key={image.src}
                 src={image.src}
                 height={image.height}
                 width={image.width}
