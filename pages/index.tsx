@@ -73,18 +73,20 @@ const imagePreloads = [
           </header>
         </main>
       </AnimatedPage>
-      {
-        imagePreloads.map((image: any) => 
-          <Image
-            key={image.src}
-            src={image.src}
-            height={image.height}
-            width={image.width}
-            alt="hidden image for cache"
-            className="opacity-0 absolute"
-          />
-        )
-      }
+        {
+          imagePreloads.map((image: any) => 
+            <div className="w-11/12 sm:w-2/3 lg:w-1/3 min-w-[300px] max-w-none lg:max-w-sm absolute">
+              <Image
+                key={image.src}
+                src={image.src}
+                height={image.height}
+                width={image.width}
+                alt="hidden image for cache"
+                className="opacity-0 w-full"
+              />
+            </div>
+          )
+        }
     </div>
   );
 }
