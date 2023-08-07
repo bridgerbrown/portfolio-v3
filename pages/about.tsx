@@ -58,6 +58,10 @@ function About(){
                         <span className='font-extralight'> Python for Programmers</span>
                       </li>
                       <li>
+                        Stanford University -
+                        <span className='font-extralight'> A Crash Course in AI</span>
+                      </li>
+                      <li>
                         School of Motion -
                         <span className='font-extralight'> Design Kickstart, PS + AI Unleashed</span>
                       </li>
