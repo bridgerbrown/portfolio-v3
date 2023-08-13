@@ -7,10 +7,8 @@ import projectsData from '@/data/projectsData.json';
 import PageHeader from '@/components/PageHeader';
 
 function Projects(){
-  const inputCSS: string = ``;
   const labelCSS: string = `text-xs md:text-base uppercase transition tracking-wider ml-1 mr-3 md:mr-4 text-light hover:opacity-100 transition-opacity opacity-60`;
   const checkedLabelCSS: string = `text-xs md:text-base border-b border-white-1 uppercase tracking-wider pb-0.5 ml-1 mr-3 md:mr-4 text-light transition-opacity opacity-100`
-
   const [category, setCategory] = useState<string>('all');
   
   const allProjects = projectsData.map((project) => <Project key={project.id} project={project} />);
@@ -31,7 +29,7 @@ function Projects(){
                   value="all" 
                   checked={category === 'all'}
                   onClick={() => setCategory('all')}
-                  className={inputCSS}
+                  className=""
                   readOnly
                 />
                   <label 
@@ -45,7 +43,7 @@ function Projects(){
                   id="featured" 
                   name="categories" 
                   value="featured"
-                  className={inputCSS}
+                  className=""
                   checked={category === 'featured'}
                   onClick={() => setCategory('featured')}
                   readOnly
@@ -61,7 +59,7 @@ function Projects(){
                 id="solo-projects" 
                 name="categories" 
                 value="solo-projects"
-                className={inputCSS}
+                className=""
                 checked={category === 'solo-projects'}
                 onClick={() => setCategory('solo-projects')}
                 readOnly
@@ -77,7 +75,7 @@ function Projects(){
                 id="work" 
                 name="categories" 
                 value="work"
-                className={inputCSS}
+                className=""
                 checked={category === 'work'}
                 onClick={() => setCategory('work')}
                 readOnly
