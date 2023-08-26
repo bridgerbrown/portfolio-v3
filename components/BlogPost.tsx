@@ -15,7 +15,7 @@ function BlogPost() {
       <div className="w-2/3 text-white">
         <div className="pl-12">
           <h2 className="pb-2 text-4xl font-extralight">
-            "DayNotes" Website Finished!
+            DayNotes Website Finished!
           </h2>
           <h3 className="pb-4 font-thin text-sm tracking-wide uppercase">
             August 13, 2023
