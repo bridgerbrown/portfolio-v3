@@ -45,7 +45,7 @@ const imagePreloads = [
 ];
 
   return (
-    <div className="bg-nearBlack fixed left-0 top-0 min-h-screen w-full">
+    <div className="font-sansSerif bg-nearBlack fixed left-0 top-0 min-h-screen w-full">
       <AnimatedPage>
         <main 
           className="justify-between flex flex-col text-white"
@@ -63,11 +63,11 @@ const imagePreloads = [
               <HomeNavbar />
           </div>
 
-          <header className="fixed bottom-homeBoxPosition w-fit z-10 pl-10 lg:pl-12 pr-2 pb-4 flex md:flex-row flex-col md:items-end items-start justify-start">
+          <header className="fixed bottom-homeBoxPosition w-fit z-10 pl-10 lg:pl-12 pr-2 pb-3 flex md:flex-row flex-col md:items-end items-start justify-start">
             <h1 className="transition-all cursor-pointer text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin text-white">
               BRIDGER BROWN  
             </h1>
-            <h2 className="cursor-pointer tracking-wide pl-0 md:pl-4 text-md sm:text-2xl font-thin text-white">
+            <h2 className="pb-1 cursor-pointer tracking-wide pl-0 md:pl-4 text-md sm:text-2xl font-thin text-white">
               Frontend Developer
             </h2>
           </header>

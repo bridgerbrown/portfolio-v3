@@ -6,10 +6,22 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    extend: {
       fontFamily: {
         sansSerif: ['var(--font-blinkMac)']
       },
-    extend: {
+      fontSize: {
+        base: ['16.3px', '24px'],
+      },
+      letterSpacing: {
+        tightest: '-.075em',
+        tighter: '-.05em',
+        tight: '-.025em',
+        normal: '.035em',
+        wide: '.040em',
+        wider: '.05em',
+        widest: '.1em',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

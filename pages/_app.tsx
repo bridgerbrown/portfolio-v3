@@ -15,12 +15,12 @@ const blinkMacSystemFont = localFont({
     },
     {
       path: '../public/fonts/BlinkMacSystemFont-Light.woff2',
-      weight: '200',
+      weight: '300',
       style: 'normal',
     },
     {
       path: '../public/fonts/BlinkMacSystemFont-Thin.woff2',
-      weight: '300',
+      weight: '200',
       style: 'normal',
     },
     {
@@ -60,7 +60,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <link rel="manifest" href="/favicon/site.webmanifest"/>
         </Head>
         <AnimatePresence mode="wait" initial={false}>
-          <main className={`${blinkMacSystemFont.variable} font-sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`}>
+          <main className={`${blinkMacSystemFont.variable} font-sansSerif, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`}>
             <Component {...pageProps} key={router.asPath} />
           </main>
         </AnimatePresence>

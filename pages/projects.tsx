@@ -7,7 +7,7 @@ import projectsData from '@/data/projectsData.json';
 import PageHeader from '@/components/PageHeader';
 
 function Projects(){
-  const labelCSS: string = `text-xs md:text-base uppercase transition tracking-wider ml-1 mr-3 md:mr-4 text-light hover:opacity-100 transition-opacity opacity-60`;
+  const labelCSS: string = `text-xs md:text-base uppercase transition tracking-wider ml-1 mr-3 md:mr-4 hover:opacity-100 transition-opacity opacity-60`;
   const checkedLabelCSS: string = `text-xs md:text-base border-b border-white-1 uppercase tracking-wider pb-0.5 ml-1 mr-3 md:mr-4 text-light transition-opacity opacity-100`
   const [category, setCategory] = useState<string>('all');
   
@@ -17,10 +17,10 @@ function Projects(){
   const workProjects = projectsData.filter((project) => project.type !== "Solo-Project").map((project) => <Project key={project.id} project={project} />)
 
   return (
-    <div className='overflow-hidden relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
+    <div className='font-sansSerif overflow-hidden relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
       <AnimatedPage>
         <PageHeader pageTitle={"Projects"} />
-          <div className='flex justify-center items-center text-white font-light'>
+          <div className='flex justify-center items-center text-white font-extralight'>
             <div className='w-mobileWidth md:w-[80vw] max-w-[1300px]'>
               <input 
                 type="radio" 
