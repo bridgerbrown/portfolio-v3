@@ -17,7 +17,7 @@ function Contact(){
   }
 
   return (
-    <div className='overflow-hidden relative min-h-[95vh] w-full bg-nearBlack'>
+    <div className='font-sansSerif overflow-hidden relative min-h-[95vh] w-full bg-nearBlack'>
       <AnimatedPage>
         <PageHeader pageTitle={"Contact"} />
 

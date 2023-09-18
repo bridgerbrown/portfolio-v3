@@ -5,7 +5,7 @@ import BlogPost from "@/components/BlogPost";
 
 function Blog() {
   return (
-    <div className='overflow-hidden relative min-h-screen w-full bg-nearBlack'>
+    <div className='font-sansSerif overflow-hidden relative min-h-screen w-full bg-nearBlack'>
       <AnimatedPage>
         <PageHeader pageTitle={"Blog"} />
         <section className='mt-[80px] flex justify-center items-center'>
