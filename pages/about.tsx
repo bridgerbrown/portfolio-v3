@@ -157,7 +157,7 @@ function About(){
                   <div className='w-full mt-6 flex justify-start'>
                     <Link href="/contact">
                       <button 
-                        className='hover:bg-gray-400 hover:text-white transition-colors font-regular text-sm w-24 h-12 rounded-sm bg-gray-300 text-black'
+                        className='hover:bg-gray-400 hover:text-white transition-colors font-normal text-sm w-24 h-12 rounded-sm bg-gray-300 text-black'
                           onClick={() => window.open('/Bridger_Brown_Resume_2023.pdf')}
                       >
                         Resume
