@@ -25,6 +25,18 @@
   },
   {
     "id": 2,
+    "title": "Python Web Scraper",
+    "type": "Solo-Project",
+    "description": "An HTML web scraper with a back-end built in Python which retrieves specified elements from any given website. The Flask backend server, which listens to the front-end, initiates a request to the website and utilizes the BeautifulSoup library to parse the HTML data. After processing the data with the Pandas library, it is transmitted in a parsed JSON format to the front-end to then be displayed.",
+    "builtWith": ["Python", "Flask", "BeautifulSoup", "Requests", "Pandas", "React", "TypeScript", "NextJS", "TailwindCSS", "Render"],
+    "projectLink": "https://web-scraper-python.vercel.app/",
+    "githubLink": "https://github.com/bridgerbrown/web-scraper-python",
+    "date": "September 2023",
+    "img": "/project-previews/web-scraper-preview.webp",
+    "featured": "false"
+  },
+  {
+    "id": 3,
     "title": "Ecommerce Paintings",
     "type": "Solo-Project",
     "description": "An eCommerce platform pulling products from an API with features such as a database of dynamically updating products, cart functionality, and email user authentication.",
@@ -36,7 +48,7 @@
     "featured": "false"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "3D Spheres Scrolling Animation",
     "type": "Solo-Project",
     "description": "A 3D environment scrolling animation using a mars-themed sky texture and rotating reflective spheres, made using Three.js and WebGL.",
@@ -48,7 +60,7 @@
     "featured": "false"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Quizzical Trivia Game",
     "type": "Solo-Project",
     "description": "A trivia question game with multiple categories and difficulties, this React app fetches data from the Open Trivia Database API. This project started out as a part of the Scrimba Front-End Developer Career Path but was fleshed out more on its own.",
@@ -60,7 +72,7 @@
     "featured": "false"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Ricochet Productions Website",
     "type": "Freelance (in development)",
     "description": "A freelance one-pager website currently in development for the company Ricochet Productions.",
@@ -72,7 +84,7 @@
     "featured": "false"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Martini Shot Podcast Website",
     "type": "Freelance",
     "description": "A website for the podcast Martini Shot with writer and TV producer Rob Long (Cheers, Sullivan & Son). This was one of my first website projects and was built using Wordpress, HTML, and CSS. In addition to managing the website, I am also the audio producer/editor and designed the Martini Shot logo.",
