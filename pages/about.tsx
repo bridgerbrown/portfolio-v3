@@ -158,7 +158,7 @@ function About(){
                     <Link href="/contact">
                       <button 
                         className='hover:bg-gray-400 hover:text-white transition-colors font-normal text-sm w-24 h-12 rounded-sm bg-gray-300 text-black'
-                          onClick={() => window.open('/Bridger_Brown_Resume_2023.pdf')}
+                          onClick={() => window.open('/Bridger_Brown_Resume_2023.docx')}
                       >
                         Resume
                       </button>
