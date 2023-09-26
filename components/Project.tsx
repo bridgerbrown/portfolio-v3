@@ -10,7 +10,6 @@ function Project(props: any){
     <section className="w-full max-w-[1300px] flex flex-col"> 
       <div 
         className="cursor-pointer transition hover:scale-102 w-full lg:h-fit xl:h-[275px] border-white-1 flex lg:flex-row flex-col items-center lg:items-start mb-4"
-        onClick={() => window.open(project.projectLink, '_blank', 'noopener noreferrer')}
       >
         <div className="rounded-sm w-11/12 sm:w-2/3 lg:w-1/3 min-w-[300px] max-w-none lg:max-w-sm bg-white">
           <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
