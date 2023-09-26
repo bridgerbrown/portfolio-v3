@@ -29,7 +29,7 @@ function Contact(){
             <div className='pb-[710px] sm:pb-[720px] items-center justify-center sm:justify-end flex flex-col sm:flex-row'>
               <div className='items-center justify-end flex mb-8 sm:mb-0'>
                 <div className='cursor-pointer sm:mr-10 mx-6 flex flex-col justify-center items-center'>
-                  <a href='https://github.com/bridgerbrown' target="_blank" rel="noopener noreferrer"
+                  <a href='https://github.com/bridgerbrown' rel="noopener noreferrer"
                      className='flex flex-col justify-center items-center'
                   >
                     <Image
@@ -45,7 +45,7 @@ function Contact(){
                   </a>
                 </div>
                 <div className='cursor-pointer mx-6 sm:mr-10'>
-                  <a href='https://www.linkedin.com/in/bridger-brown/' target="_blank" rel="noopener noreferrer"
+                  <a href='https://www.linkedin.com/in/bridger-brown/' rel="noopener noreferrer"
                      className='flex flex-col justify-center items-center'
                   >
                   <Image
@@ -61,7 +61,7 @@ function Contact(){
                   </a>
                 </div>
                 <div className='cursor-pointer mr-0 mx-6 sm:mr-4 flex flex-col justify-center items-center'>
-                  <a href='https://www.instagram.com/bridger.dev/' target="_blank" rel="noopener noreferrer"
+                  <a href='https://www.instagram.com/bridger.dev/' rel="noopener noreferrer"
                      className='flex flex-col justify-center items-center'
                   >
                     <Image
