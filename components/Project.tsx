@@ -12,7 +12,7 @@ function Project(props: any){
         className="cursor-pointer transition hover:scale-102 w-full lg:h-fit xl:h-[275px] border-white-1 flex lg:flex-row flex-col items-center lg:items-start mb-4"
       >
         <div className="rounded-sm w-11/12 sm:w-2/3 lg:w-1/3 min-w-[300px] max-w-none lg:max-w-sm bg-white">
-          <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
+          <a href={project.projectLink} rel="noopener noreferrer">
             <Image
               src={project.img}
               alt="Project image"
@@ -62,10 +62,10 @@ function Project(props: any){
             </p>
           </div>
           <div className="mt-8 sm:mt-6 xl:mt-0 justify-end items-end flex">
-            <a className={buttonCSS} href={project.projectLink} target="_blank" rel="noopener noreferrer">
+            <a className={buttonCSS} href={project.projectLink} rel="noopener noreferrer">
               View
             </a>
-            <a className={buttonCSS} href={project.githubLink} target="_blank" rel="noopener noreferrer">
+            <a className={buttonCSS} href={project.githubLink} rel="noopener noreferrer">
               Github 
             </a>
           </div>
