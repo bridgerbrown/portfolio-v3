@@ -9,7 +9,7 @@ function About(){
   const skillCss: string = `mb-10 font-extralight sm:text-sm text-xs tracking-widest text-white`;
 
   return (
-    <div className='font-sansSerif overflow-hidden relative min-h-screen w-full bg-nearBlack'>
+    <div className='tracking-wide font-sansSerif overflow-hidden relative min-h-screen w-full bg-nearBlack'>
       <AnimatedPage>
         <PageHeader pageTitle={"About"} />
         <section className='mt-[80px] flex justify-center items-center'>
@@ -31,13 +31,13 @@ function About(){
                 Bridger Brown
               </h2>
               <p className='text-md font-extralight'>
-                Hello! My name is Bridger Brown, and I am a passionate Front-End Developer based out of Portland, Oregon. With a deep love for the craft of programming, I bring curiousity and dedication to every project I&apos;m on. I have a strong background in web development and a keen eye for design, specializing in the creation of immersive and intuitive user experiences. 
-               <br/>
-               <br/>
-                My journey in web development began a couple years ago when I discovered my love for crafting pixel-perfect interfaces that blend aesthetics with functionality and efficiency. Since then, I have honed my skills in technologies such as JavaScript, React, TypeScript, and Python, always seeking to expand my knowledge in any way I can.
-               <br/>
-               <br/>
-                I am excited about the opportunity to work on challenging projects, pushing boundaries and exploring new frontiers in web development. If you&apos;re looking for a dedicated and skilled developer to bring your ideas to reality, I would love to connect with you.
+                Hello! I'm Bridger Brown, a results-driven Frontend Developer with a passion for crafting exceptional user experiences. My journey into web development began a few years ago, sparked by a love for creating pixel-perfect interfaces that seamlessly blend aesthetics with functionality. Specializing in technologies such as JavaScript, React, TypeScript, Node.js, Next.js, and Python, I'm always eager to explore new frontiers in the ever-evolving landscape of web development.
+                <br/>
+                <br/>
+                Bringing a blend of technical expertise and a creative mindset to every project, I have cultivated a strong background in web development and graphic design. I am passionate about creating immersive and intuitive user experiences, combining a keen eye for aesthetics with seamless functionality.
+                <br/>
+                <br/>
+                If you're seeking a skilled developer who combines technical expertise with a creative mindset to bring your ideas to life, let's connect. I am enthusiastic about contributing to innovative projects and am ready to make a meaningful impact.
               </p>
               <br/>
 

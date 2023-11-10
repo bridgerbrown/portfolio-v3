@@ -17,7 +17,7 @@ function Projects(){
   const workProjects = projectsData.filter((project) => project.type !== "Solo-Project").map((project) => <Project key={project.id} project={project} />)
 
   return (
-    <div className='font-sansSerif overflow-hidden relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
+    <div className='tracking-wide font-sansSerif overflow-hidden relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
       <AnimatedPage>
         <PageHeader pageTitle={"Projects"} />
           <div className='flex justify-center items-center text-white font-extralight'>

@@ -7,7 +7,7 @@ function Project(props: any){
   const builtWith = project.builtWith;
 
   return (
-    <section className="w-full max-w-[1300px] flex flex-col"> 
+    <section className="tracking-wide w-full max-w-[1300px] flex flex-col"> 
       <div 
         className="cursor-pointer transition hover:scale-102 w-full lg:h-fit xl:h-[275px] border-white-1 flex lg:flex-row flex-col items-center lg:items-start mb-4"
       >
@@ -47,11 +47,11 @@ function Project(props: any){
             <h3 className="mb-4 text-base font-light uppercase opacity-80">
               {project.type}
             </h3>
-            <p className="text-white tracking-normal text-base font-extralight">
+            <p className="text-white text-base font-extralight">
               {project.description}
             </p>
             <br/>
-            <p className="text-base tracking-normal font-extralight">
+            <p className="text-base font-extralight">
               Built with {builtWith.map((item: string) => 
                 item !== builtWith[builtWith.length - 1] 
                 ? 
