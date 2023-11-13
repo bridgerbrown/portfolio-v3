@@ -31,13 +31,13 @@ function About(){
                 Bridger Brown
               </h2>
               <p className='text-md font-extralight'>
-                Hello! I'm Bridger Brown, a results-driven Frontend Developer with a passion for crafting exceptional user experiences. My journey into web development began a few years ago, sparked by a love for creating pixel-perfect interfaces that seamlessly blend aesthetics with functionality. Specializing in technologies such as JavaScript, React, TypeScript, Node.js, Next.js, and Python, I'm always eager to explore new frontiers in the ever-evolving landscape of web development.
+                Hello! I&apos;m Bridger Brown, a results-driven Frontend Developer with a passion for crafting exceptional user experiences. My journey into web development began a few years ago, sparked by a love for creating pixel-perfect interfaces that seamlessly blend aesthetics with functionality. Specializing in technologies such as JavaScript, React, TypeScript, Node.js, Next.js, and Python, I&apos;m always eager to explore new frontiers in the ever-evolving landscape of web development.
                 <br/>
                 <br/>
                 Bringing a blend of technical expertise and a creative mindset to every project, I have cultivated a strong background in web development and graphic design. I am passionate about creating immersive and intuitive user experiences, combining a keen eye for aesthetics with seamless functionality.
                 <br/>
                 <br/>
-                If you're seeking a skilled developer who combines technical expertise with a creative mindset to bring your ideas to life, let's connect. I am enthusiastic about contributing to innovative projects and am ready to make a meaningful impact.
+                If you&apos;re seeking a skilled developer who combines technical expertise with a creative mindset to bring your ideas to life, let&apos;s connect. I am enthusiastic about contributing to innovative projects and am ready to make a meaningful impact.
               </p>
               <br/>
 
