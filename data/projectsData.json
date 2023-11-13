@@ -9,7 +9,8 @@
     "githubLink": "https://github.com/bridgerbrown/daynotes",
     "date": "July 2023",
     "img": "/project-previews/daynotes-preview.webp",
-    "featured": "true"
+    "featured": "true",
+    "buttonsEnabled": "11" 
   },
   {
     "id": 1,
@@ -21,7 +22,8 @@
     "githubLink": "https://github.com/bridgerbrown/paycats",
     "date": "April 2023",
     "img": "/project-previews/paycats-preview.webp",
-    "featured": "true"
+    "featured": "true",
+    "buttonsEnabled": "11"
   },
   {
     "id": 2,
@@ -33,7 +35,8 @@
     "githubLink": "https://github.com/bridgerbrown/web-scraper-python",
     "date": "September 2023",
     "img": "/project-previews/web-scraper-preview.webp",
-    "featured": "false"
+    "featured": "false",
+    "buttonsEnabled": "11"
   },
   {
     "id": 3,
@@ -45,7 +48,8 @@
     "githubLink": "https://github.com/bridgerbrown/ecommerce-paintings",
     "date": "January 2023",
     "img": "/project-previews/ecommerce-preview.webp",
-    "featured": "false"
+    "featured": "false",
+    "buttonsEnabled": "11"
   },
   {
     "id": 4,
@@ -57,7 +61,8 @@
     "githubLink": "https://github.com/bridgerbrown/mars-spheres-animation",
     "date": "April 2023",
     "img": "/project-previews/spheres-preview.webp",
-    "featured": "false"
+    "featured": "false",
+    "buttonsEnabled": "11"
   },
   {
     "id": 5,
@@ -69,7 +74,8 @@
     "githubLink": "https://github.com/bridgerbrown/quiz-app-project",
     "date": "October 2022",
     "img": "/project-previews/quizzical-preview.webp",
-    "featured": "false"
+    "featured": "false",
+    "buttonsEnabled": "11"
   },
   {
     "id": 6,
@@ -81,7 +87,8 @@
     "githubLink": "https://github.com/bridgerbrown/ricochet-productions",
     "date": "May 2023",
     "img": "/project-previews/ricochet-productions-preview.webp",
-    "featured": "false"
+    "featured": "false",
+    "buttonsEnabled": "11"
   },
   {
     "id": 7,
@@ -93,6 +100,7 @@
     "githubLink": "",
     "date": "January 2022",
     "img": "/project-previews/martini-shot-preview.webp",
-    "featured": "false"
+    "featured": "false",
+    "buttonsEnabled": "00"
   }
 ]
