@@ -7,8 +7,8 @@ import projectsData from '@/data/projectsData.json';
 import PageHeader from '@/components/PageHeader';
 
 function Projects(){
-  const labelCSS: string = `text-xs md:text-base uppercase transition tracking-wider ml-1 mr-3 md:mr-4 hover:opacity-100 transition-opacity opacity-60`;
-  const checkedLabelCSS: string = `text-xs md:text-base border-b border-white-1 uppercase tracking-wider pb-0.5 ml-1 mr-3 md:mr-4 text-light transition-opacity opacity-100`
+  const labelCSS: string = `transition-opacity text-xs md:text-base uppercase transition tracking-wider ml-1 mr-3 md:mr-4 hover:opacity-100 transition-opacity opacity-60`;
+  const checkedLabelCSS: string = `transition-opacity text-xs md:text-base border-b border-white-1 uppercase tracking-wider pb-0.5 ml-1 mr-3 md:mr-4 text-light transition-opacity opacity-100`
   const [category, setCategory] = useState<string>('all');
   
   const allProjects = projectsData.map((project) => <Project key={project.id} project={project} />);
@@ -36,7 +36,13 @@ function Projects(){
                     htmlFor="all"
                     className={category === "all" ? checkedLabelCSS : labelCSS}
                   >
-                    All
+                    {
+                    category == "all"
+                    ?
+                    "All " + "(" + allProjects.length + ")"
+                    :
+                    "All"
+                    }
                   </label>
                 <input 
                   type="radio" 
@@ -52,7 +58,13 @@ function Projects(){
                     htmlFor="featured"
                     className={category === "featured" ? checkedLabelCSS : labelCSS}
                   >
-                    Featured 
+                    {
+                    category == "featured"
+                    ?
+                    "Featured " + "(" + featuredProjects.length + ")"
+                    :
+                    "Featured"
+                    }
                   </label>
               <input 
                 type="radio" 
@@ -68,7 +80,13 @@ function Projects(){
                   htmlFor="solo-projects"
                   className={category === "solo-projects" ? checkedLabelCSS : labelCSS}
                 >
-                  Solo-Projects
+                  {
+                  category == "solo-projects"
+                  ?
+                  "Solo-Projects " + "(" + soloProjects.length + ")"
+                  :
+                  "Solo-Projects"
+                  }
                 </label>
               <input 
                 type="radio" 
@@ -84,7 +102,13 @@ function Projects(){
                   htmlFor="work"
                   className={category === "work" ? checkedLabelCSS : labelCSS}
                 >
-                  Work 
+                  {
+                  category == "work"
+                  ?
+                  "Work " + "(" + workProjects.length + ")"
+                  :
+                  "Work"
+                  }
                 </label>
             </div>
         </div>
