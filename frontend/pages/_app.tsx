@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import localFont from "next/font/local"
+import Script from "next/script";
 
 const blinkMacSystemFont = localFont({
   src: [
@@ -58,6 +59,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
           <link rel="manifest" href="/favicon/site.webmanifest"/>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
         </Head>
         <AnimatePresence mode="wait" initial={false}>
           <main className={`${blinkMacSystemFont.variable} font-sansSerif, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`}>
