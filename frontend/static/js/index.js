@@ -1,7 +1,18 @@
-import Home from "../views/Home";
-import Projects from "./views/Projects";
-import About from "./views/About";
-import Contact from "./views/Contact";
+import Home from "./views/Home.js";
+import Projects from "./views/Projects.js";
+import About from "./views/About.js";
+import Contact from "./views/Contact.js";
+
+const pathToRegex = (path) => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
+
+const getParams = (match) => {
+  const values = match.result.slice(1);
+  const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
+
+  return Object.fromEntries(keys.map((key, i) => {
+    return [key, values[i]];
+  }));
+};
 
 const navigateTo = (url) => {
   history.pushState(null, null, url);
@@ -16,23 +27,23 @@ const router = async () => {
     { path: "/contact", view: Contact },
   ];
 
-  const potentialMatches = routes.map(route => {
+  const potentialMatches = routes.map((route) => {
     return {
       route: route,
-      isMatch: location.pathname === route.path,
+      result: location.pathname.match(pathToRegex(route.path))
     };
   });
 
-  let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+  let match = potentialMatches.find(potentialMatch => potentialMatch.result !== null);
   
   if (!match) {
     match = {
       route: routes[0],
-      isMatch: true,
+      result: [location.pathname]
     };
   }
 
-  const view = new match.route.view();
+  const view = new match.route.view(getParams(match));
 
   document.querySelector("#app").innerHTML = await view.getHtml();
 };
