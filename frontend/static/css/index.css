@@ -2,8 +2,38 @@
   --nearBlack: #0b0b0b;
 }
 
+@font-face {
+  font-family: 'BlinkMacSystemFont';
+  font-weight: 100;
+  src: url('../public/fonts/BlinkMacSystemFont-Thin.woff') format('woff'),
+       url('../public/fonts/BlinkMacSystemFont-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'BlinkMacSystemFont';
+  font-weight: 200; 
+  src: url('../public/fonts/BlinkMacSystemFont-Ultralight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'BlinkMacSystemFont';
+  font-weight: 300; 
+  src: url('../public/fonts/BlinkMacSystemFont-Light.woff') format('woff'),
+       url('../public/fonts/BlinkMacSystemFont-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'BlinkMacSystemFont';
+  font-weight: 400; 
+  src: url('../public/fonts/BlinkMacSystemFont-Regular.woff') format('woff'),
+       url('../public/fonts/BlinkMacSystemFont-Regular.woff2') format('woff2');
+}
+
+body {
+  font-family: 'BlinkMacSystemFont', sans-serif;
+}
+
 #app {
-  font-family: sans-serif;
   color: white;
   background: var(--nearBlack);
   width: 100%;
@@ -98,23 +128,87 @@
   justify-content: flex-start;
 }
 
-@media (max-width: 640px) {
-  /* HOME page */
-  .nav__container-home {
-    padding: 2rem 2.5rem 0 0;
+.home__heading-container h1 {
+  font-size: 6rem; 
+  line-height: 1;
+  font-weight: 100;
+}
+
+.home__heading-container h2 {
+  font-size: 1.5rem; 
+  font-weight: 100;
+  padding: 0 0 0.4rem 1rem;
+}
+
+
+.home__heading-container h1,
+.home__heading-container h2 {
+  margin: 0;
+}
+
+/* < xs */
+@media (max-width: 450px) {
+  .home__heading-container h1 {
+    font-size: 1.875rem; 
   }
 }
 
+/* < sm */
+@media (max-width: 640px) {
+  .home__heading-container h2 {
+    font-size: 1rem; 
+  }
+}
+/* < lg */
 @media (max-width: 768px) {
   .home__heading-container {
     flex-direction: column;
     align-items: flex-start;
   }
+  .home__heading-container h2 {
+    padding: 0.15rem 0 0.35rem 0rem;
+  }
+  .home__heading-container {
+    padding: 0 0.5rem 0.75rem 2.45rem;
+  }
 }
 
-@media (max-width: 1024px) {
-  /* HOME page */
+/* sm - md */
+@media (min-width: 451px) and (max-width: 640px) {
+  .nav__container-home {
+    padding: 2rem 2.5rem 0 0;
+  }
+  .home__heading-container h1 {
+    font-size: 2.25rem; 
+  }
+}
+
+/* md - lg */
+@media (min-width: 641px) and (max-width: 768px) {
+  .home__heading-container h1 {
+    font-size: 3rem; 
+  }
+}
+
+/* lg < */
+@media (min-width: 769px) and (max-width: 1024px) {
   .home__heading-container {
     padding: 0 0.5rem 0.75rem 2.5rem;
+  }
+  .home__heading-container h1 {
+    font-size: 3.75rem; 
+  }
+  .home__heading-container h2 {
+    padding: 0 0 0.12rem 1rem;
+  }
+}
+
+/* xl */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .home__heading-container h1 {
+    font-size: 4.5rem; 
+  }
+  .home__heading-container h2 {
+    padding: 0 0 0.2rem 1rem;
   }
 }

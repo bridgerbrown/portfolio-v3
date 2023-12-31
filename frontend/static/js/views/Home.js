@@ -18,10 +18,10 @@ export default class extends AbstractView {
           <div class="nav__container-home">
           </div>
           <header class="home__heading-container">
-            <h1 class="transition-all cursor-pointer text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin text-white">
+            <h1>
               BRIDGER BROWN  
             </h1>
-            <h2 class="pb-1 cursor-pointer tracking-wide pl-0 md:pl-4 text-md sm:text-2xl font-thin text-white">
+            <h2>
               Frontend Developer
             </h2>
           </header>
