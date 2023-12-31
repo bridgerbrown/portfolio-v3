@@ -76,8 +76,9 @@ body {
   text-decoration: none;
   font-family: 'BlinkMacSystemFont';
   font-weight: 200;
+  font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
   padding: 0.5rem 0 0.5rem 0;
   opacity: 0.6;
   cursor: pointer;
@@ -164,7 +165,7 @@ body {
   font-size: 1.5rem; 
   font-weight: 100;
   padding: 0 0 0.4rem 1rem;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
 }
 
 
@@ -188,8 +189,14 @@ body {
   .home__heading-container h2 {
     font-size: 1rem; 
   }
-  .nav__home {
-    padding: 2rem 2.5rem 0 0;
+  #nav__home-container {
+    right: 2.5rem;
+  }
+  .nav__link {
+    font-size: 0.875rem;
+  }
+  .home__heading-container h2 {
+    padding: 0.15rem 0 0.35rem 0rem;
   }
 }
 /* < lg */
@@ -198,9 +205,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  .home__heading-container h2 {
-    padding: 0.15rem 0 0.35rem 0rem;
-  }
   .home__heading-container {
     padding: 0 0.5rem 0.75rem 2.45rem;
   }
@@ -208,9 +212,6 @@ body {
 
 /* sm - md */
 @media (min-width: 451px) and (max-width: 640px) {
-  .nav__container-home {
-    padding: 2rem 2.5rem 0 0;
-  }
   .home__heading-container h1 {
     font-size: 2.25rem; 
   }
@@ -220,6 +221,9 @@ body {
 @media (min-width: 641px) and (max-width: 768px) {
   .home__heading-container h1 {
     font-size: 3rem; 
+  }
+  .home__heading-container h2 {
+    padding: 0.15rem 0 0.35rem 0rem;
   }
 }
 
