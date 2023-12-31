@@ -58,12 +58,38 @@ body {
   width: 100%;
 }
 
-.nav__container-home {
+#nav__home-container {
+  position: absolute;
+  right: 3rem;
+  margin: 2.15rem 0rem 0 0;
+  width: 100%;
+}
+
+#nav__home {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
-  z-index: 10;
-  padding: 2rem 3rem 0 0;
+}
+
+.nav__link {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+  font-family: 'BlinkMacSystemFont';
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  padding: 0.5rem 0 0.5rem 0;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 100;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.nav__link:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 #home__linebox {
@@ -138,12 +164,16 @@ body {
   font-size: 1.5rem; 
   font-weight: 100;
   padding: 0 0 0.4rem 1rem;
+  letter-spacing: 0.025em;
 }
 
 
 .home__heading-container h1,
 .home__heading-container h2 {
   margin: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 /* < xs */
@@ -157,6 +187,9 @@ body {
 @media (max-width: 640px) {
   .home__heading-container h2 {
     font-size: 1rem; 
+  }
+  .nav__home {
+    padding: 2rem 2.5rem 0 0;
   }
 }
 /* < lg */
@@ -209,6 +242,6 @@ body {
     font-size: 4.5rem; 
   }
   .home__heading-container h2 {
-    padding: 0 0 0.2rem 1rem;
+    padding: 0 0 0.18rem 1rem;
   }
 }
