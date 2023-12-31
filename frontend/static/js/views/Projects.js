@@ -1,4 +1,5 @@
 import AbstractView from "./AbstractView.js";
+import { renderCategories, state } from "../services/state.js";
 
 export default class extends AbstractView {
   constructor(params) {
@@ -7,126 +8,117 @@ export default class extends AbstractView {
 
   async getHtml() {
     return `
-      <div className='tracking-wide font-sansSerif overflow-hidden relative min-h-screen flex flex-col justify-center items-center w-full bg-nearBlack'>
-        <AnimatedPage>
-          <PageHeader pageTitle={"Projects"} />
-            <div className='flex justify-center items-center text-white font-extralight'>
-              <div className='w-mobileWidth md:w-[80vw] max-w-[1300px]'>
-                <input 
-                  type="radio" 
-                    id="all" 
-                    name="categories" 
-                    value="all" 
-                    checked={category === 'all'}
-                    onClick={() => setCategory('all')}
-                    className=""
-                    readOnly
-                  />
-                    <label 
-                      htmlFor="all"
-                      className={category === "all" ? checkedLabelCSS : labelCSS}
-                    >
-                      {
-                      category == "all"
-                      ?
-                      "All " + "(" + allProjects.length + ")"
-                      :
-                      "All"
-                      }
-                    </label>
-                  <input 
-                    type="radio" 
-                    id="featured" 
-                    name="categories" 
-                    value="featured"
-                    className=""
-                    checked={category === 'featured'}
-                    onClick={() => setCategory('featured')}
-                    readOnly
-                  />
-                    <label 
-                      htmlFor="featured"
-                      className={category === "featured" ? checkedLabelCSS : labelCSS}
-                    >
-                      {
-                      category == "featured"
-                      ?
-                      "Featured " + "(" + featuredProjects.length + ")"
-                      :
-                      "Featured"
-                      }
-                    </label>
-                <input 
-                  type="radio" 
-                  id="solo-projects" 
+      <div class="page page__projects">
+            <div class="projects__categories-container content__width">
+              <input 
+                type="radio" 
+                  id="all" 
                   name="categories" 
-                  value="solo-projects"
-                  className=""
-                  checked={category === 'solo-projects'}
-                  onClick={() => setCategory('solo-projects')}
+                  value="all" 
+                  checked=${state.category === 'all'}
+                  onClick=${() => state.set('category', 'all')}
                   readOnly
                 />
                   <label 
-                    htmlFor="solo-projects"
-                    className={category === "solo-projects" ? checkedLabelCSS : labelCSS}
+                    htmlFor="all"
+                    id="category__label"    
                   >
-                    {
-                    category == "solo-projects"
+                    ${
+                    state.category == "all"
                     ?
-                    "Solo-Projects " + "(" + soloProjects.length + ")"
+                    "All " + "(" + allProjects.length + ")"
                     :
-                    "Solo-Projects"
+                    "All"
                     }
                   </label>
                 <input 
                   type="radio" 
-                  id="work" 
+                  id="featured" 
                   name="categories" 
-                  value="work"
-                  className=""
-                  checked={category === 'work'}
-                  onClick={() => setCategory('work')}
+                  value="featured"
+                  checked=${state.category === 'featured'}
+                  onClick=${() => state.set('category', 'featured')}
                   readOnly
                 />
                   <label 
-                    htmlFor="work"
-                    className={category === "work" ? checkedLabelCSS : labelCSS}
+                    htmlFor="featured"
+                    id="category__label"    
                   >
-                    {
-                    category == "work"
+                    ${
+                    state.category == "featured"
                     ?
-                    "Work " + "(" + workProjects.length + ")"
+                    "Featured " + "(" + featuredProjects.length + ")"
                     :
-                    "Work"
+                    "Featured"
                     }
                   </label>
-              </div>
+              <input 
+                type="radio" 
+                id="solo-projects" 
+                name="categories" 
+                value="solo-projects"
+                checked=${state.category === 'solo-projects'}
+                onClick=${() => state.set('category', 'solo-projects')}
+                readOnly
+              />
+                <label 
+                  htmlFor="solo-projects"
+                  id="category__label"    
+                >
+                  ${
+                  state.category == "solo-projects"
+                  ?
+                  "Solo-Projects " + "(" + soloProjects.length + ")"
+                  :
+                  "Solo-Projects"
+                  }
+                </label>
+              <input 
+                type="radio" 
+                id="work" 
+                name="categories" 
+                value="work"
+                checked=${state.category === 'work'}
+                onClick=${() => state.set('category', 'work')}
+                readOnly
+              />
+                <label 
+                  htmlFor="work"
+                  id="category__label"    
+                >
+                  ${
+                  state.category == "work"
+                  ?
+                  "Work " + "(" + workProjects.length + ")"
+                  :
+                  "Work"
+                  }
+                </label>
           </div>
-          <main className='mb-72 flex items-center justify-center'>
-            <div className='w-mobileWidth sm:w-[80vw] max-w-[1300px] z-10 flex flex-col mt-[50px] justify-center items-center'>
-                {
+          <main class="page__content-container">
+            <div id="projects__content-container">
+                ${
                   projectsData ? 
-                    category == 'all' ?
+                    state.category == 'all' ?
                       allProjects
                       :
-                      category == 'solo-projects' ?
+                      state.category == 'solo-projects' ?
                         soloProjects
                         :
-                        category == 'featured' ?
+                        state.category == 'featured' ?
                         featuredProjects
                         :
                         workProjects
                   :
-                  <div className='top-[50vh] text-center flex'>
-                    <h2 className='font-light text-2xl'>
+                  `<div id="loading__container">
+                    <h2>
                       Loading...
                     </h2>
-                  </div>
+                  </div>`
                 }
             </div>
           </main>
           <Footer />
-        </AnimatedPage>
       </div>
     `;
   }

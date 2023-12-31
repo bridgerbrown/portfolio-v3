@@ -43,9 +43,31 @@ body {
   left: 0;
 }
 
-#page {
+.page {
   min-height: 100%;
   width: 100%;
+  overflow: hidden;
+}
+
+.page__content-container {
+  margin-bottom: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__width {
+  max-width: 1300px;
+  width: 80vw;
+}
+
+#loading__container {
+  top: 50vh;
+  text-align: center;
+  display: flex;
+  font-family: 'BlinkMacSystemFont';
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 /* HOME page */
@@ -177,6 +199,30 @@ body {
   transition-duration: 150ms;
 }
 
+/* PROJECTS page */
+.page__projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects__categories-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects__content-container {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
 /* < xs */
 @media (max-width: 450px) {
   .home__heading-container h1 {
@@ -198,7 +244,11 @@ body {
   .home__heading-container h2 {
     padding: 0.15rem 0 0.35rem 0rem;
   }
+  .content__width {
+    width: 93vw;
+  }
 }
+
 /* < lg */
 @media (max-width: 768px) {
   .home__heading-container {

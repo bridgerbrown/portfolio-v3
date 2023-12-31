@@ -1,21 +1,15 @@
 import AbstractView from "./AbstractView.js";
 
-export default class extends AbstractView {
+export default class HomeView extends AbstractView {
   constructor(params) {
     super(params);
   }
 
-  async getHtml() {
+  getHtml() {
     return `
-      <div id="page">
+      <div class="page">
         <main id="home__container">
           <div id="nav__home-container">
-            <nav id="nav__home">
-              <a href="/" class="nav__link" data-link>Home</a>
-              <a href="/projects" class="nav__link" data-link>Projects</a>
-              <a href="/about" class="nav__link" data-link>About</a>
-              <a href="/contact" class="nav__link" data-link>Contact</a>
-            </nav>
           </div>
           <div id="home__linebox">
             <div class="home__linebox-line" id="home__linebox-top"></div>
@@ -35,4 +29,20 @@ export default class extends AbstractView {
       </div>
     `;
   }
+
+  appendNav() {
+    console.log("appending");
+    const navContainer = document.getElementById("nav__home-container");
+    const navbar = document.createElement("navbar-home");
+    navContainer.appendChild(navbar);
+  }
+
+  render() {
+    const html = this.getHtml();
+    document.getElementById("app").innerHTML = html;
+    this.appendNav();
+  }
 }
+
+const homeView = new HomeView();
+homeView.render();
