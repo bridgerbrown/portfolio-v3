@@ -1,3 +1,4 @@
+import NavbarHome from "../components/Navbar.js";
 import AbstractView from "./AbstractView.js";
 
 export default class HomeView extends AbstractView {
@@ -5,11 +6,15 @@ export default class HomeView extends AbstractView {
     super(params);
   }
 
-  getHtml() {
+  async getHtml() {
+    const navbar = new NavbarHome();
+    const navbarHtml = navbar.getHtml();
+
     return `
       <div class="page">
         <main id="home__container">
           <div id="nav__home-container">
+            ${navbarHtml}
           </div>
           <div id="home__linebox">
             <div class="home__linebox-line" id="home__linebox-top"></div>
@@ -30,19 +35,9 @@ export default class HomeView extends AbstractView {
     `;
   }
 
-  appendNav() {
-    console.log("appending");
-    const navContainer = document.getElementById("nav__home-container");
-    const navbar = document.createElement("navbar-home");
-    navContainer.appendChild(navbar);
-  }
-
-  render() {
-    const html = this.getHtml();
-    document.getElementById("app").innerHTML = html;
-    this.appendNav();
+  async render() {
+    const app = document.getElementById("app");
+    if (app) app.innerHTML = await this.getHtml();
   }
 }
 
-const homeView = new HomeView();
-homeView.render();

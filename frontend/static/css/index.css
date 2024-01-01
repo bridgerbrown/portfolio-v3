@@ -1,5 +1,10 @@
 :root {
   --nearBlack: #0b0b0b;
+  --wide: 0.04em;
+  --one-third: 33.333333%;
+  --two-thirds: 66.666667%;
+  --eleven-twelves: 91.666667%;
+  --mobileWidth: 93vw;
 }
 
 @font-face {
@@ -70,6 +75,11 @@ body {
   font-size: 1.5rem;
 }
 
+.flex-row-center {
+  display: flex;
+  align-items: center;
+}
+
 /* HOME page */
 
 #home__container {
@@ -100,7 +110,7 @@ body {
   font-weight: 200;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--wide);
   padding: 0.5rem 0 0.5rem 0;
   opacity: 0.6;
   cursor: pointer;
@@ -187,7 +197,7 @@ body {
   font-size: 1.5rem; 
   font-weight: 100;
   padding: 0 0 0.4rem 1rem;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--wide);
 }
 
 
@@ -223,6 +233,101 @@ body {
   margin-top: 50px;
 }
 
+.project__container {
+  letter-spacing: var(--wide);
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project__content-container {
+  cursor: pointer;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  width: 100%;
+  height: 275px;
+  border: 1px white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.project__content-container:hover {
+  transform: scale(1.02);
+}
+
+.project__image-container {
+  border-radius: 0.125rem;
+  width: var(--one-third);
+  min-width: 300px;
+  max-width: 24rem;
+  background-color: white;
+}
+
+.project__image {
+  width: 800px;
+  height: 600px;
+  cursor: pointer;
+}
+
+.project__text-container {
+  height: 100%;
+  width: 66%;
+  margin: 0 0 0 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project__text-container h2 {
+  letter-spacing: var(--wide);
+  font-weight: 300;
+  font-size: 1.875rem;
+}
+
+.project__text-container h3 {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.project__text-description {
+  color: white;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.project__text-tech {
+  font-weight: 300;
+  border-bottom: 1px white solid;
+}
+
+.icon__star {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem 0 0 0.5rem;
+}
+
+.project__buttons-container {
+  margin-top: 0rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.project__line-bottom {
+  height: 1px;
+  background-color: white;
+  max-width: 1300px;
+  width: 100%;
+  margin: 3rem 0;
+  opacity: 0.2;
+}
+
 /* < xs */
 @media (max-width: 450px) {
   .home__heading-container h1 {
@@ -247,9 +352,21 @@ body {
   .content__width {
     width: 93vw;
   }
+  .project__image-container {
+    width: var(--eleven-twelves);
+  }
+  .project__text-container {
+    width: var(--mobileWidth);
+  }
+  .project__text-container h2 {
+    font-size: 1.5rem;
+  }
+  .project__buttons-container {
+    margin-top: 2rem;
+  }
 }
 
-/* < lg */
+/* < md */
 @media (max-width: 768px) {
   .home__heading-container {
     flex-direction: column;
@@ -260,14 +377,29 @@ body {
   }
 }
 
-/* sm - md */
+/* < lg */
+@media (max-width: 1024px) {
+  .project__content-container {
+    height: fit-content;
+    flex-direction: row;
+    align-items: start;
+  }
+  .project__image-container {
+    max-width: none;
+  }
+  .project__text-container {
+    margin: 1rem 0 0 0;
+  }
+}
+
+/* xs - sm */
 @media (min-width: 451px) and (max-width: 640px) {
   .home__heading-container h1 {
     font-size: 2.25rem; 
   }
 }
 
-/* md - lg */
+/* sm - md */
 @media (min-width: 641px) and (max-width: 768px) {
   .home__heading-container h1 {
     font-size: 3rem; 
@@ -275,9 +407,18 @@ body {
   .home__heading-container h2 {
     padding: 0.15rem 0 0.35rem 0rem;
   }
+  .project__image-container {
+    width: var(--two-thirds);
+  }
+  .project__text-container {
+    width: 80vw;
+  }
+  .project__buttons-container {
+    margin-top: 1.5rem;
+  }
 }
 
-/* lg < */
+/* md - lg */
 @media (min-width: 769px) and (max-width: 1024px) {
   .home__heading-container {
     padding: 0 0.5rem 0.75rem 2.5rem;
@@ -288,9 +429,18 @@ body {
   .home__heading-container h2 {
     padding: 0 0 0.12rem 1rem;
   }
+  .project__image-container {
+    width: var(--two-thirds);
+  }
+  .project__text-container {
+    width: 80vw;
+  }
+  .project__buttons-container {
+    margin-top: 1.5rem;
+  }
 }
 
-/* xl */
+/* lg - xl */
 @media (min-width: 1025px) and (max-width: 1280px) {
   .home__heading-container h1 {
     font-size: 4.5rem; 
