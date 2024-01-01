@@ -1,6 +1,5 @@
 import NavbarHome from "../components/Navbar.js";
 import AbstractView from "./AbstractView.js";
-import renderProjects from "../services/renderProjects.js"
 
 export default class Home extends AbstractView {
   constructor(params) {
@@ -12,7 +11,7 @@ export default class Home extends AbstractView {
     const navbarHtml = navbar.getHtml();
 
     return `
-      <div class="page">
+      <div class="page page__home">
         <main id="home__container">
           <div id="nav__home-container">
             ${navbarHtml}

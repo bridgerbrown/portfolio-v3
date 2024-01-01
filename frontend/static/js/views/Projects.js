@@ -1,7 +1,8 @@
 import AbstractView from "./AbstractView.js";
 import { state } from "../services/state.js";
-import getProjectsLength  from "../services/RenderProjects.js";
-import renderProjects from "../services/RenderProjects.js";
+import renderProjects from "../services/renderProjects.js";
+import getProjectsLength from "../services/getProjectsLength.js";
+import renderCategoryRadio from "../services/renderCategoryRadio.js";
 
 export default class Projects extends AbstractView {
   constructor(params) {
@@ -32,23 +33,3 @@ export default class Projects extends AbstractView {
     if (app) app.innerHTML = await this.getHtml();
   }
 }
-
-function renderCategoryRadio(id, label, count) {
-  return `
-    <input
-      type="radio"
-      id="${id}"
-      name="categories"
-      value="${id}"
-      checked=${state.category === id}
-      onClick=${() => state.set('category', id)}
-      readOnly
-    />
-    <label
-      htmlFor="${id}"
-      id="category__label"
-    >
-      ${state.category === id ? `${label} (${count})` : label}
-    </label>
-  `;
-};

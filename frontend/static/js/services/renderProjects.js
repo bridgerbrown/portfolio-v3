@@ -1,4 +1,6 @@
-const projectsData = '../../data/projectsData.json';
+import Project from "../components/Project.js";
+import projectsData from "../data/projectsData.js";
+import { state } from "./state.js";
 
 export default function renderProjects() {
   if (!projectsData) {
@@ -20,14 +22,4 @@ export default function renderProjects() {
     workProjects;
 
   return selectedProjects.join('');
-}
-
-export function getProjectsLength(category) {
-  const filteredProjects =
-    category === 'all' ? projectsData :
-    category === 'solo-projects' ? projectsData.filter(project => project.type === "Solo-Project") :
-    category === 'featured' ? projectsData.filter(project => project.featured === "true") :
-    projectsData.filter(project => project.type !== "Solo-Project");
-
-  return filteredProjects.length;
 }

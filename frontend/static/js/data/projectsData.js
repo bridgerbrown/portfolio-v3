@@ -1,4 +1,4 @@
-[
+const projectsData = [
   {
     "id": 0,
     "title": "DayNotes",
@@ -104,3 +104,5 @@
     "buttonsEnabled": "00"
   }
 ]
+
+export default projectsData;
