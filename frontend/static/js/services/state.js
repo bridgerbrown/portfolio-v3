@@ -13,7 +13,7 @@ export const state = new Proxy(
 
 export function renderCategories() {
   const categoryLabel = document.getElementById('category__label'); 
-  const contentContainer = document.getElementById('projects__content_container');
+  const contentContainer = document.getElementById('projects__content-container');
   
   categoryLabel.innerHTML = state.category
 }

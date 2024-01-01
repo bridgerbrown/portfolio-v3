@@ -20,6 +20,7 @@ const navigateTo = (url) => {
 };
 
 const router = async () => {
+  console.log("Router function called")
   const routes = [
     { path: "/", view: Home },
     { path: "/projects", view: Projects },

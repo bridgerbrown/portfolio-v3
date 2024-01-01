@@ -1,8 +1,9 @@
 import AbstractView from "./AbstractView.js";
-import { renderCategories, state } from "../services/state.js";
-import { renderProjects, getProjectsLength }from "../services/renderProjects.js";
+import { state } from "../services/state.js";
+import getProjectsLength  from "../services/RenderProjects.js";
+import renderProjects from "../services/RenderProjects.js";
 
-export default class ProjectsView extends AbstractView {
+export default class Projects extends AbstractView {
   constructor(params) {
     super(params);
   }

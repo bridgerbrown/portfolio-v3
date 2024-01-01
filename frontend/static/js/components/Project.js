@@ -8,7 +8,7 @@ export default class Project {
       <section class="project__container"> 
         <div class="project__content-container">
           <div class="project__image-container">
-            <a href=${disableButtons("view")} rel="noopener noreferrer" data-link>
+            <a href="" rel="noopener noreferrer">
               <img
                 src=${this.project.img}
                 alt="Project image"
@@ -23,18 +23,6 @@ export default class Project {
                 <h2>
                   ${this.project.title}
                 </h2>
-                ${
-                  this.project.featured === "true" ?
-                  <div className="flex-row-center">
-                    <img
-                      src={"/star.png"}
-                      alt="Featured project icon, star"
-                      class="icon__star"
-                    />
-                  </div>
-                  :
-                  <div></div>
-                }
               </div>
               <h3>
                 ${this.project.type}
@@ -44,29 +32,20 @@ export default class Project {
               </p>
               <br/>
               <p class="project__text-description">
-                Built with ${this.project.builtWith.map((item) => 
-                  item !== this.project.builtWith[this.project.builtWith.length - 1] 
-                  ? 
-                  <span key={this.project.builtWith.indexOf(item)}> <span class="project__text-tech">{item}</span>,</span> 
-                  : 
-                  <span key={this.project.builtWith.indexOf(item)}> and <span class="project__text-tech">{item}</span>.</span>
-                )}
               </p>
             </div>
             <div class="project__buttons-container">
               <a 
-                class=${disableButtonStyle("view")} 
-                href=${disableButtons("view")} 
+                class=""
+                href=""
                 rel="noopener noreferrer"
-                data-link
               >
                 View
               </a>
               <a 
-                class=${disableButtonStyle("github")} 
-                href=${disableButtons("github")} 
+                class=""
+                href=""
                 rel="noopener noreferrer"
-                data-link
               >
                 Github 
               </a>

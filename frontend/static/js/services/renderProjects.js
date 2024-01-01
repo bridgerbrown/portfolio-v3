@@ -1,5 +1,4 @@
-import Project from "../components/Project";
-import projectsData from "../../../data/projectsData.json";
+const projectsData = '../../data/projectsData.json';
 
 export default function renderProjects() {
   if (!projectsData) {

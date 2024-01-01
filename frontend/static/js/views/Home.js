@@ -1,7 +1,8 @@
 import NavbarHome from "../components/Navbar.js";
 import AbstractView from "./AbstractView.js";
+import renderProjects from "../services/renderProjects.js"
 
-export default class HomeView extends AbstractView {
+export default class Home extends AbstractView {
   constructor(params) {
     super(params);
   }
