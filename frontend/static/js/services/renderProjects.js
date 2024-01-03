@@ -1,13 +1,10 @@
 import Project from "../components/Project.js";
 import projectsData from "../data/projectsData.js";
-import { state } from "./state.js";
+import { state, subscribeToCategoryChange } from "./state.js";
 
 export default function renderProjects() {
   if (!projectsData) {
-    return `
-      <div id="loading__container">
-        <h2>Loading...</h2>
-      </div>`;
+    return `<p>Loading</p>`;
   }
 
   const allProjects = projectsData.map(project => new Project({ project }).getHtml());
@@ -23,3 +20,5 @@ export default function renderProjects() {
 
   return selectedProjects.join('');
 }
+
+subscribeToCategoryChange(renderProjects);

@@ -1,19 +1,14 @@
-export const state = new Proxy(
-  {
-    category: 'all'
-  },
-  {
-    set: (target, prop, value) => {
-      target[prop] = value;
-      renderCategories();
-      return true;
-    }
-  }
-);
+export const state = {
+  category: 'all',
+};
 
-export function renderCategories() {
-  const categoryLabel = document.getElementById('category__label'); 
-  const contentContainer = document.getElementById('projects__content-container');
-  
-  categoryLabel.innerHTML = state.category
+const categoryChangeEvent = new Event('categoryChange');
+
+export function setCategory(value) {
+  state.category = value;
+  document.dispatchEvent(categoryChangeEvent);
+}
+
+export function subscribeToCategoryChange(callback) {
+  document.addEventListener('categoryChange', callback);
 }

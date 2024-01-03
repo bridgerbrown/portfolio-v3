@@ -1,6 +1,7 @@
 :root {
   --nearBlack: #0b0b0b;
   --wide: 0.04em;
+  --wider: 0.05em;
   --one-third: 33.333333%;
   --two-thirds: 66.666667%;
   --eleven-twelves: 91.666667%;
@@ -94,15 +95,15 @@ body {
 }
 
 .nav__page-link {
+  opacity: 0.6;
   margin-left: 1rem;
   color: white;
   text-decoration: none;
   font-weight: 200;
   font-size: 16.3px;
   text-transform: uppercase;
-  letter-spacing: 0;
+  letter-spacing: var(--wide);
   padding: 0;
-  opacity: 0.6;
   cursor: pointer;
   z-index: 100;
   transition-property: opacity;
@@ -111,6 +112,11 @@ body {
   line-height: 24px;
 }
 
+.nav__page-link:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+ 
 .header__container {
   display: flex;
   justify-content: center;
@@ -133,12 +139,12 @@ body {
 
 .header__text-container h1 {
   margin: 0;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0rem;
   font-size: 6rem;
   font-weight: 100;
   color: white;
   text-transform: uppercase;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.04rem;
   line-height: 6rem;
 }
 
@@ -194,7 +200,7 @@ body {
   transition-duration: 150ms;
 }
 
-.nav__link:hover {
+.nav__home-link:hover {
   opacity: 1;
   cursor: pointer;
 }
@@ -318,8 +324,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   font-size: 16.3px;
-  letter-spacing: 0.01em;
-  line-height: 1.45rem;
+  letter-spacing: var(--wider); 
+  line-height: 1.5rem;
   text-transform: uppercase;
   margin: 0 1rem 0 0.25rem;
   opacity: 0.6;
@@ -389,7 +395,7 @@ input:checked + label {
   font-size: 1.875rem;
   margin: 0;
   line-height: 36px;
-  letter-spacing: 0.029em;
+  letter-spacing: var(--wide);
 }
 
 .project__text-container h3 {
@@ -400,15 +406,16 @@ input:checked + label {
   opacity: 0.8;
   margin: 0 0 16px 0;
   line-height: 24px;
+  letter-spacing: var(--wide);
 }
 
 .project__text-description {
   color: white;
-  font-size: 16px;
+  font-size: 16.3px;
   font-weight: 200;
   margin: 0;
   line-height: 24px;
-  letter-spacing: 0em;
+  letter-spacing: var(--wide);
 }
 
 .project__text-tech {
@@ -433,6 +440,7 @@ input:checked + label {
   border-radius: 0.125rem;
   font-size: 0.875rem;
   font-weight: 400;
+  letter-spacing: var(--wide);
   width: 5rem;
   height: 2.5rem;
   margin-right: 1.5rem;

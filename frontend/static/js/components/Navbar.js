@@ -5,10 +5,9 @@ export default class NavbarHome {
       <a href="/projects" class="nav__home-link" data-link>Projects</a>
       <a href="/about" class="nav__home-link" data-link>About</a>
       <a href="/contact" class="nav__home-link" data-link>Contact</a>
-    </nav>
-    `;
+    </nav>`;
   }
-};
+}
 
 export class Navbar {
   getHtml() {
@@ -17,7 +16,6 @@ export class Navbar {
       <a href="/projects" class="nav__page-link" data-link>Projects</a>
       <a href="/about" class="nav__page-link" data-link>About</a>
       <a href="/contact" class="nav__page-link" data-link>Contact</a>
-    </nav>
-    `;
+    </nav>`;
   }
 }
