@@ -2,7 +2,6 @@ import Home from "./views/Home.js";
 import Projects from "./views/Projects.js";
 import About from "./views/About.js";
 import Contact from "./views/Contact.js";
-import useState from "./services/useState.js";
 
 const pathToRegex = (path) => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
