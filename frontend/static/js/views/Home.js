@@ -1,12 +1,29 @@
 import NavbarHome from "../components/Navbar.js";
-import AbstractView from "./AbstractView.js";
 
-export default class Home extends AbstractView {
-  constructor(params) {
-    super(params);
+export default class Home extends HTMLElement {
+  constructor() {
+    super();
+
+    this.root = this.attachShadow({ mode: "open" });
+    const template = document.getElementById("home-view-template");
+    const content = template.content.cloneNode(true);
+    this.root.appendChild(content);    
   }
 
-  async getHtml() {
+  connectedCallback() {
+    this.loadCSS();
+    this.render();
+  }
+
+  async loadCSS() {
+    const styles = document.createElement("style");
+    const request = await fetch("/static/css/index.css");
+    const text = await request.text();
+    styles.textContent = text;
+    this.root.appendChild(styles);
+  };
+
+  getHtml() {
     const navbar = new NavbarHome();
     const navbarHtml = navbar.getHtml();
 
@@ -35,9 +52,10 @@ export default class Home extends AbstractView {
     `;
   }
 
-  async render() {
-    const app = document.getElementById("app");
-    if (app) app.innerHTML = await this.getHtml();
+  render() {
+    const content = this.getHtml();
+    this.root.innerHTML = content;
   }
 }
 
+customElements.define("home-view", Home);

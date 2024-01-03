@@ -4,45 +4,47 @@ import PageHeader from "../components/PageHeader.js";
 import projectsData from "../data/projectsData.js";
 import Project from "../components/Project.js";
 
-export default class Projects extends AbstractView {
-  constructor(params) {
-    super(params);
+export default class Projects extends HTMLElement {
+  constructor() {
+    super();
 
-    this.state = {
-      category: "all",
-    };
+    this.root = this.attachShadow({ mode: "open" });
+
+    const template = document.getElementById("projects-view-template");
+    const content = template.content.cloneNode(true);
+    this.root.appendChild(content);    
   }
 
-  getState() {
-    return this.state;
-  }
-
-  setState(newState) {
-    this.state = { ...this.state, ...newState };
+  connectedCallback() {
     this.render();
+    window.addEventListener("categorychange", () => {
+      this.render();  
+    });
   }
 
   renderCategoryRadio(id, label, count) {
-    return `
-      <input
-        type="radio"
-        class="projects__category-input"
-        id="${id}"
-        name="categories"
-        value="${id}"
-        checked="${this.getState().category === id}"
-      />
-      <label
-        for="${id}"
-        class="projects__category-label"
-        id="${id}-label"
-      >
-        ${this.getState().category === id ? `${label} (${count})` : `${label}`}
-      </label>
-    `;
-  };
+    const radioButton = document.createElement("input");
+    radioButton.type = "radio";
+    radioButton.className = "projects__category-input";
+    radioButton.id = "category-input";
+    radioButton.name = "categories";
+    radioButton.value = id;
+    radioButton.checked = this.getState().category === id;
 
-  renderProjects() {
+    radioButton.addEventListener("change", () => {
+      this.handleRadioChange(id);
+    });
+
+    const radioLabel = document.createElement("label");
+    radioLabel.htmlFor = id;
+    radioLabel.className = "projects__category-label";
+    radioLabel.id = `${id}-label`;
+    radioLabel.innerText = this.getState().category === id ? `${label} (${count})` : `${label}`;
+
+    return radioButton.outerHTML + radioLabel.outerHTML;
+  }
+
+  renderProjects(category) {
     if (!projectsData) {
       return `
         <div id="loading__container">
@@ -50,18 +52,20 @@ export default class Projects extends AbstractView {
         </div>`;
     }
 
-    const allProjects = projectsData.map(project => new Project({ project }).getHtml());
-    const featuredProjects = projectsData.filter(project => project.featured === "true").map(project => new Project({ project }).getHtml());
-    const soloProjects = projectsData.filter(project => project.type === "Solo-Project").map(project => new Project({ project }).getHtml());
-    const workProjects = projectsData.filter(project => project.type !== "Solo-Project").map(project => new Project({ project }).getHtml());
+    const selectedProjects = this.getSelectedProjects(category);
+    return selectedProjects.map(project => new Project({ project }).getHtml()).join('');
+  }
 
-    const selectedProjects =
-      this.getState().category === 'all' ? allProjects :
-      this.getState().category === 'solo-projects' ? soloProjects :
-      this.getState().category === 'featured' ? featuredProjects :
-      workProjects;
+  getSelectedProjects(category) {
+    const allProjects = projectsData;
+    const featuredProjects = projectsData.filter(project => project.featured === "true");
+    const soloProjects = projectsData.filter(project => project.type === "Solo-Project");
+    const workProjects = projectsData.filter(project => project.type !== "Solo-Project");
 
-    return selectedProjects.join('');
+    return category === 'all' ? allProjects :
+           category === 'solo-projects' ? soloProjects :
+           category === 'featured' ? featuredProjects :
+           workProjects;
   }
 
   async getHtml() {
@@ -79,7 +83,7 @@ export default class Projects extends AbstractView {
         </div>
         <main class="page__content-container">
           <div id="projects__content-container">
-            ${this.renderProjects()}
+            ${this.renderProjects("all")}
           </div>
         </main>
         <Footer />
@@ -88,9 +92,8 @@ export default class Projects extends AbstractView {
   }
 
   async render() {
-    const app = document.getElementById("app");
-    if (app) {
-      app.innerHTML = await this.getHtml()
-    };
+    if (template) this.root.innerHTML = await this.getHtml();
   }
 }
+
+customElements.define("projects-view", Projects);

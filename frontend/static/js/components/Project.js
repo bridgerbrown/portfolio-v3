@@ -1,4 +1,4 @@
-export default class Project {
+export default class Project extends HTMLElement {
   constructor({ project }) {
     this.project = project;
   }
@@ -64,3 +64,5 @@ export default class Project {
     `;
   }
 }
+
+customElements.define("project-item", Project);

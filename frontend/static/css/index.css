@@ -256,6 +256,7 @@ body {
 }
 
 .home__heading-container {
+  color: white;
   position: fixed;
   bottom: max(20px, 2.5vmin);
   width: fit-content;
