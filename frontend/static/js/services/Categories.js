@@ -1,5 +1,5 @@
 const Categories = {
-  category: "all",
+  selectedCategory: "all",
 };
 
 const proxiedCategories = new Proxy(Categories, {

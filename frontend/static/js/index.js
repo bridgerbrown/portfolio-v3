@@ -3,6 +3,8 @@ import Categories from './services/Categories.js';
 
 // Web Components Imports
 import Home from './views/Home.js';
+import Project from './components/Project.js';
+import Projects from './views/Projects.js';
 
 window.app = {}
 

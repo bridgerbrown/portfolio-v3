@@ -9,9 +9,71 @@
 </head>
 <body>
   <main></main>
+
   <template id="home-view-template"></template>
-  <template id="projects-view-template"></template>
+
+  <template id="projects-view-template">
+    <div class="page page__projects">
+      <div class="projects__categories-container content__width">
+      </div>
+      <main class="page__content-container">
+        <div id="projects__content-container">
+        </div>
+      </main>
+    </div>
+  </template>
+    
+  <template id="project-item-template">
+    <section class="project__container"> 
+      <div class="project__content-container">
+        <div class="project__image-container">
+          <a href="" rel="noopener noreferrer">
+            <img
+              src=""
+              alt="Project image"
+              class="project__image"
+              priority=""
+            />
+          </a>
+        </div>
+        <div class="project__text-container">
+          <div>
+            <div class="flex-row-center">
+              <h2>
+              </h2>
+            </div>
+            <h3>
+            </h3>
+            <p class="project__text-description project__description">
+            </p>
+            <br/>
+            <p class="project__text-description project__builtwith">
+            </p>
+          </div>
+          <div class="project__buttons-container">
+            <a 
+              class="project__button"
+              href=""
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+            <a 
+              class="project__button"
+              href=""
+              rel="noopener noreferrer"
+            >
+              Github 
+            </a>
+          </div>
+        </div>
+      </div>
+      <span class="project__line-bottom"></span>
+    </section>
+  </template>
+
   <template id="about-view-template"></template>
+
   <template id="contact-view-template"></template>
 </body>
 </html>

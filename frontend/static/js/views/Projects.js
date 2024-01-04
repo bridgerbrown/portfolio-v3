@@ -1,4 +1,3 @@
-import AbstractView from "./AbstractView.js";
 import getProjectsLength from "../services/getProjectsLength.js";
 import PageHeader from "../components/PageHeader.js";
 import projectsData from "../data/projectsData.js";
@@ -9,90 +8,101 @@ export default class Projects extends HTMLElement {
     super();
 
     this.root = this.attachShadow({ mode: "open" });
-
     const template = document.getElementById("projects-view-template");
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);    
   }
 
   connectedCallback() {
+    this.loadCSS();
     this.render();
     window.addEventListener("categorychange", () => {
+      this.loadCSS();
       this.render();  
     });
   }
 
-  renderCategoryRadio(id, label, count) {
-    const radioButton = document.createElement("input");
-    radioButton.type = "radio";
-    radioButton.className = "projects__category-input";
-    radioButton.id = "category-input";
-    radioButton.name = "categories";
-    radioButton.value = id;
-    radioButton.checked = this.getState().category === id;
+  renderCategoryRadio() {
+    const categoriesData = [
+      {
+        value: "all",
+        display: "All",
+        length: getProjectsLength("allProjects")
+      }, 
+      {
+        value: "featured",
+        display: "Featured",
+        length: getProjectsLength("featuredProjects")
+      }, 
+      {
+        value: "solo-projects",
+        display: "Solo-Projects",
+        length: getProjectsLength("solo-projects")
+      }, 
+      {
+        value: "work",
+        display: "Work",
+        length: getProjectsLength("workProjects")
+      }, 
+    ]
+    const radioContainer = this.root.querySelector(".projects__categories-container");
+    
+    categoriesData.forEach((category) => {
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.className = "projects__category-input";
+      input.id = "category-input";
+      input.name = "categories";
+      input.value = category.value;
+      input.checked = app.categories.category === category.value;
+      radioContainer.appendChild(input);
 
-    radioButton.addEventListener("change", () => {
-      this.handleRadioChange(id);
+      input.addEventListener("change", () => {
+        app.categories.category = category.value;
+      });
+
+      const label = document.createElement("label");
+      label.htmlFor = category.value;
+      label.className = "projects__category-label";
+      label.id = `${category.value}-label`;
+      label.innerText = app.categories.category === category.value ? `${category.display} (${category.length})` : `${category.display}`;
+      radioContainer.appendChild(label);
     });
-
-    const radioLabel = document.createElement("label");
-    radioLabel.htmlFor = id;
-    radioLabel.className = "projects__category-label";
-    radioLabel.id = `${id}-label`;
-    radioLabel.innerText = this.getState().category === id ? `${label} (${count})` : `${label}`;
-
-    return radioButton.outerHTML + radioLabel.outerHTML;
   }
 
-  renderProjects(category) {
-    if (!projectsData) {
-      return `
-        <div id="loading__container">
-          <h2>Loading...</h2>
-        </div>`;
-    }
-
-    const selectedProjects = this.getSelectedProjects(category);
-    return selectedProjects.map(project => new Project({ project }).getHtml()).join('');
-  }
-
-  getSelectedProjects(category) {
+  renderProjects() {
     const allProjects = projectsData;
     const featuredProjects = projectsData.filter(project => project.featured === "true");
     const soloProjects = projectsData.filter(project => project.type === "Solo-Project");
     const workProjects = projectsData.filter(project => project.type !== "Solo-Project");
 
-    return category === 'all' ? allProjects :
-           category === 'solo-projects' ? soloProjects :
-           category === 'featured' ? featuredProjects :
-           workProjects;
+    const category = app.categories.category;
+    const selectedProjects = category === 'all' ? allProjects :
+      category === 'solo-projects' ? soloProjects :
+      category === 'featured' ? featuredProjects :
+      workProjects;
+
+    const projectsContainer = this.root.querySelector("#projects__content-container");
+    projectsContainer.innerHTML = "";
+
+    selectedProjects.map((project) => {
+      const item = document.createElement("project-item");
+      item.dataset.project = JSON.stringify(project);
+      projectsContainer.appendChild(item);
+    });
   }
 
-  async getHtml() {
-    const pageHeader = new PageHeader("Projects");
-    const pageHeaderHtml = pageHeader.getHtml();
+  async loadCSS() {
+    const styles = document.createElement("style");
+    const request = await fetch("/static/css/index.css");
+    const text = await request.text();
+    styles.textContent = text;
+    this.root.appendChild(styles);
+  };
 
-    return `
-      <div class="page page__projects">
-        ${pageHeaderHtml}
-        <div class="projects__categories-container content__width">
-          ${this.renderCategoryRadio("all", "All", getProjectsLength("allProjects"))}
-          ${this.renderCategoryRadio("featured", "Featured", getProjectsLength("featuredProjects"))}
-          ${this.renderCategoryRadio("solo-projects", "Solo-Projects", getProjectsLength("soloProjects"))}
-          ${this.renderCategoryRadio("work", "Work", getProjectsLength("workProjects"))}
-        </div>
-        <main class="page__content-container">
-          <div id="projects__content-container">
-            ${this.renderProjects("all")}
-          </div>
-        </main>
-        <Footer />
-      </div>
-    `;
-  }
-
-  async render() {
-    if (template) this.root.innerHTML = await this.getHtml();
+  render() {
+    this.renderCategoryRadio();
+    this.renderProjects();
   }
 }
 
