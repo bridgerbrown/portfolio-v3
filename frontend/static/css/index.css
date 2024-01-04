@@ -318,6 +318,7 @@ body {
 
 .projects__category-input {
   display: none;
+  letter-spacing: var(--wider); 
 }
 
 .projects__category-label {
@@ -334,11 +335,14 @@ body {
   cursor: pointer;
   border-bottom: 1px transparent solid;
   box-sizing: border-box;
+  color: white;
 }
 
 input:checked + label {
+  color: white;
   opacity: 1;
   border-bottom: 1px white solid;
+  letter-spacing: var(--wider); 
 }
 
 .projects__category-label:hover {

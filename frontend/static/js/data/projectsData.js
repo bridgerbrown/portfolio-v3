@@ -81,7 +81,7 @@ const projectsData = [
     "id": 6,
     "title": "RicochetProductions.org",
     "type": "Freelance",
-    "description": "A freelance one-pager website for the company Ricochet Productions.",
+    "description": "A single page application utilizing React and TypeScript, this website was a freelance project built for the company Ricochet Productions. A multi-page version with more content is coming soon.",
     "builtWith": ["TypeScript", "React", "JavaScript", "TailwindCSS", "NextJS"],
     "projectLink": "https://www.ricochetproductions.org/",
     "githubLink": "https://github.com/bridgerbrown/ricochet-productions",

@@ -46,7 +46,8 @@ export default class Projects extends HTMLElement {
       }, 
     ]
     const radioContainer = this.root.querySelector(".projects__categories-container");
-    
+    radioContainer.innerHTML = "";
+
     categoriesData.forEach((category) => {
       const input = document.createElement("input");
       input.type = "radio";
@@ -57,16 +58,17 @@ export default class Projects extends HTMLElement {
       input.checked = app.categories.category === category.value;
       radioContainer.appendChild(input);
 
-      input.addEventListener("change", () => {
-        app.categories.category = category.value;
-      });
-
       const label = document.createElement("label");
       label.htmlFor = category.value;
       label.className = "projects__category-label";
       label.id = `${category.value}-label`;
       label.innerText = app.categories.category === category.value ? `${category.display} (${category.length})` : `${category.display}`;
       radioContainer.appendChild(label);
+
+      label.addEventListener("click", (event) => {
+        app.categories.category = category.value;
+        console.log(category.value);
+      });
     });
   }
 
