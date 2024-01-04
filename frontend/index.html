@@ -12,7 +12,23 @@
 
   <template id="home-view-template"></template>
 
+  <template id="header-template">
+    <header class='header__container'>
+      <div class='header__content-container'>
+        <div class='header__text-container'>
+          <h1>
+          </h1>
+          <div class="header__nav-container"></div>
+        </div>
+        <div className="">
+          <div class='header__line'></div>
+        </div>
+      </div>
+    </header> 
+  </template>
+
   <template id="projects-view-template">
+    <div id="header__container"></div>
     <div class="page page__projects">
       <div class="projects__categories-container content__width">
       </div>
@@ -20,6 +36,11 @@
         <div id="projects__content-container">
         </div>
       </main>
+    <footer class="footer">
+      <p>
+        Created by Bridger Brown
+      </p>
+    </footer>
     </div>
   </template>
     
@@ -38,7 +59,7 @@
         </div>
         <div class="project__text-container">
           <div>
-            <div class="flex-row-center">
+            <div class="flex-row-center project__heading-top">
               <h2>
               </h2>
             </div>

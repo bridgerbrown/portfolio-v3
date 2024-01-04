@@ -2,6 +2,7 @@ import getProjectsLength from "../services/getProjectsLength.js";
 import PageHeader from "../components/PageHeader.js";
 import projectsData from "../data/projectsData.js";
 import Project from "../components/Project.js";
+import HeaderRenderer from "../services/renderHeader.js";
 
 export default class Projects extends HTMLElement {
   constructor() {
@@ -11,6 +12,7 @@ export default class Projects extends HTMLElement {
     const template = document.getElementById("projects-view-template");
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);    
+    this.headerRenderer = new HeaderRenderer(this.root, "Projects");
   }
 
   connectedCallback() {
@@ -67,7 +69,6 @@ export default class Projects extends HTMLElement {
 
       label.addEventListener("click", (event) => {
         app.categories.category = category.value;
-        console.log(category.value);
       });
     });
   }
@@ -103,6 +104,7 @@ export default class Projects extends HTMLElement {
   };
 
   render() {
+    this.headerRenderer.render();
     this.renderCategoryRadio();
     this.renderProjects();
   }

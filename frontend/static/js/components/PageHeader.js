@@ -1,27 +1,22 @@
 import { Navbar } from "./Navbar.js";
 
-export default class PageHeader {
-  constructor(props) {
-    this.props = props;
+export default class PageHeader extends HTMLElement {
+  constructor() {
+    super()
+    this.navbar = new Navbar().getHtml();
   }
-  getHtml() {
-    const navbar = new Navbar();
-    const navbarHtml = navbar.getHtml();
 
-    return `
-      <header class='header__container'>
-        <div class='header__content-container'>
-          <div class='header__text-container'>
-            <h1>
-              ${this.props}
-            </h1>
-            ${navbarHtml}
-          </div>
-          <div className="">
-            <div class='header__line'></div>
-          </div>
-        </div>
-      </header> 
-    `;
+  connectedCallback() {
+    const template = document.getElementById("header-template");
+    const content = template.content.cloneNode(true);
+
+    this.appendChild(content);
+
+    const headerText = JSON.parse(this.dataset.header);
+    this.querySelector("h1").textContent = headerText;
+    const navContainer = this.querySelector(".header__nav-container")
+    navContainer.innerHTML = this.navbar;
   }
 };
+
+customElements.define("header-item", PageHeader);

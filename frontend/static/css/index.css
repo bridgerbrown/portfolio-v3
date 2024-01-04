@@ -155,6 +155,17 @@ body {
   opacity: 0.5;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-weight: 200;
+  padding: 3rem 0;
+}
+
 /* HOME page */
 
 .page__home {
@@ -403,6 +414,12 @@ input:checked + label {
   letter-spacing: var(--wide);
 }
 
+#project__featured-icon {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem 0 0 0.5rem;
+}
+
 .project__text-container h3 {
   margin-bottom: 1rem;
   font-weight: 300;
@@ -423,7 +440,7 @@ input:checked + label {
   letter-spacing: var(--wide);
 }
 
-.project__text-tech {
+.project__builtWith-item {
   font-weight: 300;
   border-bottom: 1px white solid;
 }
