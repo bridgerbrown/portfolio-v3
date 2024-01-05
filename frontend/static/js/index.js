@@ -5,6 +5,7 @@ import Categories from './services/Categories.js';
 import Home from './views/Home.js';
 import Project from './components/Project.js';
 import Projects from './views/Projects.js';
+import About from './views/About.js';
 
 window.app = {}
 
