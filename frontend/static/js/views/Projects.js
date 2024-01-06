@@ -95,13 +95,7 @@ export default class Projects extends HTMLElement {
     });
   }
 
-  async loadCSS() {
-    const styles = document.createElement("style");
-    const request = await fetch("/static/css/index.css");
-    const text = await request.text();
-    styles.textContent = text;
-    this.root.appendChild(styles);
-  };
+
 
   render() {
     this.headerRenderer.render();

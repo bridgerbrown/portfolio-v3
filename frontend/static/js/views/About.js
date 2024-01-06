@@ -11,7 +11,6 @@ export default class About extends HTMLElement {
     this.root.appendChild(content);    
     this.headerRenderer = new HeaderRenderer(this.root, "About");
   }
-
   async connectedCallback() {
     await this.loadCSS();
     this.render();
