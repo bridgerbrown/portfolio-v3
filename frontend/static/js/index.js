@@ -1,7 +1,6 @@
 import Router from './services/Router.js';
 import Categories from './services/Categories.js';
 
-// Web Components Imports
 import Home from './views/Home.js';
 import Project from './components/Project.js';
 import Projects from './views/Projects.js';
@@ -20,6 +19,6 @@ app.router = Router;
 app.categories = Categories;
 
 window.addEventListener("DOMContentLoaded", () => {
-    app.router.init();
+  app.router.init();
 });
 

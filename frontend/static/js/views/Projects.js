@@ -15,11 +15,11 @@ export default class Projects extends HTMLElement {
     this.headerRenderer = new HeaderRenderer(this.root, "Projects");
   }
 
-  connectedCallback() {
-    this.loadCSS();
+  async connectedCallback() {
+    await this.loadCSS();
     this.render();
-    window.addEventListener("categorychange", () => {
-      this.loadCSS();
+    window.addEventListener("categorychange", async () => {
+      await this.loadCSS();
       this.render();  
     });
   }

@@ -13,6 +13,7 @@
   font-weight: 200;
   font-style: normal;
   src: url('/static/public/fonts/BlinkMacSystemFont-Thin.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -20,6 +21,7 @@
   font-weight: 100; 
   font-style: normal;
   src: url('/static/public/fonts/BlinkMacSystemFont-Ultralight.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -27,6 +29,7 @@
   font-weight: 300; 
   font-style: normal;
   src: url('/static/public/fonts/BlinkMacSystemFont-Light.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -34,6 +37,7 @@
   font-weight: 400; 
   font-style: normal;
   src: url('/static/public/fonts/BlinkMacSystemFont-Regular.woff2') format('woff2');
+  font-display: swap;
 }
 
 html {
@@ -146,6 +150,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   line-height: 6rem;
+  transition: none;
 }
 
 .header__line {
@@ -296,9 +301,6 @@ body {
 .home__heading-container h1,
 .home__heading-container h2 {
   margin: 0;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 /* PROJECTS page */
@@ -504,12 +506,12 @@ input:checked + label {
   align-items: center;
 }
 
-.about__content-container {
+#about__content-container {
   z-index: 10;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1300px;
   width: 80vw;
   margin: 68px 0 18rem 0;
