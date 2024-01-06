@@ -69,7 +69,7 @@ const projectsData = [
     "title": "Quizzical Trivia Game",
     "type": "Solo-Project",
     "description": "A trivia question game with multiple categories and difficulties, this React app fetches data from the Open Trivia Database API. This project started out as a part of the Scrimba Front-End Developer Career Path but was fleshed out more on its own.",
-    "builtWith": ["React", "NextJS"],
+    "builtWith": ["React", "NextJS", "REST API", "CSS"],
     "projectLink": "https://quiz-o8z5ipsoe-bridgerbrown.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/quiz-app-project",
     "date": "October 2022",

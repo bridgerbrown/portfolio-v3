@@ -171,6 +171,35 @@ body {
   padding: 3rem 0;
 }
 
+button {
+  border-radius: 0.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: var(--wide);
+  padding: 0 1.4rem;
+  height: 3rem;
+  margin-right: 1.5rem;
+	background-color: rgb(209 213 219);
+  color: black;
+  border: 1px white solid;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "BlinkMac";
+}
+
+button:hover {
+  border: 1px transparent solid;
+  cursor: pointer;
+	background-color: rgb(156 163 175);
+  color: white;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 /* HOME page */
 
 .page__home {
@@ -375,7 +404,7 @@ input:checked + label {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   width: 100%;
-  height: 275px;
+  min-height: 275px;
   border: 1px white;
   display: flex;
   align-items: flex-start;
@@ -454,7 +483,7 @@ input:checked + label {
 }
 
 .project__buttons-container {
-  margin-top: 0rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -465,8 +494,8 @@ input:checked + label {
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: var(--wide);
-  width: 5rem;
-  height: 2.5rem;
+  width: 5.5rem;
+  height: 2.8rem;
   margin-right: 1.5rem;
 	background-color: rgb(209 213 219);
   color: black;
@@ -479,6 +508,7 @@ input:checked + label {
 }
 
 .project__button:hover {
+  cursor: pointer;
 	background-color: rgb(156 163 175);
   border: none;
   color: white;
@@ -650,29 +680,95 @@ input:checked + label {
   justify-content: flex-start;
 }
 
-.about__section-links button {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  font-weight: 400;
-  font-size: 0.875rem;
-  width: 6rem;
-  height: 3rem;
-  border-radius: 0.125rem;
-  background-color: rgb(209 213 219);
-  color: black;
-  border: none;
-  font-family: "BlinkMac";
-  cursor: pointer;
-}
-
-.about__section-links button:hover {
-	background-color: rgb(156 163 175);
-  color: white;
-}
-
 .about__section-personal {
   margin-top: 5rem;
+}
+
+/* CONTACT page */
+
+.page__contact {
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__container {
+  margin: 138px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  width: 80vw;
+}
+
+.contact__heading {
+  margin: 0 0 8rem 0;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 100;
+  text-align: left;
+  letter-spacing: var(--wide);
+}
+
+.contact__buttons-container {
+  padding: 0 0 720px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.contact__links-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  letter-spacing: var(--wide);
+}
+
+.contact__links-container a {
+  text-decoration: none;
+}
+
+.contact__links-container span {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__links-container p {
+  font-weight: 200;
+  color: white;
+  font-size: 0.875rem; 
+  margin: 0;
+  padding: 0.2rem 0 0 0;
+}
+
+.contact__links-container img {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.9;
+  filter: invert(100%);
+  margin: 0 0 0.25rem 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.contact__links-container img:hover {
+  opacity: 0.6;
+}
+
+.contact__email-container {
+  margin: 0 0 0 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* < xs */
@@ -713,14 +809,14 @@ input:checked + label {
   .header__text-container h1 {
     font-size: 4.5rem;
   }
-  #projects__content-container {
+  #projects__content-container,
+  .contact__container,
+  .project__text-container,
+  .about__skills-container ul {
     width: var(--mobileWidth);
   }
   .project__image-container {
     width: var(--eleven-twelves);
-  }
-  .project__text-container {
-    width: var(--mobileWidth);
   }
   .project__text-container h2 {
     font-size: 1.5rem;
@@ -735,11 +831,28 @@ input:checked + label {
   .about__text-content-container h2 {
     font-size: 3rem;
   }
-  .about__skills-container ul {
-    width: var(--mobileWidth);
-  }
   .about__skill {
     font-size: 0.75rem;
+  }
+  .contact__heading {
+    margin: 0 0 5rem 0;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  .contact__buttons-container {
+    padding: 0 0 710px 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact__links-container {
+    margin-bottom: 2rem;
+  }
+  .contact__links-container span {
+    margin: 0 1.5rem;
+  }
+  .contact__email-container {
+    margin: 0;
+    justify-content: center;
   }
 }
 

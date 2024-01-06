@@ -15,8 +15,8 @@
   <main></main>
 
   <template id="home-view-template">
-    <div class="page page__home">
-      <main id="home__container">
+    <main class="page page__home">
+      <div id="home__container">
         <div id="nav__home-container">
           <nav id="nav__home">
             <a href="/" class="nav__home-link" data-link>Home</a>
@@ -39,8 +39,8 @@
             Frontend Developer
           </h2>
         </header>
-      </main>
-    </div>
+      </div>
+    </main>
   </template>
 
   <template id="header-template">
@@ -48,7 +48,14 @@
       <div class='header__content-container'>
         <div class='header__text-container'>
           <h1></h1>
-          <div class="header__nav-container"></div>
+          <div class="header__nav-container">
+            <nav id="nav__page">
+              <a href="/" class="nav__page-link" data-link>Home</a>
+              <a href="/projects" class="nav__page-link" data-link>Projects</a>
+              <a href="/about" class="nav__page-link" data-link>About</a>
+              <a href="/contact" class="nav__page-link" data-link>Contact</a>
+            </nav>
+          </div>
         </div>
         <div class="">
           <div class='header__line'></div>
@@ -58,7 +65,7 @@
   </template>
 
   <template id="projects-view-template">
-    <header id="header__container"></header>
+    <header id="header__container-projects"></header>
     <main class="page page__projects">
       <div class="projects__categories-container content__width">
       </div>
@@ -120,7 +127,7 @@
   </template>
 
   <template id="about-view-template">
-    <header id="header__container"></header>
+    <header id="header__container-about"></header>
     <main class="page page__about">
       <div id='about__content-container'>
         <div class='about__portrait-container'>
@@ -289,6 +296,61 @@
     </main>
   </template>
 
-  <template id="contact-view-template"></template>
+  <template id="contact-view-template">
+    <header id="header__container-contact"></header>
+    <main class='page page__contact'>
+      <section class='contact__container'>
+        <p class='contact__heading'>
+            I am currently available for work. Feel free to reach out with any inquiries.
+        </p>
+        <section class='contact__buttons-container'>
+          <div class='contact__links-container'>
+            <a href='https://github.com/bridgerbrown' rel="noopener noreferrer">
+              <span>
+                <img
+                  src="/static/public/github-logo.webp"
+                  alt="Github link logo"
+                  width="50"
+                  height="50"
+                />
+                <p>Github</p>
+              </span>
+            </a>
+            <a href='https://www.linkedin.com/in/bridger-brown/' rel="noopener noreferrer">
+              <span>
+                <img
+                  src="/static/public/linkedin-logo.webp"
+                  alt="LinkedIn link logo"
+                  width="50"
+                  height="50"
+                />
+                <p>LinkedIn</p>
+              </span>
+            </a>
+            <a href='https://www.instagram.com/bridger.dev/' rel="noopener noreferrer">
+              <span>
+                <img
+                  src="/static/public/instagram-logo.webp"
+                  alt="Instagram link logo"
+                  width="50"
+                  height="50"
+                />
+                <p>Instagram</p>
+              </span>
+            </a>
+          </div>
+          <div class='contact__email-container'>
+            <button id="copy-button">
+              Copy Email 
+            </button>
+          </div>
+        </section>
+      </section>
+      <footer class="footer">
+        <p>Created by Bridger Brown</p>
+      </footer>
+    </main>
+  </template>
+
 </body>
 </html>

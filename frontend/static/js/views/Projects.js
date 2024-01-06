@@ -1,27 +1,26 @@
-import getProjectsLength from "../services/getProjectsLength.js";
-import PageHeader from "../components/PageHeader.js";
 import projectsData from "../data/projectsData.js";
 import Project from "../components/Project.js";
-import HeaderRenderer from "../services/renderHeader.js";
 
 export default class Projects extends HTMLElement {
-  constructor() {
-    super();
-
-    this.root = this.attachShadow({ mode: "open" });
-    const template = document.getElementById("projects-view-template");
-    const content = template.content.cloneNode(true);
-    this.root.appendChild(content);    
-    this.headerRenderer = new HeaderRenderer(this.root, "Projects");
-  }
-
-  async connectedCallback() {
-    await this.loadCSS();
+  connectedCallback() {
     this.render();
-    window.addEventListener("categorychange", async () => {
-      await this.loadCSS();
+    window.addEventListener("categorychange", () => {
       this.render();  
     });
+  }
+
+  getProjectsLength(category) {
+    const allProjects = projectsData;
+    const featuredProjects = projectsData.filter(project => project.featured === "true");
+    const soloProjects = projectsData.filter(project => project.type === "Solo-Project");
+    const workProjects = projectsData.filter(project => project.type !== "Solo-Project");
+
+    const selectedProjects = category === 'all' ? allProjects :
+      category === 'solo-projects' ? soloProjects :
+      category === 'featured' ? featuredProjects :
+      workProjects;
+
+    return selectedProjects.length;
   }
 
   renderCategoryRadio() {
@@ -29,25 +28,25 @@ export default class Projects extends HTMLElement {
       {
         value: "all",
         display: "All",
-        length: getProjectsLength("allProjects")
+        length: this.getProjectsLength("all")
       }, 
       {
         value: "featured",
         display: "Featured",
-        length: getProjectsLength("featuredProjects")
+        length: this.getProjectsLength("featured")
       }, 
       {
         value: "solo-projects",
         display: "Solo-Projects",
-        length: getProjectsLength("solo-projects")
+        length: this.getProjectsLength("solo-projects")
       }, 
       {
         value: "work",
         display: "Work",
-        length: getProjectsLength("workProjects")
+        length: this.getProjectsLength("work")
       }, 
     ]
-    const radioContainer = this.root.querySelector(".projects__categories-container");
+    const radioContainer = document.querySelector(".projects__categories-container");
     radioContainer.innerHTML = "";
 
     categoriesData.forEach((category) => {
@@ -85,7 +84,7 @@ export default class Projects extends HTMLElement {
       category === 'featured' ? featuredProjects :
       workProjects;
 
-    const projectsContainer = this.root.querySelector("#projects__content-container");
+    const projectsContainer = document.querySelector("#projects__content-container");
     projectsContainer.innerHTML = "";
 
     selectedProjects.map((project) => {
@@ -95,12 +94,19 @@ export default class Projects extends HTMLElement {
     });
   }
 
-
-
   render() {
-    this.headerRenderer.render();
+    const template = document.getElementById("projects-view-template");
+    const content = template.content.cloneNode(true);
+    this.appendChild(content);
+
     this.renderCategoryRadio();
     this.renderProjects();
+
+    const headerContainer = document.getElementById("header__container-projects");
+    headerContainer.innerHTML = "";
+    const header = document.createElement("header-item");
+    header.dataset.heading = JSON.stringify("Projects");
+    headerContainer.appendChild(header);
   }
 }
 

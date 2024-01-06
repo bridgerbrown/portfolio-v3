@@ -1,8 +1,4 @@
 export default class Project extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     const template = document.getElementById("project-item-template");
     const content = template.content.cloneNode(true);
@@ -17,7 +13,7 @@ export default class Project extends HTMLElement {
     const builtWith = project.builtWith.map((item, index) => {
       return index < project.builtWith.length - 1 
         ? 
-        `<span><span class="project__builtWith-item">${item},</span> </span>` 
+        `<span><span class="project__builtWith-item">${item}</span>, </span>` 
         : 
         `<span>and <span class="project__builtWith-item">${item}</span>.</span>` 
     });
