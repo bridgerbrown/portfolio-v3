@@ -107,6 +107,7 @@
           <div class="project__buttons-container">
             <a 
               class="project__button"
+              id="project__button-view"
               href=""
               rel="noopener noreferrer"
             >
@@ -114,6 +115,7 @@
             </a>
             <a 
               class="project__button"
+              id="project__button-github"
               href=""
               rel="noopener noreferrer"
             >
@@ -202,7 +204,7 @@
                 </li>
 
                 <li class="about__skill">
-                  <svg width="26" height="26">
+                  <svg viewBox="0 0 128 128" width="26" height="26">
                     <path fill="#ffffff" d="M9.032 2l10.005 112.093 44.896 12.401 45.02-12.387L118.968 2H9.032zm89.126 26.539l-.627 7.172L97.255 39H44.59l1.257 14h50.156l-.336 3.471-3.233 36.119-.238 2.27L64 102.609v.002l-.034.018-28.177-7.423L33.876 74h13.815l.979 10.919L63.957 89H64v-.546l15.355-3.875L80.959 67H33.261l-3.383-38.117L29.549 25h68.939l-.33 3.539z"></path>
                   </svg>
                   <p>HTML 5</p>
@@ -280,7 +282,26 @@
             </div>
           </section>
           <section class='about__section-links'>
-            <button class=''>Resume</button>
+            <button id="about__button-resume">Resume</button>
+            <div id="about__resume-confirmation">
+              <div class="about__confirmation-container">
+                <p>Download "Bridger_Brown_Resume.docx"?</p>
+                <img 
+                  alt="check mark icon, confirmation" 
+                  width="26" 
+                  height="26" 
+                  src="/static/public/check.svg"
+                  id="about__resume-confirm"
+                />
+                <img 
+                  alt="x icon, exit" 
+                  width="26" 
+                  height="26" 
+                  src="/static/public/xmark.svg"
+                  id="about__resume-exit"
+                />
+              </div>
+            </div>
           </section>
           <section class='about__section-personal'>
             <p class=''>
@@ -340,7 +361,7 @@
             </a>
           </div>
           <div class='contact__email-container'>
-            <button id="copy-button">
+            <button id="contact__email-button">
               Copy Email 
             </button>
           </div>

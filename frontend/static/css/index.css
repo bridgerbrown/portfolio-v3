@@ -680,6 +680,48 @@ input:checked + label {
   justify-content: flex-start;
 }
 
+#about__button-resume {
+  opacity: 1;
+  display: absolute;
+  left: 0;
+	transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+#about__resume-confirmation {
+  height: 48px;
+  opacity: 0;
+  display: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+	transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+#about__resume-confirmation p {
+  margin-right: 0.75rem;
+}
+
+#about__resume-confirmation img {
+  opacity: 0.9;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.about__confirmation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about__resume-confirmation img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .about__section-personal {
   margin-top: 5rem;
 }

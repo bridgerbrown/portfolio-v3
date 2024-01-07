@@ -26,6 +26,23 @@ export default class Project extends HTMLElement {
     featuredStar.alt = "Featured project icon, a yellow star";
     featuredStar.id = "project__featured-icon";
     if (isFeatured) headingTop.appendChild(featuredStar)
+
+    const disableButtons = (type) => {
+      if (project.buttonsEnabled === "11") {
+        return type === "view" ? project.projectLink : project.githubLink;
+      } else if (project.buttonsEnabled === "01") {
+        return type === "view" ? "#" : project.githubLink;
+      } else if (project.buttonsEnabled === "10") {
+        return type === "github" ? "#" : project.projectLink;
+      } else {
+        return "#";
+      };
+    }
+
+    const viewButton = this.querySelector("#project__button-view");
+    viewButton.href = disableButtons("view");
+    const githubButton = this.querySelector("#project__button-github");
+    githubButton.href = disableButtons("github");
   }
 }
 
