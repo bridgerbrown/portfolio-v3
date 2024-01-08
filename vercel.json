@@ -4,7 +4,7 @@
     { "src": "server.cjs", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "frontend/static/$1" },
+    { "src": "/static/(.*)", "dest": "frontend/$1" },
     { "src": "/(.*)", "dest": "server.cjs" }
   ]
 }
