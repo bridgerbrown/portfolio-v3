@@ -2,16 +2,7 @@
   "name": "portfolio-v3",
   "version": "2.0.0",
   "description": "Portfolio dev website for Bridger Brown",
-  "main": "server.js",  
-  "engines": {
-    "node": ">=18.17.0"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC"

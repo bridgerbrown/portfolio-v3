@@ -1,9 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "server.js", "use": "@now/node" }
-  ],
   "routes": [
-    { "src": "/(.*)", "dest": "server.js" }
+    { "src": "/static/(.*)", "dest": "frontend/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
