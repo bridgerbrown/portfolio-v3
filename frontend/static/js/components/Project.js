@@ -6,7 +6,10 @@ export default class Project extends HTMLElement {
     this.appendChild(content);
 
     const project = JSON.parse(this.dataset.project);
-    this.querySelector("img").src = `/static/public${project.img}`;
+    const projectImg = this.querySelector("img");
+    projectImg.src = `/static/public${project.img}`;
+    projectImg.title = project.title + " image preview"
+    projectImg.alt = project.title + " image preview"
     this.querySelector("h2").textContent = project.title;
     this.querySelector("h3").textContent = project.type;
     this.querySelector(".project__description").textContent = project.description;
@@ -41,8 +44,10 @@ export default class Project extends HTMLElement {
 
     const viewButton = this.querySelector("#project__button-view");
     viewButton.href = disableButtons("view");
+    viewButton.title = project.title + " project view link"
     const githubButton = this.querySelector("#project__button-github");
     githubButton.href = disableButtons("github");
+    githubButton.title = project.title + " project github link"
   }
 }
 

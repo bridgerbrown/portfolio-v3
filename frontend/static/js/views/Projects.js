@@ -57,6 +57,8 @@ export default class Projects extends HTMLElement {
       input.name = "categories";
       input.value = category.value;
       input.checked = app.categories.category === category.value;
+      input.title = "Projects " + category.value + " category filter"; 
+      input.alt = "Projects " + category.value + " category filter";
       radioContainer.appendChild(input);
 
       const label = document.createElement("label");
@@ -64,6 +66,8 @@ export default class Projects extends HTMLElement {
       label.className = "projects__category-label";
       label.id = `${category.value}-label`;
       label.innerText = app.categories.category === category.value ? `${category.display} (${category.length})` : `${category.display}`;
+      label.title = "Projects " + category.value + " category filter"; 
+      label.alt = "Projects " + category.value + " category filter";
       radioContainer.appendChild(label);
 
       label.addEventListener("click", (event) => {
