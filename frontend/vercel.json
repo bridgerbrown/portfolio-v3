@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "frontend/index.html", "use": "@vercel/parcel" }
+  ],
   "routes": [
     {
       "src": "/[^.]+",
