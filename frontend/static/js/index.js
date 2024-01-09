@@ -1,6 +1,6 @@
 import Router from './services/Router.js';
 import Categories from './services/Categories.js';
-import motiononedom from 'https://cdn.jsdelivr.net/npm/@motionone/dom@10.16.4/+esm'
+import { inView, animate } from 'motion';
 
 import PageHeader from './components/PageHeader.js';
 import Home from './views/Home.js';
