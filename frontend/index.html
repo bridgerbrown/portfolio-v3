@@ -370,9 +370,7 @@
 
   <script>
     function initMotion() {
-      inView("#site__container", () => {
-        animate({ opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
-      });
+      animate(".home__heading-container", { x: 100, rotate: 45 }, { duration: 0.5 })
     }
   </script>
 
