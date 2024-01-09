@@ -34,7 +34,7 @@ const projectsData = [
     "projectLink": "https://web-scraper-python.vercel.app/",
     "githubLink": "https://github.com/bridgerbrown/web-scraper-python",
     "date": "September 2023",
-    "img": "/project-previews/web-scraper-preview.webp",
+    "img": "/project-previews/webscraper-preview.webp",
     "featured": "false",
     "buttonsEnabled": "11"
   },
