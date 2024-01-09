@@ -7,8 +7,7 @@ export default class Project extends HTMLElement {
 
     const project = JSON.parse(this.dataset.project);
     const projectImg = this.querySelector("img");
-    const imgPath = `./static/public${project.img}`;
-    projectImg.src = new URL(imgPath, import.meta.url).toString();
+    projectImg.src = `/static/public${project.img}`;
     projectImg.title = project.title + " image preview"
     projectImg.alt = project.title + " image preview"
     this.querySelector("h2").textContent = project.title;
@@ -26,8 +25,7 @@ export default class Project extends HTMLElement {
     const headingTop = this.querySelector(".project__heading-top");
     const isFeatured = project.featured === "true";
     const featuredStar = document.createElement("img");
-    const starPath = "./static/public/star.png";
-    featuredStar.src = new URL(starPath, import.meta.url).toString();
+    featuredStar.src = "/static/public/star.png";
     featuredStar.alt = "Featured project icon, a yellow star";
     featuredStar.id = "project__featured-icon";
     if (isFeatured) headingTop.appendChild(featuredStar)
