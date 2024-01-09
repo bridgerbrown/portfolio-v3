@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #0b0b0b;
+}
+
+input[type="radio"] {
+  display: none;  
+}
+
+input[type="radio"]:after {
+  content: '';
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="radio"]:checked:after {
+  background-color: #fbff12;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.skillIcon {
+  font-size: 1.6rem;
+  margin-right: 0.7rem;
+  color: white;
+  opacity: 0.85;
+}
