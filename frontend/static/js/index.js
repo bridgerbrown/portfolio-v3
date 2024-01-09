@@ -1,6 +1,7 @@
 import Router from './services/Router.js';
 import Categories from './services/Categories.js';
 import { inView, animate } from 'https://unpkg.com/@motionone/dom@latest/dist/index.es.js';
+import 'https://unpkg.com/@motionone/animation@latest/dist/index.es.js';
 
 import PageHeader from './components/PageHeader.js';
 import Home from './views/Home.js';
