@@ -8,5 +8,8 @@
   "type": "module",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "motion": "^10.16.4"
+  }
 }
