@@ -1,6 +1,5 @@
 import Router from './services/Router.js';
 import Categories from './services/Categories.js';
-import { inView, animate } from 'motion';
 
 import PageHeader from './components/PageHeader.js';
 import Home from './views/Home.js';
