@@ -656,10 +656,6 @@ input:checked + label {
   color: white;
 }
 
-.about__skill img {
-  fill: #ffffff;
-}
-
 .about__skill img,
 .about__skill p {
   position: relative;
@@ -675,7 +671,7 @@ input:checked + label {
   letter-spacing: 0.1em;
 }
 
-.about__skill svg {
+.about__skill img {
   width: 26px;
   height: 26px;
   opacity: 0.8;
