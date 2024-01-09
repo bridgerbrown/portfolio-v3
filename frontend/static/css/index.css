@@ -12,7 +12,8 @@
   font-family: 'BlinkMac';
   font-weight: 200;
   font-style: normal;
-  src: url('/static/public/fonts/BlinkMacSystemFont-Thin.woff2') format('woff2');
+  src: url('/static/public/fonts/BlinkMac-Thin-subset.woff2') format('woff2'),
+       url('/static/public/fonts/BlinkMac-Thin-subset.woff') format('woff');
   font-display: swap;
 }
 
@@ -20,7 +21,8 @@
   font-family: 'BlinkMac';
   font-weight: 100; 
   font-style: normal;
-  src: url('/static/public/fonts/BlinkMacSystemFont-Ultralight.woff2') format('woff2');
+  src: url('/static/public/fonts/BlinkMac-Ultralight-subset.woff2') format('woff2'),
+       url('/static/public/fonts/BlinkMac-Ultralight-subset.woff') format('woff');
   font-display: swap;
 }
 
@@ -28,7 +30,8 @@
   font-family: 'BlinkMac';
   font-weight: 300; 
   font-style: normal;
-  src: url('/static/public/fonts/BlinkMacSystemFont-Light.woff2') format('woff2');
+  src: url('/static/public/fonts/BlinkMac-Light-subset.woff2') format('woff2'),
+       url('/static/public/fonts/BlinkMac-Light-subset.woff') format('woff');
   font-display: swap;
 }
 
@@ -36,7 +39,8 @@
   font-family: 'BlinkMac';
   font-weight: 400; 
   font-style: normal;
-  src: url('/static/public/fonts/BlinkMacSystemFont-Regular.woff2') format('woff2');
+  src: url('/static/public/fonts/BlinkMac-Regular-subset.woff2') format('woff2'),
+       url('/static/public/fonts/BlinkMac-Regular-subset.woff') format('woff');
   font-display: swap;
 }
 
