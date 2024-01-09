@@ -656,7 +656,11 @@ input:checked + label {
   color: white;
 }
 
-.about__skill svg,
+.about__skill img {
+  fill: #ffffff;
+}
+
+.about__skill img,
 .about__skill p {
   position: relative;
   top: 0.25rem;
