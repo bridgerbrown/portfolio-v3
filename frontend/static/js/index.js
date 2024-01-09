@@ -23,10 +23,3 @@ app.categories = Categories;
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
 });
-
-
-inView("#site__container", () => {
-  animate (
-  { opacity: 1 },
-  { duration: 1.25, easing: "ease-in-out" });
-});
