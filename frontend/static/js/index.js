@@ -1,5 +1,6 @@
 import Router from './services/Router.js';
 import Categories from './services/Categories.js';
+import { animate, inView } from "motion";
 
 import PageHeader from './components/PageHeader.js';
 import Home from './views/Home.js';
@@ -24,3 +25,9 @@ window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
 });
 
+
+inView("#site__container", () => {
+  animate (
+  { opacity: 1 },
+  { duration: 1.25, easing: "ease-in-out" });
+});
