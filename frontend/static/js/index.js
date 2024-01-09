@@ -1,5 +1,6 @@
 import Router from './services/Router.js';
 import Categories from './services/Categories.js';
+import { inView, animate } from 'https://unpkg.com/motion@latest/dist/animate.es.js';
 
 import PageHeader from './components/PageHeader.js';
 import Home from './views/Home.js';
@@ -23,3 +24,9 @@ app.categories = Categories;
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
 });
+
+inView("#site__container", () => {
+  animate({ opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
+});
+
+animate(".home__heading-container", { transform: "rotate(45deg)" }, { duration: 0.5 })
