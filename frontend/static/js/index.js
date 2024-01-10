@@ -27,8 +27,12 @@ window.addEventListener("DOMContentLoaded", () => {
   pages.forEach((item) => {
     animate(item, { opacity: [0, 1] }, { duration: 0.4, easing: "ease-in-out" })
   });
-  animate(".animate-stagger",
+  animate(".home__heading-container h1",
     { opacity: [0, 1] },
-    { duration: 1, delay: 0.5, delay: stagger(1)}
+    { duration: 1, delay: 0.5 }
+  )
+  animate(".home__heading-container h2",
+    { opacity: [0, 1] },
+    { duration: 1, delay: 1.75 }
   )
 });
