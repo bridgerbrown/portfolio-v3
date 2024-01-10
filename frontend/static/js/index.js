@@ -25,9 +25,9 @@ window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
   const pages = [".page__home", "projects-view", "about-view", "contact-view"];
   pages.forEach((item) => {
-    animate(item, { opacity: [0, 1, 1, 0] }), {
+    inView(animate(item, { opacity: [0, 1, 1, 0] }), {
       target: item,
       offset: ["start end", "end end", "start start", "end start"]
-    };
+    });
   })
 });
