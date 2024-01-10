@@ -23,7 +23,9 @@ app.categories = Categories;
 
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
-  animate("#site-container", { opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
-  animate(".page__home", { opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
-  animate(".project__content-container", { opacity: 1 }, { duration: 1.25, delay: stagger(1) });
+  animate(".page__home", { opacity: 1 }, { duration: 0.5, easing: "ease-in-out" });
+  animate("projects-view", { opacity: 1 }, { duration: 0.5, easing: "ease-in-out" });
+  animate("about-view", { opacity: 1 }, { duration: 0.5, easing: "ease-in-out" });
+  animate("contact-view", { opacity: 1 }, { duration: 0.5, easing: "ease-in-out" });
+  animate(".project__content-container", { opacity: 1 }, { duration: 0.5, delay: stagger(1) });
 });

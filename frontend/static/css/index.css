@@ -204,9 +204,15 @@ button:hover {
   transition-duration: 150ms;
 }
 
-#site-container {
+/* Animations */
+
+#site-container,
+projects-view,
+about-view,
+contact-view {
   opacity: 0;
 }
+
 
 /* HOME page */
 
@@ -420,6 +426,7 @@ input:checked + label {
   min-height: 275px;
   border: 1px white;
   margin-bottom: 1rem;
+  opacity: 0;
 }
 
 .project__content-container:hover {
