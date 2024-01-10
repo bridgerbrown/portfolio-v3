@@ -24,14 +24,7 @@ app.categories = Categories;
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
   animate(".page__home", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
-  inView(".page__home", (info) => {
-    animate(".page__home", { opacity: 0 }, { duration: 0.4, easing: "ease-in-out" });
-    return (leaveInfo) => fadeOut;
-  })
   animate("projects-view", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
   animate("about-view", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
   animate("contact-view", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
-  inView(".project__content-container", () => {
-    animate({ opacity: 1 }, { duration: 0.25, delay: stagger(0.25) });
-  })
 });
