@@ -24,8 +24,7 @@ app.categories = Categories;
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
   const pages = [".page__home", "projects-view", "about-view", "contact-view"];
-  ;
   pages.forEach((item) => {
-    animate(item, { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" })
-  })
+    animate(item, { opacity: [0, 1] }, { duration: 0.3, easing: "ease-in-out" })
+  });
 });
