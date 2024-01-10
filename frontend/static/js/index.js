@@ -1,6 +1,6 @@
 import Router from './services/Router.js';
 import Categories from './services/Categories.js';
-import { inView, animate } from 'motion';
+import { inView, animate, stagger } from 'motion';
 
 import PageHeader from './components/PageHeader.js';
 import Home from './views/Home.js';
@@ -23,11 +23,7 @@ app.categories = Categories;
 
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
-
-
-  inView("#site__container", () => {
-    animate({ opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
-  });
-
-    animate(".home__heading-container h1", { color: "blue" }, { duration: 3 })
+  animate("#site-container", { opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
+  animate(".page__home", { opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
+  animate(".project__content-container", { opacity: 1 }, { duration: 1.25, delay: stagger(1) });
 });
