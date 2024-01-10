@@ -25,14 +25,14 @@ window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
   const pages = [".page__home", "projects-view", "about-view", "contact-view"];
   pages.forEach((item) => {
-    animate(item, { opacity: [0, 1] }, { duration: 0.4, easing: "ease-in-out" })
+    animate(item, { opacity: [0, 1] }, { duration: 0.5, easing: "ease-in-out" })
   });
   animate(".home__heading-container h1",
     { opacity: [0, 1] },
-    { duration: 1, delay: 0.5 }
+    { duration: 1, delay: 0.25 }
   )
   animate(".home__heading-container h2",
     { opacity: [0, 1] },
-    { duration: 1, delay: 1.75 }
+    { duration: 1, delay: 1.5 }
   )
 });
