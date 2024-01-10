@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
   pages.forEach((item) => {
     animate(item, { opacity: [0, 1] }, { duration: 0.4, easing: "ease-in-out" })
   });
-  animate([".home__heading-container h1", ".home__heading-container h2"],
+  animate(".animate-stagger",
     { opacity: [0, 1] },
     { duration: 0.75, delay: stagger(0.4)}
   )
