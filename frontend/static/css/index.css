@@ -322,6 +322,7 @@ button:hover {
   line-height: 1;
   font-weight: 100;
   letter-spacing: 0.04rem;
+  color: white;
 }
 
 .home__heading-container h2 {
