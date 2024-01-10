@@ -23,12 +23,11 @@ app.categories = Categories;
 
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
-});
 
-inView("#site__container", () => {
-  animate({ opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
-});
 
-inView(".page", ({ target }) => {
-  animate(target.querySelector("h1"), { color: "blue" }, { duration: 3 })
-})
+  inView("#site__container", () => {
+    animate({ opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
+  });
+
+    animate(".home__heading-container h1", { color: "blue" }, { duration: 3 })
+});
