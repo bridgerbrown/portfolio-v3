@@ -29,10 +29,10 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   animate(".home__heading-container h1",
     { opacity: [0, 1] },
-    { duration: 1, delay: 0.25 }
+    { duration: 1, delay: 0.4 }
   )
   animate(".home__heading-container h2",
     { opacity: [0, 1] },
-    { duration: 1, delay: 1.5 }
+    { duration: 1, delay: 1 }
   )
 });
