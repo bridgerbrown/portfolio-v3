@@ -29,4 +29,6 @@ inView("#site__container", () => {
   animate({ opacity: 1 }, { duration: 1.25, easing: "ease-in-out" });
 });
 
-animate(".home__heading-container", { transform: "rotate(45deg)" }, { duration: 0.5 })
+inView(".page", ({ target }) => {
+  animate(target.querySelector("h1"), { color: "blue" }, { duration: 3 })
+})
