@@ -204,12 +204,17 @@ button:hover {
   transition-duration: 150ms;
 }
 
+#site-container {
+  opacity: 0;
+}
+
 /* HOME page */
 
 .page__home {
   overflow: hidden;
   position: fixed;
   height: 100vh;
+  opacity: 0;
 }
 
 #home__container {
