@@ -23,6 +23,7 @@ app.categories = Categories;
 
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
+  const pages = [".page__home", "projects-view", "about-view", "contact-view"];
   pages.forEach((item) => {
     animate(item, { opacity: [0, 1, 1, 0] }), {
       target: item,
