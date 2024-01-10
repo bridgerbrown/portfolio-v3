@@ -23,8 +23,10 @@ app.categories = Categories;
 
 window.addEventListener("DOMContentLoaded", () => {
   app.router.init();
-  animate(".page__home", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
-  animate("projects-view", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
-  animate("about-view", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
-  animate("contact-view", { opacity: 1 }, { duration: 0.4, easing: "ease-in-out" });
+  pages.forEach((item) => {
+    animate(item, { opacity: [0, 1, 1, 0] }), {
+      target: item,
+      offset: ["start end", "end end", "start start", "end start"]
+    };
+  })
 });

@@ -426,7 +426,6 @@ input:checked + label {
   min-height: 275px;
   border: 1px white;
   margin-bottom: 1rem;
-  opacity: 0;
 }
 
 .project__content-container:hover {
