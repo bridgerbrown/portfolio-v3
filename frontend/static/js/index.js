@@ -29,6 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   animate(".animate-stagger",
     { opacity: [0, 1] },
-    { duration: 0.75, delay: stagger(0.4)}
+    { duration: 1, delay: 0.5, delay: stagger(1)}
   )
 });
