@@ -100,7 +100,6 @@ export default class Projects extends HTMLElement {
 
   render() {
     const template = document.getElementById("projects-view-template");
-    template.innerHTML = "";
 
     const content = template.content.cloneNode(true);
     this.appendChild(content);
@@ -113,6 +112,7 @@ export default class Projects extends HTMLElement {
     const header = document.createElement("header-item");
     header.dataset.heading = JSON.stringify("Projects");
     headerContainer.appendChild(header);
+    document.querySelector(".footer__text").textContent = "Created by Bridger Brown";
   }
 }
 
