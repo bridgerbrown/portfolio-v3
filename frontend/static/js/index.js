@@ -35,5 +35,5 @@ window.addEventListener("DOMContentLoaded", () => {
     { opacity: [0, 1] },
     { duration: 1.3, delay: 1.3 }
   );
-  animate("project-item", { opacity: [0, 1] }, { duration: 0.5, easing: "ease-in-out", delay: stagger(0.5) });
+  animate("project-item", { opacity: [0, 1] }, { duration: 0.3, easing: "ease-in-out", delay: stagger(0.2) });
 });
