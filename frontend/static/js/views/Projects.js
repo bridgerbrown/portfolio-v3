@@ -2,6 +2,11 @@ import projectsData from "../data/projectsData.js";
 import Project from "../components/Project.js";
 
 export default class Projects extends HTMLElement {
+  constructor() {
+    super();
+    this.isAppended = false;
+  }
+
   connectedCallback() {
     this.render();
     window.addEventListener("categorychange", () => {
@@ -101,8 +106,11 @@ export default class Projects extends HTMLElement {
   render() {
     const template = document.getElementById("projects-view-template");
 
-    const content = template.content.cloneNode(true);
-    this.appendChild(content);
+    if (!this.isAppended) {
+      const content = template.content.cloneNode(true);
+      this.appendChild(content);
+      this.isAppended = true;
+    }
 
     this.renderCategoryRadio();
     this.renderProjects();
