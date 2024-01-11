@@ -90,7 +90,11 @@ export default class Projects extends HTMLElement {
       workProjects;
 
     const projectsContainer = document.querySelector("#projects__content-container");
-    projectsContainer.innerHTML = "";
+    let child = projectsContainer.childNodes;
+    while (child) {
+      projectsContainer.removeChild(child);
+      child = projectsContainer.firstChild;
+    }
 
     selectedProjects.map((project) => {
       const item = document.createElement("project-item");
@@ -101,6 +105,8 @@ export default class Projects extends HTMLElement {
 
   render() {
     const template = document.getElementById("projects-view-template");
+    template.childNodes.removeChild();
+
     const content = template.content.cloneNode(true);
     this.appendChild(content);
 
@@ -112,12 +118,6 @@ export default class Projects extends HTMLElement {
     const header = document.createElement("header-item");
     header.dataset.heading = JSON.stringify("Projects");
     headerContainer.appendChild(header);
-
-    const projects = document.querySelectorAll("project-item");
-
-    projects.forEach((project) => {
-      animate(project, { opacity: [0, 1] }, { delay: stagger(1) });
-    });
   }
 }
 
