@@ -1,6 +1,5 @@
 import projectsData from "../data/projectsData.js";
 import Project from "../components/Project.js";
-import { animate, stagger } from "motion";
 
 export default class Projects extends HTMLElement {
   connectedCallback() {
@@ -90,11 +89,7 @@ export default class Projects extends HTMLElement {
       workProjects;
 
     const projectsContainer = document.querySelector("#projects__content-container");
-    let child = projectsContainer.childNodes;
-    while (child) {
-      projectsContainer.removeChild(child);
-      child = projectsContainer.firstChild;
-    }
+    projectsContainer.innerHTML = "";
 
     selectedProjects.map((project) => {
       const item = document.createElement("project-item");
@@ -105,7 +100,7 @@ export default class Projects extends HTMLElement {
 
   render() {
     const template = document.getElementById("projects-view-template");
-    template.childNodes.removeChild();
+    template.innerHTML = "";
 
     const content = template.content.cloneNode(true);
     this.appendChild(content);
