@@ -1,5 +1,6 @@
 import projectsData from "../data/projectsData.js";
 import Project from "../components/Project.js";
+import { animate, stagger } from "motion";
 
 export default class Projects extends HTMLElement {
   connectedCallback() {
@@ -111,6 +112,12 @@ export default class Projects extends HTMLElement {
     const header = document.createElement("header-item");
     header.dataset.heading = JSON.stringify("Projects");
     headerContainer.appendChild(header);
+
+    const projects = document.querySelectorAll("project-item");
+
+    projects.forEach((project) => {
+      animate(project, { opacity: [0, 1] }, { delay: stagger(1) });
+    });
   }
 }
 
