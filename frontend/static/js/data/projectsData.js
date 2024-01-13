@@ -40,6 +40,19 @@ const projectsData = [
   },
   {
     "id": 3,
+    "title": "Portfolio Website",
+    "type": "Solo-Project",
+    "description": "A single page application portfolio website built using vanilla JavaScript, HTML, and CSS for a lightweight blazingly fast experience. Dynamic content like project category filters utilizes the cloning of HTML templates.",
+    "builtWith": ["JavaScript", "HTML", "CSS", "Motion One", "Parcel build"],
+    "projectLink": "https://bridgerbrown.dev/",
+    "githubLink": "https://github.com/bridgerbrown/portfolio-v3",
+    "date": "December 2023",
+    "img": "/project-previews/portfolio-v3-preview.webp",
+    "featured": "false",
+    "buttonsEnabled": "11"
+  },
+  {
+    "id": 4,
     "title": "Ecommerce Paintings",
     "type": "Solo-Project",
     "description": "An eCommerce platform that fetches painting data from a public museum's RESTful API and uses it to showcase demo products for user interaction. The website includes features like real-time product stock updates from a Firestore database, shopping cart functionality, and basic user email authentication through Firebase.",
@@ -52,7 +65,7 @@ const projectsData = [
     "buttonsEnabled": "11"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "3D Spheres Scrolling Animation",
     "type": "Solo-Project",
     "description": "A 3D environment scrolling animation using a mars-themed sky texture and rotating reflective spheres, made using Three.js and WebGL.",
@@ -65,7 +78,7 @@ const projectsData = [
     "buttonsEnabled": "11"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Quizzical Trivia Game",
     "type": "Solo-Project",
     "description": "A trivia question game with multiple categories and difficulties, this React app fetches data from the Open Trivia Database API. This project started out as a part of the Scrimba Front-End Developer Career Path but was fleshed out more on its own.",
@@ -78,7 +91,7 @@ const projectsData = [
     "buttonsEnabled": "11"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "RicochetProductions.org",
     "type": "Freelance",
     "description": "A single page application utilizing React and TypeScript, this website was a freelance project built for the company Ricochet Productions. A multi-page version with more content is coming soon.",
@@ -91,7 +104,7 @@ const projectsData = [
     "buttonsEnabled": "11"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Martini Shot Podcast Website",
     "type": "Freelance",
     "description": "A website for the podcast Martini Shot with writer and TV producer Rob Long (Cheers, Sullivan & Son). This was one of my first website projects and was built using Wordpress, HTML, and CSS. In addition to managing the website, I am also the audio producer/editor and designed the Martini Shot logo.",
