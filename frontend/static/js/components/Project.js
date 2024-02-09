@@ -38,9 +38,11 @@ export default class Project extends HTMLElement {
         return type === "view" ? project.projectLink : project.githubLink;
       } else if (project.buttonsEnabled === "01") {
         viewButton.classList.replace("project__button", "project__button-disabled");
+        viewButton.removeAttribute("rel")
         return type === "view" ? "#" : project.githubLink;
       } else if (project.buttonsEnabled === "10") {
         githubButton.classList.replace("project__button", "project__button-disabled");
+        githubButton.removeAttribute("rel");
         return type === "github" ? "#" : project.projectLink;
       } else {
         return "#";

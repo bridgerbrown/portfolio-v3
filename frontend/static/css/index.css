@@ -536,10 +536,10 @@ input:checked + label {
 }
 
 .project__button-disabled {
-  background-color: #717375;
+  background-color: #7e7f81;
   color: #424242;
   border: 1px #717375 solid;
-  cursor: none;
+  cursor: default;
   border-radius: 0.125rem;
   font-size: 0.875rem;
   font-weight: 400;
