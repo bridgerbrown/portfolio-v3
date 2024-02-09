@@ -30,22 +30,25 @@ export default class Project extends HTMLElement {
     featuredStar.id = "project__featured-icon";
     if (isFeatured) headingTop.appendChild(featuredStar)
 
+    const viewButton = this.querySelector("#project__button-view");
+    const githubButton = this.querySelector("#project__button-github");
+
     const disableButtons = (type) => {
       if (project.buttonsEnabled === "11") {
         return type === "view" ? project.projectLink : project.githubLink;
       } else if (project.buttonsEnabled === "01") {
+        viewButton.classList.replace("project__button", "project__button-disabled");
         return type === "view" ? "#" : project.githubLink;
       } else if (project.buttonsEnabled === "10") {
+        githubButton.classList.replace("project__button", "project__button-disabled");
         return type === "github" ? "#" : project.projectLink;
       } else {
         return "#";
       };
     }
 
-    const viewButton = this.querySelector("#project__button-view");
     viewButton.href = disableButtons("view");
     viewButton.title = project.title + " project view link"
-    const githubButton = this.querySelector("#project__button-github");
     githubButton.href = disableButtons("github");
     githubButton.title = project.title + " project github link"
   }

@@ -535,6 +535,25 @@ input:checked + label {
   transition-duration: 150ms;
 }
 
+.project__button-disabled {
+  background-color: #717375;
+  color: #424242;
+  border: 1px #717375 solid;
+  cursor: none;
+  border-radius: 0.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: var(--wide);
+  width: 5.5rem;
+  height: 2.8rem;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
 .project__line-bottom {
   height: 1px;
   background-color: white;
