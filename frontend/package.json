@@ -2,6 +2,7 @@
   "name": "portfolio-v3",
   "version": "2.0.0",
   "description": "Portfolio dev website for Bridger Brown",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel",
