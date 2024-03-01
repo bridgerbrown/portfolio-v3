@@ -3,14 +3,14 @@ const projectsData = [
     "id": 0,
     "title": "Interpreter in TypeScript",
     "type": "Solo-Project",
-    "description": "A programming language interpreter is a foundational element of many programming languages like JavaScript, allowing the translating and executing of input code. It is made up of a lexer for tokenizing input text, an abstract syntax tree (AST) for properly representing those tokens, a parser for semantic analysis, and an evaluator for taking that semantic structure to properly execute its appropriate functionality. Building this interpreter was definitely one of the most complicated personal coding projects I’ve done, but that made it all the more satisfying to conquer! It demands a deep understanding of language syntax, semantics, and software architecture to ensure efficient code interpretation. This website was built with a frontend of vanilla JavaScript, HTML, CSS, Xterm.js, and Highlight.js, and the backend with Node.js, Websockets, and Express.js. The website was built to test the interpreter and explain what an interpreter is, how it works, and how it was built.",
-    "builtWith": ["TypeScript", "Jest", "JavaScript", "Node.js", "HTML", "CSS", "Express.js"],
-    "projectLink": "https://ts-interpreter-gilt.vercel.app/",
+    "description": "(Currently in development) A programming language interpreter is a foundational element of many programming languages, allowing the translating and executing of input code. It is made up of a lexer for tokenizing input text, an abstract syntax tree (AST) for properly representing those tokens, and a parser for semantic analysis. Building an interpreter has been one of the most challenging projects, but also the most fascinating. It demands a deep understanding of language syntax, semantics, and software architecture to ensure efficient code interpretation.",
+    "builtWith": ["TypeScript", "Jest"],
+    "projectLink": "",
     "githubLink": "https://github.com/bridgerbrown/ts-interpreter",
-    "date": "March 2024",
+    "date": "January 2024",
     "img": "/project-previews/ts-interpreter-preview.webp",
     "featured": "true",
-    "buttonsEnabled": "11" 
+    "buttonsEnabled": "01" 
   },
   {
     "id": 1,
