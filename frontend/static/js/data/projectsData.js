@@ -16,14 +16,14 @@ const projectsData = [
     "id": 1,
     "title": "DayNotes",
     "type": "Solo-Project",
-    "description": "A MERN full-stack date-based note taking platform that uses web sockets for seamless synchronization between browser tabs. Through Socket.io, the client-side website communicates with the back-end server built with Node.js and Express.js to save notes made with the Quill.js text editor to a MongoDB database. Users log in securely through cookie-based authentication sent through the Next.js and Express.js routes.",
+    "description": "(TEMPORARY DISABLED) A MERN full-stack date-based note taking platform that uses web sockets for seamless synchronization between browser tabs. Through Socket.io, the client-side website communicates with the back-end server built with Node.js and Express.js to save notes made with the Quill.js text editor to a MongoDB database. Users log in securely through cookie-based authentication sent through the Next.js and Express.js routes.",
     "builtWith": ["Node.js", "Express.js", "Socket.io", "React", "TypeScript", "MongoDB", "Quill.js", "Date-fns", "HTTP", "BCrypt", "TailwindCSS", "NextJS"],
     "projectLink": "https://daynotes-client.vercel.app",
     "githubLink": "https://github.com/bridgerbrown/daynotes",
     "date": "July 2023",
     "img": "/project-previews/daynotes-preview.webp",
     "featured": "true",
-    "buttonsEnabled": "11" 
+    "buttonsEnabled": "01" 
   },
   {
     "id": 2,
