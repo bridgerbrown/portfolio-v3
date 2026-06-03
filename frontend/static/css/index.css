@@ -565,6 +565,24 @@ input:checked + label {
 
 /* ABOUT page */
 
+.work-date-range {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.about__section-work-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about__section-work-header a {
+  padding-top: 0.25rem;
+  padding-left: 0.75rem;
+  color: white;
+  text-decoration: none;
+}
+
 .page__about {
   position: relative;
   display: flex;
@@ -622,7 +640,7 @@ input:checked + label {
 
 .about__text-content-container h4 {
   font-size: 1.125rem;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 0rem 0;
   border-bottom: 1px white solid;
   width: fit-content;
   letter-spacing: var(--wider);
@@ -643,7 +661,7 @@ input:checked + label {
 }
 
 .about__section-education li {
-  padding: 1rem 0 0.15rem 0.75rem;
+  padding: 0rem 0 0.75rem 0.75rem;
   letter-spacing: var(--wide);
 }
 

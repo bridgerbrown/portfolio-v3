@@ -42,7 +42,7 @@ export default class Projects extends HTMLElement {
       }, 
       {
         value: "solo-projects",
-        display: "Solo-Projects",
+        display: "Personal",
         length: this.getProjectsLength("solo-projects")
       }, 
       {
