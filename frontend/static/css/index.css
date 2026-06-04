@@ -1,11 +1,17 @@
 :root {
   --nearBlack: #0b0b0b;
   --wide: 0.04em;
-  --wider: 0.05em;
+  --wider: 0.06em;
   --one-third: 33.333333%;
   --two-thirds: 66.666667%;
   --eleven-twelves: 91.666667%;
   --mobileWidth: 90vw;
+  --neon-green: #8bd600;
+  --neon-pink: #ff2384;
+  --neon-light-blue: #04d9ff;
+  --box-line-width: 1px;
+  --button-gray: rgb(209 213 219);
+  --button-hover-gray: rgb(156 163 175);
 }
 
 @font-face {
@@ -150,7 +156,8 @@ body {
   padding-bottom: 0rem;
   font-size: 6rem;
   font-weight: 100;
-  color: white;
+  /* color: var(--neon-green); */
+  color:white;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   line-height: 5.9rem;
@@ -159,9 +166,9 @@ body {
 
 .header__line {
   width: 100%;
-  height: 1px;
-  background-color: white;
-  opacity: 0.5;
+  height: var(--box-line-width);
+  background-color: var(--neon-green);
+  box-shadow: 0 0 5px 0.4px var(--neon-green);
 }
 
 .footer {
@@ -173,6 +180,7 @@ body {
   text-align: center;
   font-weight: 200;
   padding: 3rem 0;
+  letter-spacing: var(--wide);
 }
 
 button {
@@ -183,8 +191,8 @@ button {
   padding: 0 1.4rem;
   height: 3rem;
   margin-right: 1.5rem;
-	background-color: rgb(209 213 219);
   color: black;
+  background-color: var(--button-gray);
   border: 1px white solid;
   text-decoration: none;
   display: flex;
@@ -197,9 +205,8 @@ button {
 button:hover {
   border: 1px transparent solid;
   cursor: pointer;
-	background-color: rgb(156 163 175);
-  color: white;
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  background-color: var(--button-hover-gray);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -235,7 +242,7 @@ contact-view {
 #nav__home-container {
   position: absolute;
   right: 3rem;
-  margin: 2.15rem 0rem 0 0;
+  margin: 1.9rem 0.1rem 0 0;
   width: 100%;
 }
 
@@ -252,7 +259,7 @@ contact-view {
   font-size: 16.3px;
   text-transform: uppercase;
   letter-spacing: var(--wide);
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 1rem 0rem 0.7rem 0;
   opacity: 0.6;
   cursor: pointer;
   z-index: 100;
@@ -277,24 +284,38 @@ contact-view {
 
 .home__linebox-line {
   background-color: white;
-  opacity: 0.5;
+}
+
+@keyframes glow-in {
+  from {
+    box-shadow: 0 0 5px 0.5px var(--neon-green);
+  }
+  to {
+    box-shadow: 0 0 2px 0.1px var(--neon-green),
+                0 0 10px 0.8px var(--neon-green);
+  }
+}
+
+#home__linebox-top,
+#home__linebox-bottom,
+#home__linebox-right,
+#home__linebox-left {
+  background-color: var(--neon-green);
+  position: absolute;
+  animation: glow-in 2s ease-in forwards;
 }
 
 #home__linebox-top,
 #home__linebox-bottom {
-  background-color: white;
-  position: absolute;
   width: 100%;
-  height: 1px;
+  height: var(--box-line-width);
   left: 0;
   z-index: 100;
 }
 
 #home__linebox-right,
 #home__linebox-left {
-  background-color: white;
-  position: absolute;
-  width: 1px;
+  width: var(--box-line-width);
   height: 100%;
   top: 0;
   z-index: 100;
@@ -322,7 +343,7 @@ contact-view {
   bottom: max(20px, 2.5vmin);
   width: fit-content;
   z-index: 10;
-  padding: 0 0.5rem 0.75rem 3rem;
+  padding: 0 0.5rem 1rem 3.25rem;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -334,7 +355,8 @@ contact-view {
   line-height: 1;
   font-weight: 100;
   letter-spacing: 0.04rem;
-  color: white;
+  /* color: var(--neon-green); */
+  color:white;
 }
 
 .home__heading-container h2 {
@@ -378,7 +400,6 @@ contact-view {
 
 .projects__category-input {
   display: none;
-  letter-spacing: var(--wider); 
 }
 
 .projects__category-label {
@@ -420,7 +441,7 @@ input:checked + label {
   display: flex;
   align-items: flex-start;
   cursor: pointer;
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   width: 100%;
@@ -515,7 +536,7 @@ input:checked + label {
   width: 5.5rem;
   height: 2.8rem;
   margin-right: 1.5rem;
-	background-color: rgb(209 213 219);
+  background-color: var(--button-gray);
   color: black;
   border: 1px white solid;
   text-decoration: none;
@@ -527,10 +548,10 @@ input:checked + label {
 
 .project__button:hover {
   cursor: pointer;
-	background-color: rgb(156 163 175);
-  border: none;
+  background-color: var(--button-hover-gray);
+  border: 1px transparent solid;
   color: white;
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -664,7 +685,7 @@ input:checked + label {
   margin: 0 0 0rem 0;
   border-bottom: 1px white solid;
   width: fit-content;
-  letter-spacing: var(--wider);
+  letter-spacing: var(--wide);
   color: white;
   font-weight: 200;
 }
@@ -843,11 +864,11 @@ input:checked + label {
   justify-content: flex-end;
   align-items: center;
   margin: 0;
-  letter-spacing: var(--wide);
 }
 
 .contact__links-container a {
   text-decoration: none;
+  letter-spacing: var(--wider);
 }
 
 .contact__links-container span {
