@@ -268,7 +268,7 @@ contact-view {
   font-size: 16.3px;
   text-transform: uppercase;
   letter-spacing: var(--wide);
-  padding: 1rem 0rem 0.7rem 0;
+  padding: 0.9rem 0rem 0.7rem 0;
   opacity: 0.6;
   cursor: pointer;
   z-index: 100;
@@ -352,7 +352,7 @@ contact-view {
   bottom: max(20px, 2.5vmin);
   width: fit-content;
   z-index: 10;
-  padding: 0 0.5rem 1rem 3.25rem;
+  padding: 0 0.5rem 1rem 3.2rem;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -932,10 +932,11 @@ input:checked + label {
     margin: 0 0 0.8rem 0
   }
   #nav__page {
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem 0 0.4rem 0;
   }
   .projects__category-label {
-    font-size: 0.875rem;
+    font-size: 12px;
+    margin: 0 0.75rem 0 0.25rem;
   }
   .nav__page-link {
     margin: 0 0.9rem;
@@ -943,6 +944,17 @@ input:checked + label {
   .about__section-personal {
     margin-top: 5rem;
     text-align: center;
+  }
+  .nav__home-link {
+    padding: 0.5rem 0rem 0.7rem 0;
+    font-size: 14px;
+  }
+  .about__skill {
+    flex-direction: column;
+  }
+  .about__skill img {
+    margin: 0;
+    padding-bottom: 0.2rem;
   }
 }
 
