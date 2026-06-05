@@ -163,11 +163,21 @@ body {
   transition: none;
 }
 
+@keyframes header-glow-in {
+  from {
+    box-shadow: 0 0 3px 0.4px var(--neon-light-blue),
+  }
+  to {
+    box-shadow: 0 0 5px 0.6px var(--neon-light-blue);
+  }
+}
+
+
 .header__line {
   width: 100%;
   height: var(--box-line-width);
   background-color: var(--neon-light-blue);
-  box-shadow: 0 0 3px 0.4px var(--neon-light-blue);
+  animation: glow-in 1s ease-in forwards;
 }
 
 .footer {
@@ -919,16 +929,20 @@ input:checked + label {
     margin-top: 0.3rem;
   }
   .header__container {
-    margin: 0 0 0.5rem 0
+    margin: 0 0 0.8rem 0
   }
   #nav__page {
-    padding: 0 0 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 0;
   }
   .projects__category-label {
     font-size: 0.875rem;
   }
   .nav__page-link {
     margin: 0 0.9rem;
+  }
+  .about__section-personal {
+    margin-top: 5rem;
+    text-align: center;
   }
 }
 

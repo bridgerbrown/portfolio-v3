@@ -16,9 +16,10 @@
     "motion": "^10.17.0"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.11.0",
-    "@parcel/transformer-webmanifest": "^2.11.0",
-    "parcel": "^2.11.0",
+    "@parcel/config-default": "^2.16.4",
+    "@parcel/packager-raw-url": "^2.16.4",
+    "@parcel/transformer-webmanifest": "^2.16.4",
+    "parcel": "^2.16.4",
     "parcel-reporter-static-files-copy": "^1.5.3"
   }
 }
