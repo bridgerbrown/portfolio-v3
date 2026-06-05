@@ -156,7 +156,6 @@ body {
   padding-bottom: 0rem;
   font-size: 6rem;
   font-weight: 100;
-  /* color: var(--neon-green); */
   color:white;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
@@ -167,8 +166,8 @@ body {
 .header__line {
   width: 100%;
   height: var(--box-line-width);
-  background-color: var(--neon-green);
-  box-shadow: 0 0 5px 0.4px var(--neon-green);
+  background-color: var(--neon-light-blue);
+  box-shadow: 0 0 3px 0.4px var(--neon-light-blue);
 }
 
 .footer {
@@ -288,11 +287,11 @@ contact-view {
 
 @keyframes glow-in {
   from {
-    box-shadow: 0 0 5px 0.5px var(--neon-green);
+    box-shadow: 0 0 3px 0.4px var(--neon-light-blue),
   }
   to {
-    box-shadow: 0 0 2px 0.1px var(--neon-green),
-                0 0 10px 0.8px var(--neon-green);
+    box-shadow: 0 0 3px 0.4px var(--neon-light-blue),
+                0 0 10px 0.8px var(--neon-light-blue);
   }
 }
 
@@ -300,9 +299,9 @@ contact-view {
 #home__linebox-bottom,
 #home__linebox-right,
 #home__linebox-left {
-  background-color: var(--neon-green);
+  background-color: var(--neon-light-blue);
   position: absolute;
-  animation: glow-in 2s ease-in forwards;
+  animation: glow-in 1s ease-in forwards;
 }
 
 #home__linebox-top,
