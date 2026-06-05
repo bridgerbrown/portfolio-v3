@@ -612,6 +612,7 @@ input:checked + label {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 2rem 0 0 0;
 }
 
 .about__section-work-header a {
@@ -700,7 +701,7 @@ input:checked + label {
 }
 
 .about__section-education {
-  margin: 2rem 0 0 0;
+  margin: 0rem 0 0 0;
 }
 
 .about__section-education ul {
