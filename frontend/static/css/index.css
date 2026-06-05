@@ -842,6 +842,7 @@ input:checked + label {
 
 .about__section-personal {
   margin-top: 0rem;
+  max-width: 400px;
 }
 
 /* CONTACT page */
@@ -958,9 +959,6 @@ input:checked + label {
     margin-bottom: 1rem;
     text-align: center;
   }
-  .about__section-personal br {
-    display: none;
-  }
   .nav__home-link {
     padding: 0.5rem 0rem 0.7rem 0;
     font-size: 14px;
@@ -1071,6 +1069,15 @@ input:checked + label {
   }
   .about__section-skills {
     justify-content: center;
+    align-items: center;
+  }
+  .about__section-personal {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__portrait-container {
     align-items: center;
   }
 }
