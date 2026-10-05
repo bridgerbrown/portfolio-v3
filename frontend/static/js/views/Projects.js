@@ -9,6 +9,7 @@ export default class Projects extends HTMLElement {
 
   connectedCallback() {
     this.render();
+    this.querySelector(".projects__modal").showModal();
     window.addEventListener("categorychange", () => {
       this.render();  
     });

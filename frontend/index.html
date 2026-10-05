@@ -99,6 +99,22 @@
         <p class="footer__text"></p>
       </footer>
     </main>
+    <dialog class="projects__modal">
+      <h2>Projects currently disabled</h2>
+      <h3>October 2026</h3>
+      <p class="project__text-description">
+        I am not currently looking for work, so backend hosting is disabled for my bigger projects like the
+        Interpreter in TypeScript, DayNotes, and the Python Web Scraper. Feel free to check out the Interpreter
+        project to read more about what I built, but the actual functionality of the interpreter in the terminal
+        and the viewing of code previews are disabled. Come back another time to test them out!
+        <br/>
+        <br/>
+        Thank you for visiting!
+      </p>
+      <form method="dialog" class="project__buttons-container">
+        <button class="project__button">Close</button>
+      </form>
+    </dialog>
   </template>
     
   <template id="project-item-template">
@@ -185,6 +201,12 @@
               <!-- <a href="https://www.linkedin.com/in/bridger-brown/">LinkedIn</a> -->
             </div>
             <ul>
+              <li>
+                Fullstack Engineer - 
+                <span>PracticeWise</span>
+                <br>
+                <span class="work-date-range">August 2026 – Now</span>
+              </li>
               <li>
                 Backend Software Engineer - 
                 <span>NeuroFlow</span>
@@ -337,7 +359,7 @@
     <main class='page page__contact'>
       <section class='contact__container'>
         <p class='contact__heading'>
-            I am currently available for work. Feel free to reach out with any inquiries.
+            I am currently working as a Fullstack Engineer for PracticeWise, but feel free to reach out!
         </p>
         <section class='contact__buttons-container'>
           <div class='contact__links-container'>

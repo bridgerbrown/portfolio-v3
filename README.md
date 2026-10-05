@@ -4,3 +4,8 @@ A single page application portfolio website built using vanilla JavaScript, HTML
 [Website](https://www.bridgerbrown.dev/)
 
 Built with JavaScript, HTML, CSS, Motion One, and Parcel build.
+
+# Running Locally
+
+1. `cd frontend`
+2. `npx parcel index.html`

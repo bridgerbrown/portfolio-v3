@@ -49,7 +49,7 @@ const projectsData = [
     "date": "September 2023",
     "img": "/project-previews/webscraper-preview.webp",
     "featured": "false",
-    "buttonsEnabled": "11"
+    "buttonsEnabled": "01"
   },
   {
     "id": 4,
@@ -103,32 +103,6 @@ const projectsData = [
     "featured": "false",
     "buttonsEnabled": "11"
   },
-  {
-    "id": 8,
-    "title": "RicochetProductions.org",
-    "type": "Freelance",
-    "description": "A single page application utilizing React and TypeScript, this website was a freelance project built for the company Ricochet Productions. A multi-page version with more content is coming soon.",
-    "builtWith": ["TypeScript", "React", "JavaScript", "TailwindCSS", "NextJS"],
-    "projectLink": "https://www.ricochetproductions.org/",
-    "githubLink": "https://github.com/bridgerbrown/ricochet-productions",
-    "date": "May 2023",
-    "img": "/project-previews/ricochet-productions-preview.webp",
-    "featured": "false",
-    "buttonsEnabled": "11"
-  },
-  {
-    "id": 9,
-    "title": "Martini Shot Podcast Website",
-    "type": "Freelance",
-    "description": "A website for the podcast Martini Shot with writer and TV producer Rob Long (Cheers, Sullivan & Son). This was one of my first website projects and was built using Wordpress, HTML, and CSS. In addition to managing the website, I am also the audio producer/editor and designed the Martini Shot logo.",
-    "builtWith": ["JavaScript", "HTML", "CSS", "Wordpress"],
-    "projectLink": "https://www.martinishotpodcast.com/",
-    "githubLink": "",
-    "date": "January 2022",
-    "img": "/project-previews/martini-shot-preview.webp",
-    "featured": "false",
-    "buttonsEnabled": "00"
-  }
 ]
 
 export default projectsData;

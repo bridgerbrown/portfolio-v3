@@ -499,7 +499,8 @@ input:checked + label {
   margin: 0.25rem 0 0 0.5rem;
 }
 
-.project__text-container h3 {
+.project__text-container h3,
+.projects__modal h3 {
   margin-bottom: 1rem;
   font-weight: 300;
   font-size: 16.3px;
@@ -582,6 +583,33 @@ input:checked + label {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+}
+
+.projects__modal {
+  width: 80vw;
+  max-width: 560px;
+  padding: 2rem;
+  color: white;
+  background-color: var(--nearBlack);
+  border: var(--box-line-width) solid var(--neon-light-blue);
+  border-radius: 0.125rem;
+  box-shadow: 0 0 5px 0.6px var(--neon-light-blue);
+}
+
+.projects__modal::backdrop {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+.projects__modal h2 {
+  font-weight: 300;
+  font-size: 1.875rem;
+  margin: 0;
+  line-height: 36px;
+  letter-spacing: var(--wide);
+}
+
+.projects__modal .project__button {
+  margin-right: 0;
 }
 
 .project__line-bottom {
